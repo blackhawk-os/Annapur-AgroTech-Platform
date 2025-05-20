@@ -50,10 +50,10 @@ export default function Header() {
         </div>
 
         {/* Create Account */}
-        {/* <Button
+        <Button
           text="Create Account"
           className=" sm:block hidden text-white bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 rounded-md px-4 py-2"
-        /> */}
+        />
 
         {/* Hamburger Menu */}
         <div className={`sm:hidden block `}>

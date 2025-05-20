@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FiPhoneOutgoing } from "react-icons/fi";
 import { Montserrat_Alternates } from "next/font/google";
@@ -49,7 +49,7 @@ export default function Footer() {
               </a>
               <a href="#">
                 <button className="w-12 h-12 flex items-center justify-center bg-transparent rounded-full border border-white">
-                  <FaTiktok className="text-2xl" />
+                  <FaGithub className="text-2xl" />
                 </button>
               </a>
             </div>
@@ -124,7 +124,7 @@ export default function Footer() {
               </a>
               <a href="#">
                 <button className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-transparent rounded-full border border-white">
-                  <FaTiktok className="sm:text-2xl text:xl" />
+                  <FaGithub className="sm:text-2xl text:xl" />
                 </button>
               </a>
             </div>
