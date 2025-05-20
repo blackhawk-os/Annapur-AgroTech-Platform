@@ -39,17 +39,17 @@ export default function Footer() {
             <div className="flex gap-4">
               <a href="#">
                 <button className="w-12 h-12 flex items-center justify-center bg-transparent rounded-full border border-white">
-                  <FaInstagram className="text-2xl" />
+                  <FaInstagram className="text-xl" />
                 </button>
               </a>
               <a href="#">
                 <button className="w-12 h-12 flex items-center justify-center bg-transparent rounded-full border border-white">
-                  <FaFacebookF className="text-2xl" />
+                  <FaFacebookF className="text-xl" />
                 </button>
               </a>
               <a href="#">
                 <button className="w-12 h-12 flex items-center justify-center bg-transparent rounded-full border border-white">
-                  <FaGithub className="text-2xl" />
+                  <FaGithub className="text-xl" />
                 </button>
               </a>
             </div>
