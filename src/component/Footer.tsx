@@ -14,8 +14,8 @@ const montserratAlt = Montserrat_Alternates({
 
 export default function Footer() {
   return (
-    <footer className="w-full lg:h-[430px] md:h-[460px] flex flex-col items-center align-center bg-[#007acc] text-white pt-[52px]  pb-[42px] px-6">
-      <div className="h-full flex flex-col sm:flex-row flex-wrap lg:gap-8 md:gap-6 sm:gap-4 gap-8 justify-between ">
+    <footer className="w-full lg:h-[430px] md:h-[460px] flex flex-col items-center align-center bg-[#24231D] text-[#A5A49A] pt-[52px] pb-0">
+      <div className="h-full flex flex-col sm:flex-row flex-wrap lg:gap-12 md:gap-6 sm:gap-4 gap-8 justify-between ">
         {/* Logo & Description */}
         <div className="flex-2 min-w-[250px]">
           <Image
@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Follow Us */}
           <div className="mt-15 gap-2 sm:block hidden">
             <h2
-              className={`font-semibold  text-lg mb-2 ${montserratAlt.className}`}
+              className={`font-semibold  text-lg mb-2 ${montserratAlt.className} text-white`}
             >
               Follow Us
             </h2>
@@ -60,10 +60,11 @@ export default function Footer() {
         <div className=" lg:w-[40%] md:w-[48%] sm:w-[50%] flex flex-col sm:flex-row sm:gap-0 gap-8">
           <div className="flex-1 min-w-[150px]">
             <h2
-              className={`font-semibold sm:text-lg text-2xl mb-4 ${montserratAlt.className}`}
+              className={`font-semibold sm:text-lg text-2xl mb-4 ${montserratAlt.className} text-white`}
             >
               Quick Links
-            </h2>
+            </h2>{" "}
+            <div className=""></div>
             <ul className="space-y-5 sm:text-xs md:text-sm ">
               <li>
                 <a href="#" className="hover:underline">
@@ -90,7 +91,7 @@ export default function Footer() {
           {/* Get in Touch */}
           <div className="flex-1 min-w-[200px]">
             <h2
-              className={`font-semibold sm:text-lg text-2xl mb-4 ${montserratAlt.className}`}
+              className={`font-semibold sm:text-lg text-2xl mb-4 ${montserratAlt.className} text-white`}
             >
               Get in Touch
             </h2>
@@ -131,11 +132,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      <hr className="border-t border-white/20 mt-15 sm:w-[80%] w-[95%]" />
-
-      <div className="mt-10 text-center text-sm">
-        <p>COPYRIGHT © 2025 LoopsCart E-commerce | All Rights Reserved</p>
+      <div className="flex flex-row items-center justify-around w-full h-15 mt-10 text-center text-sm bg-[#1F1E17]">
+        <div>
+          <p>COPYRIGHT © 2025 LoopsCart E-commerce | All Rights Reserved</p>
+        </div>
       </div>
     </footer>
   );

@@ -3,9 +3,18 @@
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaMailBulk,
+} from "react-icons/fa";
 import Button from "./Button";
 import Link from "next/link";
+import { FaCartShopping } from "react-icons/fa6";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,17 +25,23 @@ export default function Header() {
   return (
     <header className="w-full">
       {/* Top Bar */}
-      <div className="bg-gray-100 text-sm sm:flex hidden flex-col sm:flex-row justify-between items-center  sm:px-16 py-2 border-b border-white">
-        <div className="flex items-center gap-1 text-gray-700 text-[14px] font-montserrat mb-1 md:mb-0">
-          <FaPhoneAlt size={12} />
-          <span>Call Us: +977 982-3821451</span>
+      <div className="bg-[#88B04B] text-sm sm:flex hidden flex-col sm:flex-row justify-between items-center  sm:px-16 py-2 border-b border-white">
+        <div className="flex items-center text-white text-[14px] font-montserrat mb-1 md:mb-0 gap-5">
+          <div className="flex items-center gap-2">
+            <FaPhoneAlt size={12} />
+            <span>Call Us: +977 982-3821451</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <FaMailBulk size={12} />
+            <span>Mail Us: 3k6Mh@example.com</span>
+          </div>
         </div>
         <div className="flex items-center gap-2">
-          {/* <FaWhatsapp className="text-purple-500" /> */}
-          <FaWhatsapp
-            className="text-green-500"
-            onClick={() => window.open("https://wa.me/9779823821451", "_blank")}
-          />
+          <FaFacebook className="text-white" />
+          <FaInstagram className="text-white" />
+          <FaGithub className="text-white" />
+          <FaLinkedin className="text-white" />
         </div>
       </div>
 
@@ -40,20 +55,24 @@ export default function Header() {
         {/* Nav Items */}
         <div className="sm:flex hidden flex-col sm:flex-row gap-4 md:gap-12 sm:gap-6 text-sm font-montserrat text-center">
           <Link href="/">Home</Link>
+          <Link href="/">Market</Link>
+          <Link href="/">Services</Link>
           <Link href="/about">About Us</Link>
-          <Link
-            onClick={() => window.open("https://wa.me/9779823821451", "_blank")}
-            href={""}
-          >
-            Get Support
-          </Link>
+          <Link href="/contact">Contact Us</Link>
         </div>
 
-        {/* Create Account */}
-        <Button
-          text="Create Account"
-          className=" sm:block hidden text-white bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 rounded-md px-4 py-2"
-        />
+        <div className="flex items-center gap-4">
+          {/* Cart Icon */}
+          <FaCartShopping className="text-xl text-gray-700 sm:block hidden" />
+
+          {/* Create Account */}
+          <Link href="/">
+            <Button
+              text="Create Account"
+              className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2"
+            />
+          </Link>
+        </div>
 
         {/* Hamburger Menu */}
         <div className={`sm:hidden block `}>
