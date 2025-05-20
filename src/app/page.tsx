@@ -1,3 +1,12 @@
+import Explore from '@/components/Explore';
 export default function Home() {
-  return <></>;
+  return (
+    <>
+    {/* Components yesko muni*/}
+      <Explore />
+    {/* Components yesko maathi*/}
+    
+    </>
+     
+  );
 }
