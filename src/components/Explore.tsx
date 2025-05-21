@@ -1,4 +1,5 @@
 import React from "react";
+import FeatureCard from "./FeatureCard";
 
 const Explore = () => {
   return (
@@ -17,67 +18,71 @@ const Explore = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Feature 1*/}
 
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
-              Quality Organic Food
-            </h3>
-            <p className="text-gray-600">
-              There are variation You need to be sure there is anything hidden
-              in the middle of text.
-            </p>
-          </div>
-
+          <FeatureCard
+            text="Quality Organic Food"
+            text2="There are variation You need to be sure there is anything hidden
+              in the middle of text."
+          />
+          {/* 
+          
+                        
+          */}
           {/* Feature 2 */}
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
-              Professional Farmers
-            </h3>
-
-            <p className="text-gray-600">
-              These are variation You need to be sure there is anything hidden
-              in the middle of text.
-            </p>
-          </div>
+          <FeatureCard
+            text="Quality Products"
+            text2="There are variation You need to be sure there is anything hidden
+              in the middle of text."
+          />
 
           {/* Feature 3 */}
-          <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
-              Quality Products
-            </h3>
-            <p className="text-gray-600">
-              There are variation You need to be sure there is anything hidden
-              in the middle of text.
-            </p>
+          <FeatureCard
+            text="Professional Farmers"
+            text2="These are variation You need to be sure there is anything hidden
+              in the middle of text."
+          />
+        </div>
+
+        {/*Divider*/}
+        <div className="border-t border-gray-200 my-12"></div>
+
+        {/*News and articles section*/}
+        <div>
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              News & Articles
+            </h2>
+            <span className="text-gray-500">From: No Blog</span>
           </div>
-        </div>
-      </section>
-
-      {/*Divider*/}
-      <div className="border-t border-gray-200 my-12"></div>
-
-      {/*News and articles section*/}
-      <section>
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            News & Articles
-          </h2>
-          <span className="text-gray-500">From: No Blog</span>
-        </div>
-        {/* Article Card */}
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="p-6 md:p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Bringing Food Production Back To Cities
-            </h3>
-            <p className="text-gray-600 mb-4">
-              The Future of Farming, Smart Irrigation Solutions
-            </p>
-            <button
-              className="bg-[#88B04B] hover:bg-[#7a9e44] text-white font-medium py-2 px-6 rounded transition-colors"
-              style={{ backgroundColor: "#88B04B)" }}
-            >
-              Read More
-            </button>
+          {/* Article Card */}
+          <div className=" bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6 md:p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                Bringing Food Production Back To Cities
+              </h3>
+              <p className="text-gray-600 mb-4">
+                The Future of Farming, Smart Irrigation Solutions
+              </p>
+              <button
+                className="bg-[#88B04B] hover:bg-[#7a9e44] text-white font-medium py-2 px-6 rounded transition-colors"
+                style={{ backgroundColor: "#88B04B)" }}
+              >
+                Read More
+              </button>
+            </div>
+            <div className="p-6 md:p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                Bringing Food Production Back To Cities
+              </h3>
+              <p className="text-gray-600 mb-4">
+                The Future of Farming, Smart Irrigation Solutions
+              </p>
+              <button
+                className="bg-[#88B04B] hover:bg-[#7a9e44] text-white font-medium py-2 px-6 rounded transition-colors"
+                style={{ backgroundColor: "#88B04B)" }}
+              >
+                Read More
+              </button>
+            </div>
           </div>
         </div>
       </section>
