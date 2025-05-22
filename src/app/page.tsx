@@ -1,12 +1,12 @@
-import Explore from '@/components/Explore';
+import Explore from "@/components/Explore";
+import NewsArticle from "@/components/NewsArticle";
 export default function Home() {
   return (
     <>
-    {/* Components yesko muni*/}
+      {/* Components yesko muni*/}
       <Explore />
-    {/* Components yesko maathi*/}
-    
+      <NewsArticle />
+      {/* Components yesko maathi*/}
     </>
-     
   );
 }

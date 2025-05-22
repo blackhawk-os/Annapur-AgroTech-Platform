@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Manrope } from "next/font/google";
+import { Covered_By_Your_Grace } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
   subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+  style: "normal",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const coveredByYourGrace = Covered_By_Your_Grace({
   subsets: ["latin"],
+  variable: "--font-covered",
+  weight: "400", // only one weight available
+  display: "swap",
+  style: "normal",
 });
 
 export const metadata: Metadata = {
@@ -25,10 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${manrope.className} ${coveredByYourGrace.className} ${manrope.variable} ${coveredByYourGrace.variable}`}
+    >
+      <body style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         {/* Header */}
         <Header />
 

@@ -1,87 +1,67 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import FeatureCard from "./FeatureCard";
+import Button from "./Button";
+import Link from "next/link";
+import HeaderText from "./HeaderText";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Explore = () => {
   return (
-    <div className="w-full max-w[1920px] mx-auto px-4 py-12 md:py-20">
+    <div className="md:py-20">
       {/*Why Choose Agrios Market Section */}
-      <section className="mb-16 md:mb-24">
-        <h2 className="text-3x1 md:text-4x1 font-bold text-gray-800 mb-8 text-center">
-          Why Choose Agrios Market
-        </h2>
-        <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-          There are many variations of passenger of available but the majority
-          have suffered alteration in some form by injected hutter or random
-          weed which don&apos;t look even.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Feature 1*/}
-
-          <FeatureCard
-            text="Quality Organic Food"
-            text2="There are variation You need to be sure there is anything hidden
-              in the middle of text."
-          />
-          {/* 
-          
-                        
-          */}
-          {/* Feature 2 */}
-          <FeatureCard
-            text="Quality Products"
-            text2="There are variation You need to be sure there is anything hidden
-              in the middle of text."
-          />
-
-          {/* Feature 3 */}
-          <FeatureCard
-            text="Professional Farmers"
-            text2="These are variation You need to be sure there is anything hidden
-              in the middle of text."
-          />
-        </div>
-
-        {/*Divider*/}
-        <div className="border-t border-gray-200 my-12"></div>
-
-        {/*News and articles section*/}
-        <div>
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-              News & Articles
-            </h2>
-            <span className="text-gray-500">From: No Blog</span>
+      <section className="w-full h-[700px] mx-auto px-10 py-12 mb-16 md:mb-24">
+        <div className="w-full flex flex-row justify-center">
+          <div className="w-1\2 h-[450px]">
+            <img
+              src="/image/elements.jpg"
+              alt="Why Choose Agrios Market"
+              className="w-[600px] h-[600px] object-contain"
+            />
           </div>
-          {/* Article Card */}
-          <div className=" bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Bringing Food Production Back To Cities
-              </h3>
-              <p className="text-gray-600 mb-4">
-                The Future of Farming, Smart Irrigation Solutions
-              </p>
-              <button
-                className="bg-[#88B04B] hover:bg-[#7a9e44] text-white font-medium py-2 px-6 rounded transition-colors"
-                style={{ backgroundColor: "#88B04B)" }}
-              >
-                Read More
-              </button>
+          <div className="w-[450px]">
+            <HeaderText text="Our Benefits" text2="Why Choose Agrios Market" />
+            <p className=" text-[16px] font-medium text-[#878680] text-left  mx-auto mb-3">
+              There are many variations of passenger of available but the
+              majority have suffered alteration in some form by injected hutter
+              or random weed which don&apos;t look even.
+            </p>
+
+            <div className="flex flex-col justify-center items-start gap-5">
+              {/* Feature 1*/}
+
+              <FeatureCard
+                icon={<FaCheckCircle className="text-[#88B04B] mt-7 h-7 w-7" />}
+                text="Quality Organic Food"
+                text2="There are variation You need to be sure there is anything hidden
+              in the middle of text."
+              />
+
+              {/* Feature 2 */}
+              <FeatureCard
+                icon={<FaCheckCircle className="text-[#C5CE38] mt-7 h-7 w-7" />}
+                text="Quality Products"
+                text2="There are variation You need to be sure there is anything hidden
+              in the middle of text."
+              />
+
+              {/* Feature 3 */}
+              <FeatureCard
+                icon={
+                  <FaCheckCircle className="text-[#EEC044] mt-7 h-7 w-7 " />
+                }
+                text="Professional Farmers"
+                text2="These are variation You need to be sure there is anything hidden
+              in the middle of text."
+              />
             </div>
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                Bringing Food Production Back To Cities
-              </h3>
-              <p className="text-gray-600 mb-4">
-                The Future of Farming, Smart Irrigation Solutions
-              </p>
-              <button
-                className="bg-[#88B04B] hover:bg-[#7a9e44] text-white font-medium py-2 px-6 rounded transition-colors"
-                style={{ backgroundColor: "#88B04B)" }}
-              >
-                Read More
-              </button>
+            <div>
+              <Link href="/">
+                <Button
+                  text="Explore More"
+                  className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2 mt-2"
+                />
+              </Link>
             </div>
           </div>
         </div>
