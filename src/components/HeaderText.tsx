@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ text, text2, className = "" }) => {
         {text}
       </p>
       <h2
-        className={`text-[40px] font-manrope font-bold text-gray-800 mb-3 text-left ${className}`}
+        className={`text-[40px] font-manrope font-bold text-gray-800 mb-3 text-center ${className}`}
       >
         {text2}
       </h2>
