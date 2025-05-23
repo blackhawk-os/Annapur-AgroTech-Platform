@@ -31,7 +31,7 @@ const Explore = () => {
               majority have suffered alteration in some form by injected hutter
               or random weed which don&apos;t look even.
             </p> */}
-
+            f
             <div className="flex flex-col justify-center items-start gap-5">
               {/* Feature 1*/}
 
