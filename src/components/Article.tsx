@@ -7,7 +7,7 @@ export const Article = () => {
       title: "Reviving Agriculture Through Technology: How Digital Markets Empower Local Farmers",
       date: "22 Sep 2024",
       excerpt: "In an age where agriculture is facing countless challenges, digital marketplaces like Annapur are helping to bridge the gap between traditional farming and modern commerce by directly connecting farmers to buyers. We’re not just enabling better profits, we’re helping sustain local communities and build a more resilient food system for the future.",
-      image: "/image/explore-image-1.jpg",
+      image: "/image/blog-image.jpg",
       variant: 'featured' as const,
       category: "Farmers voice"
     },
