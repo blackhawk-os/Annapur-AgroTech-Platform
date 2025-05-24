@@ -20,12 +20,12 @@ const faqItems = [
   },
 
   {
-    question: "How does the Bidding System Work?",
+    question: "How does the Bidding system work?",
     answer: "Buyers can place bids on listed products. Farmers can then accept the highest or most suitable bid, giving them more control over pricing and fair returns."
   },
 
   {
-    question: "Can Restaurants or WholeSalers also buy through the platfrom?",
+    question: "Can Restaurants or wholesalers also buy through the platfrom?",
     answer: "Yes. Annapur is open to all kinds of buyers-from households to hotels, restaurants, and wholesale retailers."
   },
 

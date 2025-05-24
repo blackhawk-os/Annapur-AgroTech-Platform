@@ -10,11 +10,11 @@ import { PiGavelFill } from "react-icons/pi";
 const Explore = () => {
   return (
     <div className="">
-      {/*Why Choose Agrios Market Section */}
+      {/*Why Choose Annapur Section */}
       <section className="w-full h-[900px] mx-auto px-10 py-12">
         <HeaderText
           text="Our Benefits"
-          text2="Why Choose Agrios Market"
+          text2="Why Choose Annapur Marketplace"
           className="text-center items-center"
         />
         <div className="w-full flex flex-row justify-center gap-4">
@@ -26,12 +26,7 @@ const Explore = () => {
             />
           </div>
           <div className="w-[480px]">
-            {/* <p className=" text-[16px] font-medium text-[#878680] text-left  mx-auto mb-3">
-              There are many variations of passenger of available but the
-              majority have suffered alteration in some form by injected hutter
-              or random weed which don&apos;t look even.
-            </p> */}
-            f
+            
             <div className="flex flex-col justify-center items-start gap-5">
               {/* Feature 1*/}
 
