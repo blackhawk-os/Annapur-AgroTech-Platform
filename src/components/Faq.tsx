@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { FAQCard }  from './Faqcard';
-import  Button  from './HeaderText';
+import  HeaderText  from './HeaderText';
 
 const faqItems = [
   {
@@ -35,9 +35,9 @@ export const Faq = () => {
   return (
     <section className="w-full max-w-4xl mx-auto py-12 px-4 sm:px-6">
       <div>
-        <Button 
+        <HeaderText
         text="Have Questions?" 
-        text2="Frequently Asked Questions" 
+        text2="FAQs" 
         className="mb-8" 
       />
     </div>

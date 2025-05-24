@@ -1,6 +1,6 @@
 import Banner from "@/components/Banner";
 import Explore from "@/components/Explore";
-import NewsArticle from "@/components/NewsArticle";
+import { Article } from "@/components/Article";
 import { Faq } from "@/components/Faq";
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       {/* Components yesko muni*/}
       <Banner />
       <Explore />
-      <NewsArticle />
+      <Article />
       <Faq />
       {/* Components yesko maathi*/}
     </>
