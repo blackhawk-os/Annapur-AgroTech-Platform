@@ -4,7 +4,7 @@ interface ButtonProps {
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, text2, className = "" }) => {
+const HeaderText: React.FC<ButtonProps> = ({ text, text2, className = "" }) => {
   return (
   <div className={`text-center ${className}`}>
       <p
@@ -22,4 +22,4 @@ const Button: React.FC<ButtonProps> = ({ text, text2, className = "" }) => {
   );
 };
 
-export default Button;
+export default HeaderText;
