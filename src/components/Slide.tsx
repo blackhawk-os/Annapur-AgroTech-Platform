@@ -53,7 +53,7 @@ const Slide: React.FC<SlideProps> = ({ slide, isActive }) => {
             {slide.buttons.map((btn, idx) => (
               <button
                 key={idx}
-                className="bg-[#88B04B] text-white px-4 py-2 rounded-xl hover:bg-gray-200 transition"
+                className="bg-[#88B04B] text-white px-4 py-2 rounded-xl opacity-70 hover:opacity-90 transition"
               >
                 {btn}
               </button>
