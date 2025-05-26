@@ -66,7 +66,7 @@ export default function Header() {
           <FaCartShopping className="text-xl text-gray-700 sm:block hidden" />
 
           {/* Create Account */}
-          <Link href="/">
+          <Link href="">
             <Button
               text="Create Account"
               className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2"

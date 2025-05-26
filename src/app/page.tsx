@@ -6,6 +6,7 @@ import { Faq } from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
 import SignupPage from "./acccount/create-account/page";
 import LoginPage from "./acccount/login/page";
+import FeaturedProducts from "@/components/FeaturedProducts";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Home() {
       <Banner />
       <SignupPage />
       <LoginPage />
+      <FeaturedProducts />
       <Explore />
       <Marquee />
       <Article />
