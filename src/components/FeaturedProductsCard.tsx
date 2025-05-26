@@ -1,4 +1,3 @@
-// components/ProductCard.tsx
 import Image from "next/image";
 import { FaCartShopping } from "react-icons/fa6";
 
@@ -12,7 +11,11 @@ type Product = {
   location: string;
 };
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function FeaturedProductsCard({
+  product,
+}: {
+  product: Product;
+}) {
   return (
     <div className="bg-white shadow-md rounded-2xl overflow-hidden transition-transform hover:scale-105">
       <Image
