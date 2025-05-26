@@ -4,11 +4,13 @@ import { Marquee } from "@/components/Marquee";
 import { Article } from "@/components/Article";
 import { Faq } from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
+import FeaturedProducts from "@/components/FeaturedProducts";
 export default function Home() {
   return (
     <>
       {/* Components yesko muni*/}
       <Banner />
+      <FeaturedProducts />
       <Explore />
       <Marquee />
       <Article />
