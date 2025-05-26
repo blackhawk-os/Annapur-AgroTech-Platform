@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import Button from "./Button";
 import Link from "next/link";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaUser } from "react-icons/fa6";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -63,14 +63,11 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           {/* Cart Icon */}
-          <FaCartShopping className="text-xl text-gray-700 sm:block hidden" />
+          <FaCartShopping className="text-xl text-[#88B04B] sm:block hidden" />
 
           {/* Create Account */}
-          <Link href="">
-            <Button
-              text="Create Account"
-              className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2"
-            />
+          <Link href="/acccount/create-account">
+            <FaUser className="text-xl text-[#88B04B] sm:block hidden" />
           </Link>
         </div>
 
@@ -142,22 +139,15 @@ export default function Header() {
               >
                 About Us
               </Link>
-              <Link
-                href="/"
-                className="hover:underline hover:text-[#38B6FF] transform ease-in-out duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Support
-              </Link>
+              <Link href="/">Get Support</Link>
             </div>
-            <div>
-              <Link href="/" onClick={() => setIsOpen(false)}>
-                <Button
-                  text="Create Account"
-                  className="text-white bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-500 hover:to-purple-500 rounded-md px-4 py-2"
-                />
-              </Link>
-            </div>
+
+            <Link href="/acccount/create-account">
+              <Button
+                text="Create Account"
+                className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2"
+              />
+            </Link>
           </div>
         </div>
       </nav>

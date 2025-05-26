@@ -1,24 +1,38 @@
+import Link from "next/link";
+
 interface ButtonProps {
   text: string;
   className?: string;
-  icon?: React.ReactNode;
-  iconPosition?: "left" | "right";
-  highlight?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
   text,
   className = "",
-  icon,
-  iconPosition = "right",
+  href,
+  target,
+  rel,
+  onClick,
 }) => {
+  const baseStyles =
+    "px-4 py-2 text-sm md:max-lg:text-xs shadow font-montserrat font-semibold flex items-center gap-2";
+
+  if (href) {
+    const isExternal = href.startsWith("http");
+    const linkProps = isExternal ? { target, rel } : {};
+    return (
+      <Link href={href} {...linkProps}>
+        <span className={`${baseStyles} ${className}`}>{text}</span>
+      </Link>
+    );
+  }
+
   return (
-    <button
-      className={`px-4 py-2 text-sm md:max-lg:text-xs shadow font-montserrat font-semibold flex items-center gap-2 ${className}`}
-    >
-      {icon && iconPosition === "left" && icon}
+    <button className={`${baseStyles} ${className}`} onClick={onClick}>
       {text}
-      {icon && iconPosition === "right" && icon}
     </button>
   );
 };
