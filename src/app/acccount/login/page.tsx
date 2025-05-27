@@ -8,11 +8,42 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [credentials, setCredentials] = useState({
     emailOrPhone: "",
     password: "",
     rememberMe: false,
   });
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^(98|97)\d{8}$/;
+
+    if (!credentials.emailOrPhone) {
+      newErrors.emailOrPhone = "Email or phone is required";
+    } else if (
+      !emailRegex.test(credentials.emailOrPhone) &&
+      !phoneRegex.test(credentials.emailOrPhone)
+    ) {
+      newErrors.emailOrPhone = "Invalid email or phone number";
+    }
+
+    if (!credentials.password) {
+      newErrors.password = "Password is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      // Submit login logic
+      console.log("Login submitted:", credentials);
+    }
+  };
 
   return (
     <div className="min-h-screen flex">
@@ -56,7 +87,7 @@ export default function LoginPage() {
           </div>
 
           {/* Login Form */}
-          <form className="space-y-5 mt-10">
+          <form className="space-y-5 mt-10" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email or Phone Number
@@ -73,6 +104,9 @@ export default function LoginPage() {
                 placeholder="Enter email or phone"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
               />
+              {errors.emailOrPhone && (
+                <p className="text-red-500 text-sm mt-1">{errors.emailOrPhone}</p>
+              )}
             </div>
 
             <div>
@@ -94,10 +128,13 @@ export default function LoginPage() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
                   aria-label={showPassword ? "Hide password" : "Show password"}
-                >
+                  >
                   {showPassword ? <FaEye /> : <FaEyeSlash />}
                 </button>
               </div>
+                    {errors.password && (
+                        <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+                    )}
             </div>
 
             <div className="flex items-center justify-between">

@@ -3,15 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MarqueeCard } from "./MarqueeCard";
 import HeaderText from "./HeaderText";
-import {
-  FaCarrot,
-  FaAppleAlt,
-  FaLeaf,
-  FaSeedling,
-  FaEgg,
-  FaPepperHot,
-} from "react-icons/fa";
-import { GiMilkCarton, GiGrainBundle, GiJellyBeans } from "react-icons/gi";
 
 export const Marquee = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -23,47 +14,47 @@ export const Marquee = () => {
 
   const products = [
     {
-      icon: <FaCarrot />,
+      icon: "/image/Marquee-icons/vegetable.png",
       title: "Fresh Vegetables",
       tagline: "Farm-to-table goodness",
     },
     {
-      icon: <FaAppleAlt />,
+      icon: "/image/Marquee-icons/fruit.png",
       title: "Seasonal Fruits",
       tagline: "Nature's sweet bounty",
     },
     {
-      icon: <GiGrainBundle />,
+      icon: "/image/Marquee-icons/grain.png",
       title: "Essential Grains",
       tagline: "The foundation of every meal",
     },
     {
-      icon: <GiJellyBeans />,
+      icon: "/image/Marquee-icons/red-beans.png",
       title: "Nutritious Pulses",
       tagline: "Protein rich and hearty",
     },
     {
-      icon: <GiMilkCarton />,
+      icon: "/image/Marquee-icons/milk.png",
       title: "Dairy Products",
       tagline: "Pure & nutritious",
     },
     {
-      icon: <FaLeaf />,
+      icon: "/image/Marquee-icons/lettuce.png",
       title: "Organic Greens",
       tagline: "Straight from the farm",
     },
     {
-      icon: <FaSeedling />,
+      icon: "/image/Marquee-icons/sprout.png",
       title: "Sprouts",
       tagline: "Young and tender",
     },
     {
-      icon: <FaEgg />,
+      icon: "/image/Marquee-icons/eggs.png",
       title: "Farm Eggs",
       tagline: "Daily freshness",
     },
     {
-      icon: <FaPepperHot />,
+      icon: "/image/Marquee-icons/spice.png",
       title: "Spices",
       tagline: "Flavorful harvest",
     },
