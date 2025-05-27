@@ -4,16 +4,12 @@ import { Marquee } from "@/components/Marquee";
 import { Article } from "@/components/Article";
 import { Faq } from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
-import SignupPage from "./acccount/create-account/page";
-import LoginPage from "./acccount/login/page";
 import FeaturedProducts from "@/components/FeaturedProducts";
 export default function Home() {
   return (
     <>
       {/* Components yesko muni*/}
       <Banner />
-      <SignupPage />
-      <LoginPage />
       <FeaturedProducts />
       <Explore />
       <Marquee />
