@@ -19,9 +19,7 @@ export default function CreateAccountPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [userType, setUserType] = useState<"farmer" | "buyer" | null>(null);
-  const [termsChecked, setTermsChecked] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     fullName: "",
     email: "",
     phone: "",
@@ -33,68 +31,6 @@ export default function CreateAccountPage() {
     () => checkPasswordStrength(formData.password),
     [formData.password]
   );
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    const phoneRegex = /^(98|97)\d{8}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const nameRegex = /^[a-zA-Z]{2,}(?:\s+[a-zA-Z]{2,})+$/;
-    const passwordComplexityRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
-
-
-
-    if (!userType) newErrors.userType = "Please select user type";
-
-    if (!formData.fullName.trim()) {  
-        newErrors.fullName = "Full name is required";
-    }
-    else if(!nameRegex.test(formData.fullName.trim())){
-        newErrors.fullName = "Enter your full name (first and last name)";
-    }
-
-    
-    if (!formData.email){
-     newErrors.email = "Email is required";
-    }    
-    else if (!emailRegex.test(formData.email)){
-        newErrors.email = "Invalid email format";
-    }
-
-    
-    if (!formData.phone){
-         newErrors.phone = "Phone no. is required";
-    }
-    else if (!phoneRegex.test(formData.phone)) {
-        newErrors.phone = "Phone must start with 98 or 97 and be 10 digits";
-    }
-
-    if (!formData.password) {
-            newErrors.password = "Password is required";
-        }
-    else if (!passwordComplexityRegex.test(formData.password)) {
-            newErrors.password = "Password must be 8+ characters, include upper, lower, number and a symbol";
-    }
-    if (formData.password !== formData.confirmPassword) {
-        newErrors.confirmPassword = "Passwords don't match";
-    }
-    else if (!formData.confirmPassword){
-        newErrors.confirmPassword = "Please confirm your password";
-    }
-    if (!termsChecked) {
-        newErrors.terms = "Please accept the terms and conditions to proceed";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Submit form logic
-      console.log("Form submitted:", { ...formData, userType });
-    }
-  };
 
   return (
     <div className="min-h-screen flex">
@@ -204,20 +140,16 @@ export default function CreateAccountPage() {
           </div>
 
           {/* Signup Form */}
-          <form className="space-y-5" onSubmit={handleSubmit}>
+          <form className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name
               </label>
               <input
                 type="text"
-                value={formData.fullName}
-                onChange={(e) => setFormData({ ...formData, fullName: e.target.value})}
                 placeholder="Enter your full name"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
               />
-               {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}
-                </p>}
             </div>
 
             <div className="flex gap-4">
@@ -227,12 +159,9 @@ export default function CreateAccountPage() {
                 </label>
                 <input
                   type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="Email address"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
                 />
-                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
               <div className="w-1/2">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -240,12 +169,9 @@ export default function CreateAccountPage() {
                 </label>
                 <input
                   type="tel"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="Phone number"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
                 />
-                {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
               </div>
             </div>
 
@@ -256,8 +182,6 @@ export default function CreateAccountPage() {
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
-                  value={formData.password}
-                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   placeholder="Create a password"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 pr-10 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
                 />
@@ -269,7 +193,6 @@ export default function CreateAccountPage() {
                   {showPassword ? <FaEye /> : <FaEyeSlash />}
                 </button>
               </div>
-              {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
               {formData.password && (
                 <div className="mt-2 text-sm">
                   <span
@@ -298,8 +221,6 @@ export default function CreateAccountPage() {
               <div className="relative">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  value={formData.confirmPassword}
-                  onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                   placeholder="Confirm your password"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 pr-10 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
                 />
@@ -311,17 +232,13 @@ export default function CreateAccountPage() {
                   {showConfirmPassword ? <FaEye /> : <FaEyeSlash />}
                 </button>
               </div>
-              {errors.confirmPassword && (
-                <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>
-              )}
             </div>
 
             {/* Terms & Conditions Checkbox */}
             <div className="flex items-start gap-2 text-sm text-gray-600">
               <input
                 type="checkbox"
-                checked={termsChecked}
-                onChange={(e) => setTermsChecked(e.target.checked)}
+                required
                 className="mt-1 accent-[#88B04B]"
               />
               <label>
@@ -335,7 +252,6 @@ export default function CreateAccountPage() {
                 </a>
                 .
               </label>
-              {errors.terms && <p className="text-red-500 text-sm mt-1">{errors.terms}</p>}
             </div>
 
             <LoginButton
