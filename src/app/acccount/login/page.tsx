@@ -4,10 +4,11 @@ import { useState } from "react";
 import { LoginButton } from "@/components/ui/LoginButton";
 import HeaderText from "@/components/HeaderText";
 import Link from "next/link";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import TextInput from "@/components/TextInput";
+import PasswordInput from "@/components/PasswordInput";
+import CheckboxInput from "@/components/CheckboxInput";
 
 export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [credentials, setCredentials] = useState({
     emailOrPhone: "",
@@ -88,78 +89,47 @@ export default function LoginPage() {
 
           {/* Login Form */}
           <form className="space-y-5 mt-10" onSubmit={handleSubmit}>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email or Phone Number
-              </label>
-              <input
-                type="text"
-                value={credentials.emailOrPhone}
+            <TextInput
+              label="Email or Phone Number"
+              name="emailOrPhone"
+              value={credentials.emailOrPhone}
+              onChange={(e) =>
+                setCredentials({
+                  ...credentials,
+                  emailOrPhone: e.target.value,
+                })
+              }
+              placeholder="Enter email or phone"
+              error={errors.emailOrPhone}
+            />
+
+            <PasswordInput
+              label="Password"
+              name="password"
+              value={credentials.password}
+              onChange={(e) =>
+                setCredentials({
+                  ...credentials,
+                  password: e.target.value,
+                })
+              }
+              placeholder="Enter your password"
+              error={errors.password}
+            />
+
+            <div className="flex items-center justify-between">
+              <CheckboxInput
+                label="Remember me"
+                name="rememberMe"
+                checked={credentials.rememberMe}
                 onChange={(e) =>
                   setCredentials({
                     ...credentials,
-                    emailOrPhone: e.target.value,
+                    rememberMe: e.target.checked,
                   })
                 }
-                placeholder="Enter email or phone"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
               />
-              {errors.emailOrPhone && (
-                <p className="text-red-500 text-sm mt-1">{errors.emailOrPhone}</p>
-              )}
             </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Password
-              </label>
-              <div className="relative">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  value={credentials.password}
-                  onChange={(e) =>
-                    setCredentials({ ...credentials, password: e.target.value })
-                  }
-                  placeholder="Enter your password"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 pr-10 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                  aria-label={showPassword ? "Hide password" : "Show password"}
-                  >
-                  {showPassword ? <FaEye /> : <FaEyeSlash />}
-                </button>
-              </div>
-                    {errors.password && (
-                        <p className="text-red-500 text-sm mt-1">{errors.password}</p>
-                    )}
-            </div>
-
-            <div className="flex items-center justify-between">
-              <label className="flex items-center gap-2 text-sm text-gray-600">
-                <input
-                  type="checkbox"
-                  checked={credentials.rememberMe}
-                  onChange={(e) =>
-                    setCredentials({
-                      ...credentials,
-                      rememberMe: e.target.checked,
-                    })
-                  }
-                  className="h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
-                />
-                Remember me
-              </label>
-              <Link
-                href="/account/forgot-password"
-                className="text-sm font-medium text-accent hover:underline text-[#88B04B]"
-              >
-                Forgot Password?
-              </Link>
-            </div>
-
             <LoginButton
               variant="primary"
               type="submit"
