@@ -6,6 +6,7 @@ import { Faq } from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import FillerBanner from "@/components/FillerBanner";
+import { Filter } from "@/components/Filter";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Home() {
       <Banner />
       <FeaturedProducts />
       <FillerBanner />
+      <Filter />
       <Explore />
       <Marquee />
       <Article />
