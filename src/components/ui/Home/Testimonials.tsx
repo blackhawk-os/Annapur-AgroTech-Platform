@@ -1,5 +1,5 @@
-import HeaderText from "./HeaderText";
-import TestimonialSlider from "./TestimonialSlider";
+import HeaderText from "@/components/HeaderText";
+import TestimonialSlider from "@/components/TestimonialSlider";
 
 interface Testimonial {
   id: number;

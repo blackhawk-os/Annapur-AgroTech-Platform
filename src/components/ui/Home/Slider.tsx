@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Slide from "./Slide";
+import Slide from "@/components/Slide";
 import { useSwipeable } from "react-swipeable";
 
 const slides = [

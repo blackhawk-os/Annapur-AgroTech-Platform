@@ -1,12 +1,11 @@
-import Banner from "@/components/Banner";
-import Explore from "@/components/Explore";
+import Banner from "@/components/ui/Home/Banner";
+import Explore from "@/components/ui/Home/Explore";
 import { Marquee } from "@/components/Marquee";
-import { Article } from "@/components/Article";
-import { Faq } from "@/components/Faq";
-import Testimonials from "@/components/Testimonials";
-import FeaturedProducts from "@/components/FeaturedProducts";
-import FillerBanner from "@/components/FillerBanner";
-import { Filter } from "@/components/Filter";
+import { Article } from "@/components/ui/Home/Article";
+import { Faq } from "@/components/ui/Home/Faq";
+import Testimonials from "@/components/ui/Home/Testimonials";
+import FeaturedProducts from "@/components/ui/Home/FeaturedProducts";
+import FillerBanner from "@/components/ui/Home/FillerBanner";
 export default function Home() {
   return (
     <>
@@ -14,7 +13,6 @@ export default function Home() {
       <Banner />
       <FeaturedProducts />
       <FillerBanner />
-      <Filter />
       <Explore />
       <Marquee />
       <Article />

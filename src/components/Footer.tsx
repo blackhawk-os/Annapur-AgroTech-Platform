@@ -18,13 +18,7 @@ export default function Footer() {
       <div className="h-full flex flex-col sm:flex-row flex-wrap lg:gap-12 md:gap-6 sm:gap-4 gap-8 justify-between ">
         {/* Logo & Description */}
         <div className="flex-2 min-w-[250px]">
-          <Image
-            src="/image/LogoF.svg"
-            width={180}
-            height={50}
-            alt="Logo"
-            className="mb-4"
-          />
+          <Image src="/image/logo.png" width={130} height={50} alt="Logo" />
           <p className="md:text-[16px] sm:text-sm font-normal">
             All-in-one platform to sell farm products, connect, and grow—no
             middlemen.

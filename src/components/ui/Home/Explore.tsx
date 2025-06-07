@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import FeatureCard from "./FeatureCard";
-import HeaderText from "./HeaderText";
+import FeatureCard from "@/components/FeatureCard";
+import HeaderText from "@/components/HeaderText";
 import { FaHandshake, FaShoppingBasket, FaShoppingCart } from "react-icons/fa";
 import { GiFarmer } from "react-icons/gi";
 import { FaLocationDot } from "react-icons/fa6";
@@ -26,7 +26,6 @@ const Explore = () => {
             />
           </div>
           <div className="w-[480px]">
-            
             <div className="flex flex-col justify-center items-start gap-5">
               {/* Feature 1*/}
 

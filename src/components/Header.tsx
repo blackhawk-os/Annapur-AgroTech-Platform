@@ -12,7 +12,7 @@ import {
   FaLinkedin,
   FaMailBulk,
 } from "react-icons/fa";
-import Button from "./Button";
+import Button from "./ui/Buttons/Button";
 import Link from "next/link";
 import { FaCartShopping, FaUser } from "react-icons/fa6";
 export default function Header() {
@@ -49,13 +49,13 @@ export default function Header() {
       <nav className="flex flex-row justify-between items-center w-full py-4 px-4 sm:px-8 border-b border-white gap-4 sm:gap-0">
         {/* Logo */}
         <div>
-          <Image src="/image/logo.svg" width={150} height={40} alt="Logo" />
+          <Image src="/image/logo.png" width={130} height={50} alt="Logo" />
         </div>
 
         {/* Nav Items */}
         <div className="sm:flex hidden flex-col sm:flex-row gap-4 md:gap-12 sm:gap-6 text-sm font-montserrat text-center">
           <Link href="/">Home</Link>
-          <Link href="/">Market</Link>
+          <Link href="/market">Market</Link>
           <Link href="/">Services</Link>
           <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>

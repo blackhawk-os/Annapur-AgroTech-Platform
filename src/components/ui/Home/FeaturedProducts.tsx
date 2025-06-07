@@ -1,7 +1,7 @@
 // components/FeaturedProducts.tsx
-import FeaturedProductsCard from "./FeaturedProductsCard";
+import FeaturedProductsCard from "@/components/FeaturedProductsCard";
 import products from "@/data/featured-products.json";
-import HeaderText from "./HeaderText";
+import HeaderText from "@/components/HeaderText";
 
 export default function FeaturedProducts() {
   return (
