@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FAQCard } from "@/components/Faqcard";
+import { FAQCard } from "@/components/ui/Cards/Faqcard";
 import HeaderText from "@/components/HeaderText";
 
 const faqItems = [

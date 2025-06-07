@@ -1,5 +1,5 @@
 import React from "react";
-import FillerBannerCard from "@/components/FillerBannerCard";
+import FillerBannerCard from "@/components/ui/Cards/FillerBannerCard";
 import { url } from "inspector";
 
 export default function FillerBanner() {

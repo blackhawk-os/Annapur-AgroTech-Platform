@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { MarqueeCard } from "./MarqueeCard";
+import { MarqueeCard } from "./ui/Cards/MarqueeCard";
 import HeaderText from "./HeaderText";
 
 export const Marquee = () => {

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import FeatureCard from "@/components/FeatureCard";
+import FeatureCard from "@/components/ui/Cards/FeatureCard";
 import HeaderText from "@/components/HeaderText";
 import { FaHandshake, FaShoppingBasket, FaShoppingCart } from "react-icons/fa";
 import { GiFarmer } from "react-icons/gi";

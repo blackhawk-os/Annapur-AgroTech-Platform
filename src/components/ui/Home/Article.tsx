@@ -1,5 +1,5 @@
 import HeaderText from "@/components/HeaderText";
-import { ArticleCard } from "@/components/ArticleCard";
+import { ArticleCard } from "@/components/ui/Cards/ArticleCard";
 
 export const Article = () => {
   const article = [

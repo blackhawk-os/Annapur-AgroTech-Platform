@@ -1,5 +1,5 @@
 // components/FeaturedProducts.tsx
-import FeaturedProductsCard from "@/components/FeaturedProductsCard";
+import FeaturedProductsCard from "@/components/ui/Cards/FeaturedProductsCard";
 import products from "@/data/featured-products.json";
 import HeaderText from "@/components/HeaderText";
 

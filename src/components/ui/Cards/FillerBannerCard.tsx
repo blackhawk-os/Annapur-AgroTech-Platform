@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Button from "./ui/Buttons/Button";
+import Button from "../Buttons/Button";
 interface FillerBannerCardProps {
   text: string;
   text2: string;
