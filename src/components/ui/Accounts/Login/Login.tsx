@@ -129,7 +129,15 @@ export default function Login() {
                   })
                 }
               />
-            </div>
+             
+             <Link
+                href="/acccount/forgot-password"
+                className="text-sm font-medium text-accent hover:underline text-[#88B04B]"
+                >
+                Forgot password?
+              </Link>
+        </div>
+
             <LoginButton
               variant="primary"
               type="submit"

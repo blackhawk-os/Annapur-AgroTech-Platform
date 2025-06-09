@@ -1,10 +1,10 @@
-export default function Market() {
+import ForgotPassword from "@/components/ui/Accounts/Forgot-password/Forgotpassword";
+import React from "react";
+
+export default function ForgotpasswordPage() {
   return (
     <>
-      <div>
-        <div></div>
-        <div></div>
-      </div>
+      <ForgotPassword />
     </>
   );
 }
