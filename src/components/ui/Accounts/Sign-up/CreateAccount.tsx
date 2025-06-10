@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaEye, FaEyeSlash, FaSeedling, FaUserTie } from "react-icons/fa";
 import TextInput from "@/components/TextInput";
 import PasswordInput from "@/components/PasswordInput";
+import TermsAndPrivacyModal from "@/components/TermsAndPrivacy";
 
 const checkPasswordStrength = (password: string) => {
   let score = 0;
@@ -30,6 +31,7 @@ export default function CreateAccount() {
     password: "",
     confirmPassword: "",
   });
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
   const passwordStrength = useMemo(
     () => checkPasswordStrength(formData.password),
@@ -76,7 +78,7 @@ export default function CreateAccount() {
       newErrors.confirmPassword = "Please confirm your password";
     }
     if (!termsChecked) {
-      newErrors.terms = "Please accept the terms and conditions to proceed";
+      newErrors.terms = "Please accept the TERMS AND CONDITIONS and PRIVACY POLICY to proceed";
     }
 
     setErrors(newErrors);
@@ -292,16 +294,24 @@ export default function CreateAccount() {
                 className="mt-1 accent-[#88B04B]"
               />
               <label>
-                I agree to the{" "}
-                <a href="/terms" className="text-[#88B04B] underline">
-                  Terms and Conditions
-                </a>{" "}
-                and{" "}
-                <a href="/privacy" className="text-[#88B04B] underline">
-                  Privacy Policy
-                </a>
-                .
-              </label>
+                Please read and accept the{" "}
+                <button
+                type="button"
+                onClick={() => setShowTermsModal(true)}
+                className="font-medium text-[#88B04B] cursor-pointer hover:underline"
+                >
+                TERMS AND CONDITIONS
+                </button>{" "} and 
+                <button
+                type="button"
+                onClick={() => setShowTermsModal(true)}
+                className="font-medium text-[#88B04B] cursor-pointer hover:underline"
+                >
+                PRIVACY POLICY
+                </button>{" "}
+                to continue.
+                
+               </label>
               {errors.terms && (
                 <p className="text-red-500 text-sm mt-1">{errors.terms}</p>
               )}
@@ -326,6 +336,14 @@ export default function CreateAccount() {
           </form>
         </div>
       </div>
+
+      {/* Terms Modal */}
+      {showTermsModal && (
+        <TermsAndPrivacyModal
+        isOpen={showTermsModal}
+        onClose={() => setShowTermsModal(false)}
+        />
+      )}
     </div>
   );
 }

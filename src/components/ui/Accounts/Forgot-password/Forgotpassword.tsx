@@ -71,7 +71,7 @@ export default function ForgotPassword() {
               className="w-full py-3 text-lg font-semibold bg-[#88B04B] hover:bg-[#78a03f]"
             />
             <p className="mt-4 text-center text-sm text-gray-600">
-              Remembered your password?{" "}
+              Remember your password?{" "}
               <Link
                 href="/acccount/login"
                 className="font-medium text-[#88B04B] hover:underline"
@@ -106,7 +106,7 @@ export default function ForgotPassword() {
             />
 
             <p className="text-center text-sm text-gray-600">
-              Remembered your password?{" "}
+              Remember your password?{" "}
               <Link
                 href="/acccount/login"
                 className="font-medium text-[#88B04B] hover:underline"
