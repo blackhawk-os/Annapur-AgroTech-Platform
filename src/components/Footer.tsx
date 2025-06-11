@@ -86,9 +86,12 @@ export default function Footer() {
               </li>
               <li className="flex flex-row gap-2 items-center">
                 <FaLeaf className="text-xs text-[#88B04B]" />
-                <a href="#" className="hover:underline">
-                  About Us
-                </a>
+                <Link 
+                href="/aboutus"
+                className= "hover:underline"
+                >
+                About Us
+                </Link>
               </li>
             </ul>
           </div>

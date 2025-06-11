@@ -1,4 +1,4 @@
-export default function RootLayout({
+export default function AboutUsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -12,4 +12,3 @@ export default function RootLayout({
     </html>
   );
 }
-
