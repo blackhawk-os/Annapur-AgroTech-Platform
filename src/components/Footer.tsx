@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaInstagram, FaFacebookF, FaGithub, FaLeaf } from "react-icons/fa";
 import { FaLocationDot, FaRegEnvelope } from "react-icons/fa6";
 import { FiPhoneOutgoing } from "react-icons/fi";
@@ -64,9 +65,12 @@ export default function Footer() {
             <ul className="space-y-5 sm:text-xs md:text-sm ">
               <li className="flex flex-row gap-2 items-center">
                 <FaLeaf className="text-xs text-[#88B04B]" />
-                <a href="#" className="hover:underline">
-                  Contact Us
-                </a>
+                <Link 
+                href="/contact"
+                className= "hover:underline"
+                >
+                Contact Us
+                </Link>
               </li>
               <li className="flex flex-row gap-2 items-center">
                 <FaLeaf className="text-xs text-[#88B04B]" />
@@ -98,7 +102,12 @@ export default function Footer() {
             <div className="w-[90px] h-[2px] bg-[#88B04B] mb-3"></div>
             <div className="flex items-start gap-3 mb-5 md:text-sm sm:text-xs">
               <FaRegEnvelope className="text-xl mt-[2px]" />
-              <span>support@annapur.com</span>
+                  <Link 
+                href="/contact"
+                className= "hover:underline"
+                >
+                support@annapur.com
+                </Link>
             </div>
             <div className="flex items-start gap-3 mb-5 md:text-sm sm:text-xs">
               <FiPhoneOutgoing className="text-xl mt-[2px]" />

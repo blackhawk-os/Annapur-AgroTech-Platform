@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface TermsAndPrivacyModalProps {
   isOpen: boolean;
@@ -128,7 +129,14 @@ const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({ isOpen, onC
                 <strong>Contact Us</strong>
                 <ul className="list-disc pl-5 mt-1">
                   <li>If you have any questions or concerns, please reach out to our support team at:</li>
-                  <li>📧 support@annapur.com</li>
+                  <li>
+                    <Link 
+                      href="/contact"
+                      className= "hover:underline"
+                      >
+                        📧 support@annapur.com
+                      </Link>
+                  </li>
                 </ul>
               </li>
             </ol>
@@ -217,7 +225,14 @@ const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({ isOpen, onC
                 <strong>Contact Us</strong>
                 <ul className="list-disc pl-5 mt-1">
                   <li>For any questions or concerns regarding your privacy, contact us at:</li>
-                  <li>📧 support@annapur.com</li>
+                  <li>
+                    <Link 
+                      href="/contact"
+                      className= "hover:underline"
+                      >
+                        📧 support@annapur.com
+                      </Link>
+                  </li>
                 </ul>
               </li>
             </ol>
