@@ -8,6 +8,9 @@ import { FaEye, FaEyeSlash, FaSeedling, FaUserTie } from "react-icons/fa";
 import TextInput from "@/components/TextInput";
 import PasswordInput from "@/components/PasswordInput";
 import TermsAndPrivacyModal from "@/components/TermsAndPrivacy";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { createAccountSchema } from "@/lib/validation/CreateAccount/CreateAccountSchema";
 
 const checkPasswordStrength = (password: string) => {
   let score = 0;
@@ -18,83 +21,48 @@ const checkPasswordStrength = (password: string) => {
   return score;
 };
 
+type CreateAccountForm = {
+  userType: "farmer" | "buyer";
+  fullName: string;
+  email: string;
+  phone: string;
+  password: string;
+  confirmPassword: string;
+  termsChecked: true;
+};
+
 export default function CreateAccount() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [userType, setUserType] = useState<"farmer" | "buyer" | null>(null);
-  const [termsChecked, setTermsChecked] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    password: "",
-    confirmPassword: "",
-  });
   const [showTermsModal, setShowTermsModal] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    setValue,
+  } = useForm<CreateAccountForm>({
+    resolver: zodResolver(createAccountSchema),
+    mode: "onBlur",
+  });
+
+  const password = watch("password");
   const passwordStrength = useMemo(
-    () => checkPasswordStrength(formData.password),
-    [formData.password]
+    () => checkPasswordStrength(password || ""),
+    [password]
   );
 
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    const phoneRegex = /^(98|97)\d{8}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const nameRegex = /^[a-zA-Z]{2,}(?:\s+[a-zA-Z]{2,})+$/;
-    const passwordComplexityRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
-
-    if (!userType) newErrors.userType = "Please select user type";
-
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
-    } else if (!nameRegex.test(formData.fullName.trim())) {
-      newErrors.fullName = "Enter your full name (first and last name)";
-    }
-
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Invalid email format";
-    }
-
-    if (!formData.phone) {
-      newErrors.phone = "Phone no. is required";
-    } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Phone must start with 98 or 97 and be 10 digits";
-    }
-
-    if (!formData.password) {
-      newErrors.password = "Password is required";
-    } else if (!passwordComplexityRegex.test(formData.password)) {
-      newErrors.password =
-        "Password must be 8+ characters, include upper, lower, number and a symbol";
-    }
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = "Passwords don't match";
-    } else if (!formData.confirmPassword) {
-      newErrors.confirmPassword = "Please confirm your password";
-    }
-    if (!termsChecked) {
-      newErrors.terms = "Please accept the TERMS AND CONDITIONS and PRIVACY POLICY to proceed";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const onSubmit = (data: CreateAccountForm) => {
+    console.log("Form submitted with data:", data);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Submit form logic
-      console.log("Form submitted:", { ...formData, userType });
-    }
+  const handleUserTypeSelect = (type: "farmer" | "buyer") => {
+    setValue("userType", type, { shouldValidate: true });
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex ">
       {/* Left Side - Full Image Section with Overlay Text */}
       <div className="hidden lg:flex w-1/2 relative">
         <div
@@ -113,7 +81,7 @@ export default function CreateAccount() {
 
       {/* Right Side - Form Section */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 bg-white">
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md ">
           {/* Auth Navigation */}
           <div className="flex gap-4 mb-8 justify-between">
             <Link
@@ -140,10 +108,10 @@ export default function CreateAccount() {
             <div className="grid grid-cols-2 gap-4">
               <button
                 type="button"
-                onClick={() => setUserType("farmer")}
+                onClick={() => handleUserTypeSelect("farmer")}
                 className={`p-4 rounded-xl border-2 flex flex-col items-center gap-2 transition-all relative overflow-hidden
                                     ${
-                                      userType === "farmer"
+                                      watch("userType") === "farmer"
                                         ? "border-[#88B04B] bg-[#88B04B]/10"
                                         : "border-gray-200 hover:border-[#88B04B]/50"
                                     }`}
@@ -156,12 +124,16 @@ export default function CreateAccount() {
               >
                 <FaSeedling
                   className={`w-8 h-8 ${
-                    userType === "farmer" ? "text-[#88B04B]" : "text-gray-400"
+                    watch("userType") === "farmer"
+                      ? "text-[#88B04B]"
+                      : "text-gray-400"
                   }`}
                 />
                 <span
                   className={`font-medium ${
-                    userType === "farmer" ? "text-[#88B04B]" : "text-gray-600"
+                    watch("userType") === "farmer"
+                      ? "text-[#88B04B]"
+                      : "text-gray-600"
                   }`}
                 >
                   Farmer
@@ -170,10 +142,10 @@ export default function CreateAccount() {
 
               <button
                 type="button"
-                onClick={() => setUserType("buyer")}
+                onClick={() => handleUserTypeSelect("buyer")}
                 className={`p-4 rounded-xl border-2 flex flex-col items-center gap-2 transition-all relative overflow-hidden
                                     ${
-                                      userType === "buyer"
+                                      watch("userType") === "buyer"
                                         ? "border-[#88B04B] bg-[#88B04B]/10"
                                         : "border-gray-200 hover:border-[#88B04B]/50"
                                     }`}
@@ -186,12 +158,16 @@ export default function CreateAccount() {
               >
                 <FaUserTie
                   className={`w-8 h-8 ${
-                    userType === "buyer" ? "text-[#88B04B]" : "text-gray-400"
+                    watch("userType") === "buyer"
+                      ? "text-[#88B04B]"
+                      : "text-gray-400"
                   }`}
                 />
                 <span
                   className={`font-medium ${
-                    userType === "buyer" ? "text-[#88B04B]" : "text-gray-600"
+                    watch("userType") === "buyer"
+                      ? "text-[#88B04B]"
+                      : "text-gray-600"
                   }`}
                 >
                   Buyer
@@ -201,56 +177,41 @@ export default function CreateAccount() {
           </div>
 
           {/* Signup Form */}
-          <form className="space-y-5" onSubmit={handleSubmit}>
+          <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
             <TextInput
               label="Full Name"
-              name="fullName"
-              value={formData.fullName}
-              onChange={(e) =>
-                setFormData({ ...formData, fullName: e.target.value })
-              }
               placeholder="Full Name"
-              error={errors.fullName}
+              {...register("fullName")}
+              error={errors.fullName?.message}
             />
 
             <div className="flex gap-4">
               <div className="w-1/2">
                 <TextInput
                   label="E-mail"
-                  name="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  {...register("email")}
                   placeholder="E-mail"
-                  error={errors.email}
+                  error={errors.email?.message}
                 />
               </div>
               <div className="w-1/2">
                 <TextInput
                   label="Phone Number"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
+                  {...register("phone")}
                   placeholder="Phone Number"
-                  error={errors.phone}
+                  error={errors.phone?.message}
                 />
               </div>
             </div>
 
             <PasswordInput
               label="Password"
-              name="password"
-              value={formData.password}
-              onChange={(e) =>
-                setFormData({ ...formData, password: e.target.value })
-              }
+              {...register("password")}
               placeholder="Create a password"
-              error={errors.password}
+              error={errors.password?.message}
               passwordStrength={passwordStrength}
               showStrength={true}
+              // toggleShow={() => setShowPassword((v) => !v)}
             />
 
             <div>
@@ -260,15 +221,11 @@ export default function CreateAccount() {
               <div className="relative">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  value={formData.confirmPassword}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      confirmPassword: e.target.value,
-                    })
-                  }
+                  {...register("confirmPassword")}
                   placeholder="Confirm your password"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 pr-10 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
+                  className={`w-full px-4 py-3 rounded-lg border border-gray-300 pr-10 focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50 ${
+                    errors.confirmPassword ? "border-red-500" : ""
+                  }`}
                 />
                 <button
                   type="button"
@@ -280,40 +237,43 @@ export default function CreateAccount() {
               </div>
               {errors.confirmPassword && (
                 <p className="text-red-500 text-sm mt-1">
-                  {errors.confirmPassword}
+                  {errors.confirmPassword.message}
                 </p>
               )}
             </div>
 
             {/* Terms & Conditions Checkbox */}
-            <div className="flex items-start gap-2 text-sm text-gray-600">
-              <input
-                type="checkbox"
-                checked={termsChecked}
-                onChange={(e) => setTermsChecked(e.target.checked)}
-                className="mt-1 accent-[#88B04B]"
-              />
-              <label>
-                Please read and accept the{" "}
-                <button
-                type="button"
-                onClick={() => setShowTermsModal(true)}
-                className="font-medium text-[#88B04B] cursor-pointer hover:underline"
-                >
-                TERMS AND CONDITIONS
-                </button>{" "} and 
-                <button
-                type="button"
-                onClick={() => setShowTermsModal(true)}
-                className="font-medium text-[#88B04B] cursor-pointer hover:underline"
-                >
-                PRIVACY POLICY
-                </button>{" "}
-                to continue.
-                
-               </label>
-              {errors.terms && (
-                <p className="text-red-500 text-sm mt-1">{errors.terms}</p>
+            <div className="flex flex-col items-start gap-2 text-sm text-gray-600">
+              <div className="flex flex-row gap-3 items-start">
+                <input
+                  type="checkbox"
+                  {...register("termsChecked")}
+                  className="mt-1 accent-[#88B04B]"
+                />
+                <label>
+                  Please read and accept the{" "}
+                  <button
+                    type="button"
+                    onClick={() => setShowTermsModal(true)}
+                    className="font-medium text-[#88B04B] cursor-pointer hover:underline"
+                  >
+                    TERMS AND CONDITIONS
+                  </button>{" "}
+                  and
+                  <button
+                    type="button"
+                    onClick={() => setShowTermsModal(true)}
+                    className="font-medium text-[#88B04B] cursor-pointer hover:underline"
+                  >
+                    PRIVACY POLICY
+                  </button>{" "}
+                  to continue.
+                </label>
+              </div>
+              {errors.termsChecked && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.termsChecked.message}
+                </p>
               )}
             </div>
 
@@ -340,8 +300,8 @@ export default function CreateAccount() {
       {/* Terms Modal */}
       {showTermsModal && (
         <TermsAndPrivacyModal
-        isOpen={showTermsModal}
-        onClose={() => setShowTermsModal(false)}
+          isOpen={showTermsModal}
+          onClose={() => setShowTermsModal(false)}
         />
       )}
     </div>

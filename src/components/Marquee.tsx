@@ -87,11 +87,13 @@ export const Marquee = () => {
   return (
     <section className="w-full py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
-        <HeaderText
-          text="Products"
-          text2="What's available Today"
-          className="mb-8 text-center"
-        />
+        <div className="mb-8">
+          <HeaderText
+            text="Products"
+            text2="What's available Today"
+            className="text-center"
+          />
+        </div>
 
         <div
           ref={containerRef}

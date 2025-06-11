@@ -1,45 +1,35 @@
 "use client";
 
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  forgotPasswordSchema,
+  ForgotPasswordInput,
+} from "@/lib/validation/PasswordReset/PasswordResetSchema";
 import { LoginButton } from "@/components/ui/Buttons/LoginButton";
 import Link from "next/link";
 import TextInput from "@/components/TextInput";
 
 export default function ForgotPassword() {
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [emailOrPhone, setEmailOrPhone] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^(98|97)\d{8}$/;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ForgotPasswordInput>({
+    resolver: zodResolver(forgotPasswordSchema),
+  });
 
-    if (!emailOrPhone) {
-      newErrors.emailOrPhone = "Email or phone is required";
-    } else if (
-      !emailRegex.test(emailOrPhone) &&
-      !phoneRegex.test(emailOrPhone)
-    ) {
-      newErrors.emailOrPhone = "Invalid email or phone number";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateForm()) {
-      console.log("Reset password for:", emailOrPhone);
-      setIsSubmitted(true);
-    }
+  const onSubmit = (data: ForgotPasswordInput) => {
+    console.log("Reset password for:", data.email);
+    setIsSubmitted(true);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="w-full max-w-md bg-white p-8 rounded-lg border border-gray-300 shadow-sm">
-
+    <div className="min-h-screen flex items-start justify-center bg-white p-4">
+      <div className="w-full max-w-md bg-gray-50 p-8 rounded-lg border border-gray-300 shadow-sm mt-20">
         {/* Forgot Password Content */}
         {isSubmitted ? (
           <div className="text-center py-4">
@@ -61,8 +51,8 @@ export default function ForgotPassword() {
               Reset Instructions Sent
             </h2>
             <p className="text-gray-600 mb-6">
-              If an account exists for {emailOrPhone}, you'll receive password
-              reset instructions shortly.
+              If an account exists for this email, you'll receive password reset
+              instructions shortly.
             </p>
             <LoginButton
               variant="primary"
@@ -81,23 +71,25 @@ export default function ForgotPassword() {
             </p>
           </div>
         ) : (
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
             <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold text-gray-900">Forgot Password</h1>
-              <p className="text-gray-600 mt-2">
-                Enter your email or phone number to reset your password
-              </p>
+              <h1 className="text-2xl font-bold text-gray-900">
+                Forgot Password
+              </h1>
             </div>
 
-            <TextInput
-              label="Email or Phone Number"
-              name="emailOrPhone"
-              value={emailOrPhone}
-              onChange={(e) => setEmailOrPhone(e.target.value)}
-              placeholder="Enter email or phone"
-              error={errors.emailOrPhone}
-            />
-
+            <div className="">
+              <TextInput
+                label="Email"
+                placeholder="Enter your email"
+                {...register("email")}
+                error={errors.email?.message}
+              />
+              <p className="font-normal text-xs text-[#565656] mt-2">
+                You will receive an email with a one-time password (OTP) from us
+                to reset your password.
+              </p>
+            </div>
             <LoginButton
               variant="primary"
               type="submit"

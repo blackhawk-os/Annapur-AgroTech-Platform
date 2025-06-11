@@ -41,11 +41,13 @@ export const Article = () => {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-12 md:py-20">
-      <HeaderText
-        text="Latest Articles"
-        text2="From our blog posts"
-        className="mb-12 text-center"
-      />
+      <div className="mb-8">
+        <HeaderText
+          text="Latest Articles"
+          text2="From our blog posts"
+          className="text-center"
+        />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {article.map((article, index) => (

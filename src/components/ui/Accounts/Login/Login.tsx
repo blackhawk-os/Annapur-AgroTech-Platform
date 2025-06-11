@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  loginSchema,
+  LoginSchemaType,
+} from "@/lib/validation/LoginForm/LoginFormSchema";
+
 import { LoginButton } from "@/components/ui/Buttons/LoginButton";
 import HeaderText from "@/components/HeaderText";
 import Link from "next/link";
@@ -9,43 +16,25 @@ import PasswordInput from "@/components/PasswordInput";
 import CheckboxInput from "@/components/CheckboxInput";
 
 export default function Login() {
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [credentials, setCredentials] = useState({
-    emailOrPhone: "",
-    password: "",
-    rememberMe: false,
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+    watch,
+  } = useForm<LoginSchemaType>({
+    resolver: zodResolver(loginSchema),
+    mode: "onBlur",
+    defaultValues: {
+      email: "",
+      password: "",
+      rememberMe: false,
+    },
   });
 
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^(98|97)\d{8}$/;
-
-    if (!credentials.emailOrPhone) {
-      newErrors.emailOrPhone = "Email or phone is required";
-    } else if (
-      !emailRegex.test(credentials.emailOrPhone) &&
-      !phoneRegex.test(credentials.emailOrPhone)
-    ) {
-      newErrors.emailOrPhone = "Invalid email or phone number";
-    }
-
-    if (!credentials.password) {
-      newErrors.password = "Password is required";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const onSubmit = (data: LoginSchemaType) => {
+    console.log("Login submitted with data:", data);
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Submit login logic
-      console.log("Login submitted:", credentials);
-    }
-  };
-
   return (
     <div className="min-h-screen flex">
       {/* Left Side - Image Section */}
@@ -88,55 +77,36 @@ export default function Login() {
           </div>
 
           {/* Login Form */}
-          <form className="space-y-5 mt-10" onSubmit={handleSubmit}>
+          <form className="space-y-5 mt-10" onSubmit={handleSubmit(onSubmit)}>
             <TextInput
               label="Email or Phone Number"
-              name="emailOrPhone"
-              value={credentials.emailOrPhone}
-              onChange={(e) =>
-                setCredentials({
-                  ...credentials,
-                  emailOrPhone: e.target.value,
-                })
-              }
+              {...register("email")}
               placeholder="Enter email or phone"
-              error={errors.emailOrPhone}
+              error={errors.email?.message}
             />
 
             <PasswordInput
               label="Password"
-              name="password"
-              value={credentials.password}
-              onChange={(e) =>
-                setCredentials({
-                  ...credentials,
-                  password: e.target.value,
-                })
-              }
+              {...register("password")}
               placeholder="Enter your password"
-              error={errors.password}
+              error={errors.password?.message}
             />
 
             <div className="flex items-center justify-between">
               <CheckboxInput
                 label="Remember me"
                 name="rememberMe"
-                checked={credentials.rememberMe}
-                onChange={(e) =>
-                  setCredentials({
-                    ...credentials,
-                    rememberMe: e.target.checked,
-                  })
-                }
+                checked={watch("rememberMe") || false}
+                onChange={(e) => setValue("rememberMe", e.target.checked)}
               />
-             
-             <Link
+
+              <Link
                 href="/acccount/forgot-password"
                 className="text-sm font-medium text-accent hover:underline text-[#88B04B]"
-                >
+              >
                 Forgot password?
               </Link>
-        </div>
+            </div>
 
             <LoginButton
               variant="primary"
