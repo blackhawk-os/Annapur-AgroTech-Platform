@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import HeaderText from "./HeaderText";
 
 export const Filter = () => {
   const MAX_PRICE = 5000;
@@ -142,130 +143,146 @@ export const Filter = () => {
     console.log("Applying filters:", filters);
   };
 
-  return (
-    <div className="ml-4 mt-4 w-64 p-4 bg-white rounded-lg shadow-md">
-      <h2 className="text-lg font-bold text-gray-800 mb-4">Filters</h2>
+ return (
+  <>
+    <div 
+      className="min-h-screen p-8 bg-cover bg-center"
+      style={{ 
+        backgroundImage: "url('/image/banner/banner-bg.png')",
+        backgroundRepeat: "repeat",
+      }}
+    >
+      <div className="text-center mb-8">
+        <HeaderText 
+          text="Product Categories" 
+          text2="Browse all categories of farm fresh products" 
+          className="text-center"
+        />
+      </div>
 
-      {/* Categories Filter */}
-      <div className="mb-5">
-        <h3 className="text-md font-semibold text-gray-800 mb-2">Categories</h3>
-        <div className="space-y-1">
-          {categories.map(category => (
-            <div key={category.title} className="flex items-center">
-              <input
-                type="checkbox"
-                id={category.title}
-                checked={selectedCategories.includes(category.title)}
-                onChange={() => toggleCategory(category.title)}
-                className="h-4 w-4 accent-[#88B04B] border-gray-300 rounded focus:ring-2 focus:ring-[#88B04B]"
-              />
-              <label htmlFor={category.title} className="ml-2 text-sm text-gray-700 flex items-center">
-                {category.icon && (
-                  <Image 
-                    src={category.icon} 
-                    alt={category.title}
-                    width={20}
-                    height={20}
-                    className="mr-2"
+      <div className="flex justify-start gap-8">
+        {/* Filter Sidebar */}
+        <div className="w-64 p-4 bg-white rounded-lg shadow-md">
+          <h2 className="text-lg font-bold text-gray-800 mb-4">Filters</h2>
+
+          {/* Categories Filter */}
+          <div className="mb-5">
+            <h3 className="text-md font-semibold text-gray-800 mb-2">Categories</h3>
+            <div className="space-y-1">
+              {categories.map(category => (
+                <div key={category.title} className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id={category.title}
+                    checked={selectedCategories.includes(category.title)}
+                    onChange={() => toggleCategory(category.title)}
+                    className="h-4 w-4 accent-[#88B04B] border-gray-300 rounded focus:ring-2 focus:ring-[#88B04B]"
                   />
-                )}
-                {category.title}
-              </label>
+                  <label htmlFor={category.title} className="ml-2 text-sm text-gray-700 flex items-center">
+                    {category.icon && (
+                      <Image 
+                        src={category.icon} 
+                        alt={category.title}
+                        width={20}
+                        height={20}
+                        className="mr-2"
+                      />
+                    )}
+                    {category.title}
+                  </label>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <hr className="my-4 border-t border-gray-200" />
+
+          {/* Price Range Filter */}
+          <div className="mb-5">
+            <h3 className="text-md font-semibold text-gray-800 mb-2">Price Range (NPR)</h3>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center">
+                <span className="text-xs text-gray-600 mr-1">NPR</span>
+                <input
+                  type="number"
+                  value={priceRange.min}
+                  onChange={(e) => handlePriceChange(e, "min")}
+                  className="w-16 p-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-[#88B04B] focus:border-[#88B04B]"
+                  min="0"
+                  max={MAX_PRICE}
+                />
+              </div>
+              <span className="text-xs text-gray-500 mx-1">to</span>
+              <div className="flex items-center">
+                <span className="text-xs text-gray-600 mr-1">NPR</span>
+                <input
+                  type="number"
+                  value={priceRange.max}
+                  onChange={(e) => handlePriceChange(e, "max")}
+                  className="w-16 p-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-[#88B04B] focus:border-[#88B04B]"
+                  min={priceRange.min}
+                  max={MAX_PRICE}
+                />
+              </div>
+            </div>
+
+            {/* Dual Range Slider */}
+            <div className="relative h-8 py-3" ref={containerRef}>
+              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 rounded-full transform -translate-y-1/2"></div>
+              <div 
+                className="absolute top-1/2 h-1 bg-[#88B04B] rounded-full transform -translate-y-1/2"
+                style={{ 
+                  left: `${(priceRange.min / MAX_PRICE) * 100}%`, 
+                  right: `${100 - (priceRange.max / MAX_PRICE) * 100}%` 
+                }}
+              ></div>
+              <div 
+                className={`absolute w-4 h-4 bg-[#88B04B] rounded-full border-2 border-white shadow-md transform -translate-y-1/2 cursor-grab ${
+                  minSliderActive ? "ring-2 ring-[#88B04B] ring-opacity-50 scale-125 cursor-grabbing" : ""
+                }`}
+                style={{ 
+                  left: `${(priceRange.min / MAX_PRICE) * 100}%`, 
+                  top: "50%",
+                  zIndex: minSliderActive ? 20 : 10
+                }}
+                onMouseDown={() => setMinSliderActive(true)}
+                onTouchStart={() => setMinSliderActive(true)}
+              ></div>
+              <div 
+                className={`absolute w-4 h-4 bg-[#88B04B] rounded-full border-2 border-white shadow-md transform -translate-y-1/2 cursor-grab ${
+                  maxSliderActive ? "ring-2 ring-[#88B04B] ring-opacity-50 scale-125 cursor-grabbing" : ""
+                }`}
+                style={{ 
+                  left: `${(priceRange.max / MAX_PRICE) * 100}%`, 
+                  top: "50%",
+                  zIndex: maxSliderActive ? 20 : 10
+                }}
+                onMouseDown={() => setMaxSliderActive(true)}
+                onTouchStart={() => setMaxSliderActive(true)}
+              ></div>
+            </div>
+            <div className="flex justify-between text-xs text-gray-500 mt-1">
+              <span>0</span>
+              <span>{MAX_PRICE}</span>
+            </div>
+          </div>
+
+          <hr className="my-4 border-t border-gray-200" />
+
+          <button
+            onClick={applyFilters}
+            className="w-full bg-[#88B04B] hover:bg-[#7A9F44] text-white font-medium py-2 px-4 rounded-md transition shadow text-sm"
+          >
+            Apply Filters
+          </button>
+        </div>
+
+        {/* Section for products */}
+        <div className="flex-1">
+          {/* Add products here */}
         </div>
       </div>
-
-      <hr className="my-4 border-t border-gray-200" />
-
-      {/* Price Range Filter */}
-      <div className="mb-5">
-        <h3 className="text-md font-semibold text-gray-800 mb-2">Price Range (NPR)</h3>
-        
-        {/* Price Inputs */}
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center">
-            <span className="text-xs text-gray-600 mr-1">NPR</span>
-            <input
-              type="number"
-              value={priceRange.min}
-              onChange={(e) => handlePriceChange(e, "min")}
-              className="w-16 p-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-[#88B04B] focus:border-[#88B04B]"
-              min="0"
-              max={MAX_PRICE}
-            />
-          </div>
-          <span className="text-xs text-gray-500 mx-1">to</span>
-          <div className="flex items-center">
-            <span className="text-xs text-gray-600 mr-1">NPR</span>
-            <input
-              type="number"
-              value={priceRange.max}
-              onChange={(e) => handlePriceChange(e, "max")}
-              className="w-16 p-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-[#88B04B] focus:border-[#88B04B]"
-              min={priceRange.min}
-              max={MAX_PRICE}
-            />
-          </div>
-        </div>
-        
-        {/* Dual Range Slider */}
-        <div className="relative h-8 py-3" ref={containerRef}>
-          {/* Background track */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 rounded-full transform -translate-y-1/2"></div>
-          
-          {/* Active range track */}
-          <div 
-            className="absolute top-1/2 h-1 bg-[#88B04B] rounded-full transform -translate-y-1/2"
-            style={{ 
-              left: `${(priceRange.min / MAX_PRICE) * 100}%`, 
-              right: `${100 - (priceRange.max / MAX_PRICE) * 100}%` 
-            }}
-          ></div>
-          
-          {/* Min price thumb */}
-          <div 
-            className={`absolute w-4 h-4 bg-[#88B04B] rounded-full border-2 border-white shadow-md transform -translate-y-1/2 cursor-grab ${
-              minSliderActive ? "ring-2 ring-[#88B04B] ring-opacity-50 scale-125 cursor-grabbing" : ""
-            }`}
-            style={{ 
-              left: `${(priceRange.min / MAX_PRICE) * 100}%`, 
-              top: "50%",
-              zIndex: minSliderActive ? 20 : 10
-            }}
-            onMouseDown={() => setMinSliderActive(true)}
-            onTouchStart={() => setMinSliderActive(true)}
-          ></div>
-          
-          {/* Max price thumb */}
-          <div 
-            className={`absolute w-4 h-4 bg-[#88B04B] rounded-full border-2 border-white shadow-md transform -translate-y-1/2 cursor-grab ${
-              maxSliderActive ? "ring-2 ring-[#88B04B] ring-opacity-50 scale-125 cursor-grabbing" : ""
-            }`}
-            style={{ 
-              left: `${(priceRange.max / MAX_PRICE) * 100}%`, 
-              top: "50%",
-              zIndex: maxSliderActive ? 20 : 10
-            }}
-            onMouseDown={() => setMaxSliderActive(true)}
-            onTouchStart={() => setMaxSliderActive(true)}
-          ></div>
-        </div>
-        
-        <div className="flex justify-between text-xs text-gray-500 mt-1">
-          <span>0</span>
-          <span>{MAX_PRICE}</span>
-        </div>
-      </div>
-
-      <hr className="my-4 border-t border-gray-200" />
-
-      <button
-        onClick={applyFilters}
-        className="w-full bg-[#88B04B] hover:bg-[#7A9F44] text-white font-medium py-2 px-4 rounded-md transition shadow text-sm"
-      >
-        Apply Filters
-      </button>
     </div>
-  );
+  </>
+);
 };
