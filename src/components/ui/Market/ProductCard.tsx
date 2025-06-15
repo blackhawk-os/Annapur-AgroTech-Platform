@@ -39,7 +39,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
             <span className="text-md font-bold text-green-600">
               NRs. {product.price}
             </span>
-            <button className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm">
+            <button className="bg-[#88B04B] hover:opacity-60 text-white px-3 py-1 rounded text-sm">
               Add to Cart
             </button>
           </div>

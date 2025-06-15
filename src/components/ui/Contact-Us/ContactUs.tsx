@@ -1,96 +1,81 @@
 "use client";
 import { useState } from "react";
 import HeaderText from "@/components/HeaderText";
+import TextInput from "@/components/TextInput";
+import { FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
+import zod from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  contactSchema,
+  ContactFormData,
+} from "@/lib/validation/ContactUsForm/contactSchema";
 
 export default function ContactUs() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Send data to backend API here
-    console.log(form);
+  const onSubmit = (data: ContactFormData) => {
+    console.log(data);
     alert("Message sent!");
   };
-
   return (
     <div
       className="min-h-screen p-8 bg-cover bg-center flex flex-col items-center"
       style={{
-        backgroundImage: "url('/image/banner/banner-bg.png')",
+        // backgroundImage: "url('/image/banner/banner-bg.png')",
         backgroundRepeat: "no-repeat",
       }}
     >
       <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg shadow-md w-full max-w-xl space-y-4"
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-white p-6 w-lg max-w-xl space-y-4"
       >
         <div className="mb-6">
           <HeaderText
             text="Get in Touch"
-            text2="Contact Us"
+            text2="Ask Us a Question"
             className=" text-center"
           />
         </div>
-        <input
-          type="text"
-          name="name"
+        <TextInput
+          label="Name *"
           placeholder="Your Name"
-          className="w-full border border-gray-300 p-3 rounded"
-          value={form.name}
-          onChange={handleChange}
-          required
+          {...register("name")}
+          error={errors.name?.message}
         />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email (optional)"
-          className="w-full border border-gray-300 p-3 rounded"
-          value={form.email}
-          onChange={handleChange}
+        <TextInput
+          label="Email *"
+          placeholder="Your Email"
+          {...register("email")}
+          error={errors.email?.message}
         />
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Your Phone-Number"
-          className="w-full border border-gray-300 p-3 rounded"
-          value={form.phone}
-          onChange={handleChange}
-          required
-          pattern="[0-9]{10}"
-          title="Enter a valid 10-digit phone number"
+        <TextInput
+          label="Subject *"
+          placeholder="Your Subject"
+          {...register("subject")}
+          error={errors.subject?.message}
         />
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          className="w-full border border-gray-300 p-3 rounded"
-          value={form.subject}
-          onChange={handleChange}
-          required
-        />
+
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Message *
+        </label>
         <textarea
-          name="message"
+          {...register("message")}
           placeholder="Your Message"
-          className="w-full border border-gray-300 p-3 rounded h-32 resize-none"
-          value={form.message}
-          onChange={handleChange}
-          required
+          className="w-full border border-gray-300 p-3 rounded h-32 resize-none mb-0 focus:outline-none focus:border-[#88B04B] focus:ring-2 focus:ring-[#88B04B]/50"
         />
+        {errors.message && (
+          <p className="text-red-500 text-sm ">{errors.message.message}</p>
+        )}
         <button
           type="submit"
-          className="bg-[#88B04B] hover:bg-[#769740] text-white font-semibold py-2 px-6 rounded"
+          className="bg-[#88B04B] hover:bg-[#769740] text-white font-semibold py-2 px-6 mt-4 rounded-sm"
         >
           Send Message
         </button>
