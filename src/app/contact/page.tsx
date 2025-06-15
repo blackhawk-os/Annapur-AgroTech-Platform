@@ -7,7 +7,7 @@ export default function ContactUsPage() {
   return (
     <>
       <Breadcrumb />
-      <div className="flex flex-row  mx-20 h-screen">
+      <div className="flex flex-row  mx-20 h-full">
         <Details />
         <ContactUs />
       </div>

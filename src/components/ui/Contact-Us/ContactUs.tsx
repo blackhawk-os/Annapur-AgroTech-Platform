@@ -56,6 +56,12 @@ export default function ContactUs() {
           error={errors.email?.message}
         />
         <TextInput
+          label="Phone *"
+          placeholder="Your Phone"
+          {...register("phone")}
+          error={errors.phone?.message}
+        />
+        <TextInput
           label="Subject *"
           placeholder="Your Subject"
           {...register("subject")}
