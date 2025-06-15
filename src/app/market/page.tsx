@@ -6,6 +6,7 @@ import { SearchBar } from "@/components/ui/Market/SearchBar";
 import { ProductCard } from "@/components/ui/Market/ProductCard";
 import { Pagination } from "@/components/ui/Market/Pagination";
 import products from "@/data/market-products.json";
+import Breadcrumb from "@/components/BreadCrumbs/BreadCrumb";
 
 const ITEMS_PER_PAGE = 12;
 const MAX_PRICE = 5000;
@@ -13,12 +14,16 @@ const MAX_PRICE = 5000;
 export default function Market() {
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string[]>(["All Products"]);
+  const [selectedCategory, setSelectedCategory] = useState<string[]>([
+    "All Products",
+  ]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
-      const matchesSearch = product.name.toLowerCase().includes(query.toLowerCase());
+      const matchesSearch = product.name
+        .toLowerCase()
+        .includes(query.toLowerCase());
       const inPriceRange =
         Number(product.price) >= priceRange.min &&
         Number(product.price) <= priceRange.max;
@@ -31,10 +36,14 @@ export default function Market() {
 
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentItems = filteredProducts.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
   return (
     <section className="min-h-screen">
+      <Breadcrumb />
       <div className="top-0 z-20 p-4">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-4">
           <HeaderText
@@ -71,7 +80,8 @@ export default function Market() {
               currentPage={currentPage}
               totalPages={totalPages}
               onPageChange={(page) => {
-                if (page < 1 || page > totalPages || page === currentPage) return;
+                if (page < 1 || page > totalPages || page === currentPage)
+                  return;
                 setCurrentPage(page);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}

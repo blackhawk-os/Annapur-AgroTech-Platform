@@ -3,17 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+type Props = {
+  productName?: string;
+};
+
 const labelMap: Record<string, string> = {
   acccount: "Account",
   "create-account": "Create Account",
   "forgot-password": "Forgot Password",
   "contact-us": "Contact Us",
   login: "Login",
+  market: "Market",
 };
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ productName }: Props) => {
   const pathname = usePathname();
   const segments = pathname.split("/").filter(Boolean);
+
   const visibleSegments = segments.filter(
     (segment) =>
       !(
@@ -52,8 +58,12 @@ const Breadcrumb = () => {
             "/" + segments.slice(0, segments.indexOf(segment) + 1).join("/");
 
           const label =
-            labelMap[segment] ||
-            segment.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+            isLast && segments.includes("market") && productName
+              ? productName
+              : labelMap[segment] ||
+                segment
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase());
 
           return (
             <li key={href} className="flex items-center">
