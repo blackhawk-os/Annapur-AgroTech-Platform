@@ -1,11 +1,11 @@
-// components/Market/SearchBar.tsx
 "use client";
 
-import { useState } from "react";
+interface SearchBarProps {
+  query: string;
+  setQuery: (value: string) => void;
+}
 
-export const SearchBar = () => {
-  const [query, setQuery] = useState("");
-
+export const SearchBar = ({ query, setQuery }: SearchBarProps) => {
   return (
     <input
       type="text"
