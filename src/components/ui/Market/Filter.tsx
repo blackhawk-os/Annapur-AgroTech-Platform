@@ -2,14 +2,24 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import HeaderText from "../../HeaderText";
+interface FilterProps {
+  selectedCategory: string[];
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string[]>>;
+  priceRange: { min: number; max: number };
+  setPriceRange: React.Dispatch<
+    React.SetStateAction<{ min: number; max: number }>
+  >;
+  maxPrice: number;
+}
 
-export const Filter = () => {
-  const MAX_PRICE = 5000;
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([
-    "All Products",
-  ]);
-  const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
+export const Filter: React.FC<FilterProps> = ({
+  selectedCategory,
+  setSelectedCategory,
+  priceRange,
+  setPriceRange,
+  maxPrice,
+}: FilterProps) => {
+  const MAX_PRICE = maxPrice || 5000;
   const [minSliderActive, setMinSliderActive] = useState(false);
   const [maxSliderActive, setMaxSliderActive] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,9 +70,9 @@ export const Filter = () => {
 
   const toggleCategory = (title: string) => {
     if (title === "All Products") {
-      setSelectedCategories(["All Products"]);
+      setSelectedCategory(["All Products"]);
     } else {
-      setSelectedCategories((prev) => {
+      setSelectedCategory((prev) => {
         const newSelected = prev.filter((c) => c !== "All Products");
         return newSelected.includes(title)
           ? newSelected.filter((c) => c !== title)
@@ -138,16 +148,6 @@ export const Filter = () => {
     };
   }, [minSliderActive, maxSliderActive, MAX_PRICE]);
 
-  const applyFilters = () => {
-    const filters = {
-      categories: selectedCategories.includes("All Products")
-        ? categories.slice(1).map((c) => c.title)
-        : selectedCategories,
-      priceRange,
-    };
-    console.log("Applying filters:", filters);
-  };
-
   return (
     <>
       <div
@@ -173,7 +173,7 @@ export const Filter = () => {
                     <input
                       type="checkbox"
                       id={category.title}
-                      checked={selectedCategories.includes(category.title)}
+                      checked={selectedCategory.includes(category.title)}
                       onChange={() => toggleCategory(category.title)}
                       className="h-4 w-4 accent-[#88B04B] border-gray-300 rounded focus:ring-2 focus:ring-[#88B04B]"
                     />
@@ -277,12 +277,12 @@ export const Filter = () => {
 
             <hr className="my-4 border-t border-gray-200" />
 
-            <button
+            {/* <button
               onClick={applyFilters}
               className="w-full bg-[#88B04B] hover:bg-[#7A9F44] text-white font-medium py-2 px-4 rounded-md transition shadow text-sm"
             >
               Apply Filters
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

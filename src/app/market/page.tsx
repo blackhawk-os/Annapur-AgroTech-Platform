@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-
+import React, { useState, useMemo } from "react";
 import HeaderText from "@/components/HeaderText";
 import { Filter } from "@/components/ui/Market/Filter";
 import { SearchBar } from "@/components/ui/Market/SearchBar";
@@ -9,13 +8,33 @@ import { Pagination } from "@/components/ui/Market/Pagination";
 import products from "@/data/market-products.json";
 
 const ITEMS_PER_PAGE = 12;
+const MAX_PRICE = 5000;
 
 export default function Market() {
   const [currentPage, setCurrentPage] = React.useState(1);
-  const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
+  const [selectedCategory, setSelectedCategory] = useState<string[]>([
+    "All Products",
+  ]);
+  const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
 
+  const filteredProducts = useMemo(() => {
+    return products.filter((product) => {
+      const inPriceRange =
+        Number(product.price) >= priceRange.min &&
+        Number(product.price) <= priceRange.max;
+      const inCategory =
+        selectedCategory.includes("All Products") ||
+        selectedCategory.includes(product.category);
+      return inPriceRange && inCategory;
+    });
+  }, [selectedCategory, priceRange]);
+
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = products.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentItems = filteredProducts.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
   return (
     <>
       <section className=" min-h-screen">
@@ -30,7 +49,13 @@ export default function Market() {
 
         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-6">
           <aside className="md:col-span-1">
-            <Filter />
+            <Filter
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+              priceRange={priceRange}
+              setPriceRange={setPriceRange}
+              maxPrice={MAX_PRICE}
+            />
           </aside>
 
           <main className="md:col-span-3">
