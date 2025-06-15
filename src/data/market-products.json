@@ -1,7 +1,7 @@
 [
   {
     "name": "Organic Tomatoes",
-    "price": "50/kg",
+    "price": "50",
     "image": "/image/market/tomatoes.jpg",
     "description": "Fresh organic tomatoes from local farmers.",
     "id": 1,
@@ -9,7 +9,7 @@
   },
   {
     "name": "Basmati Rice",
-    "price": "90/kg",
+    "price": "90",
     "image": "/image/market/rice.webp",
     "description": "Premium aged basmati rice.",
     "id": 2,
@@ -17,7 +17,7 @@
   },
   {
     "name": "Free-Range Eggs",
-    "price": "120/dozen",
+    "price": "120",
     "image": "/image/market/eggs.jpg",
     "description": "Fresh free-range eggs from local farms.",
     "id": 3,
@@ -25,7 +25,7 @@
   },
   {
     "name": "Organic Potatoes",
-    "price": "60/kg",
+    "price": "60",
     "image": "/image/market/potatoes.jpg",
     "description": "Locally sourced organic potatoes.",
     "id": 4,
@@ -33,7 +33,7 @@
   },
   {
     "name": "Organic Carrots",
-    "price": "70/kg",
+    "price": "70",
     "image": "/image/market/carrots.jpg",
     "description": "Fresh organic carrots from local farms.",
     "id": 5,
@@ -41,7 +41,7 @@
   },
   {
     "name": "Organic Spinach",
-    "price": "80/kg",
+    "price": "80",
     "image": "/image/market/spinach.jpg",
     "description": "Organic spinach from local farms.",
     "id": 6,
@@ -49,7 +49,7 @@
   },
   {
     "name": "Local Honey",
-    "price": "300/kg",
+    "price": "300",
     "image": "/image/market/honey.jpg",
     "description": "Pure local honey harvested from nearby hives.",
     "id": 7,
@@ -57,7 +57,7 @@
   },
   {
     "name": "Fresh Milk",
-    "price": "50/litre",
+    "price": "50",
     "image": "/image/market/milk.jpg",
     "description": "Fresh milk from local dairy farms.",
     "id": 8,
@@ -65,7 +65,7 @@
   },
   {
     "name": "Organic Wheat Flour",
-    "price": "40/kg",
+    "price": "40",
     "image": "/image/market/wheat_flour.jpg",
     "description": "Whole wheat flour from organic farms.",
     "id": 9,
@@ -73,7 +73,7 @@
   },
   {
     "name": "Organic Sugar",
-    "price": "60/kg",
+    "price": "60",
     "image": "/image/market/sugar.jpg",
     "description": "Pure organic sugar from local farms.",
     "id": 10,
@@ -81,7 +81,7 @@
   },
   {
     "name": "Fresh Green Beans",
-    "price": "70/kg",
+    "price": "70",
     "image": "/image/market/green_beans.jpg",
     "description": "Crisp and fresh green beans from local farms.",
     "id": 11,
@@ -89,7 +89,7 @@
   },
   {
     "name": "Organic Cucumber",
-    "price": "30/kg",
+    "price": "30",
     "image": "/image/market/cucumber.jpg",
     "description": "Cool and refreshing organic cucumbers.",
     "id": 12,
@@ -97,7 +97,7 @@
   },
   {
     "name": "Fresh Cauliflower",
-    "price": "50/kg",
+    "price": "50",
     "image": "/image/market/cauliflower.jpg",
     "description": "Freshly harvested cauliflower from local farms.",
     "id": 13,
@@ -105,7 +105,7 @@
   },
   {
     "name": "Organic Bell Peppers",
-    "price": "80/kg",
+    "price": "80",
     "image": "/image/market/bell_peppers.jpg",
     "description": "Colorful and crunchy organic bell peppers.",
     "id": 14,
@@ -113,7 +113,7 @@
   },
   {
     "name": "Local Grapes",
-    "price": "100/kg",
+    "price": "100",
     "image": "/image/market/grapes.jpg",
     "description": "Sweet and juicy grapes from local vineyards.",
     "id": 15,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Organic Bananas",
-    "price": "40/dozen",
+    "price": "40",
     "image": "/image/market/bananas.jpg",
     "description": "Fresh organic bananas from local farms.",
     "id": 16,
@@ -129,7 +129,7 @@
   },
   {
     "name": "Organic Avocados",
-    "price": "60/dozen",
+    "price": "60",
     "image": "/image/market/avocados.jpg",
     "description": "Fresh organic avocados from local farms.",
     "id": 17,
@@ -137,7 +137,7 @@
   },
   {
     "name": "Organic Lettuce",
-    "price": "30/kg",
+    "price": "30",
     "image": "/image/market/lettuce.jpg",
     "description": "Healthy and fresh organic lettuce from local farms.",
     "id": 18,
@@ -145,7 +145,7 @@
   },
   {
     "name": "Fresh Strawberries",
-    "price": "150/kg",
+    "price": "150",
     "image": "/image/market/strawberries.jpg",
     "description": "Sweet and juicy strawberries from local farms.",
     "id": 19,
@@ -153,7 +153,7 @@
   },
   {
     "name": "Organic Blueberries",
-    "price": "200/kg",
+    "price": "200",
     "image": "/image/market/blueberries.jpg",
     "description": "Fresh organic blueberries from local farms.",
     "id": 20,
@@ -161,7 +161,7 @@
   },
   {
     "name": "Organic Zucchini",
-    "price": "60/kg",
+    "price": "60",
     "image": "/image/market/zucchini.jpg",
     "description": "Fresh organic zucchini from local farms.",
     "id": 21,
@@ -169,7 +169,7 @@
   },
   {
     "name": "Local Oranges",
-    "price": "80/kg",
+    "price": "80",
     "image": "/image/market/oranges.jpg",
     "description": "Sweet and juicy oranges from local orchards.",
     "id": 22,
@@ -177,7 +177,7 @@
   },
   {
     "name": "Organic Lemons",
-    "price": "50/kg",
+    "price": "50",
     "image": "/image/market/lemons.jpg",
     "description": "Fresh organic lemons from local farms.",
     "id": 23,
@@ -185,7 +185,7 @@
   },
   {
     "name": "Organic Garlic",
-    "price": "100/kg",
+    "price": "100",
     "image": "/image/market/garlic.jpg",
     "description": "Strong and flavorful organic garlic.",
     "id": 24,
@@ -193,7 +193,7 @@
   },
   {
     "name": "Organic Onions",
-    "price": "40/kg",
+    "price": "40",
     "image": "/image/market/onions.jpg",
     "description": "Fresh organic onions from local farms.",
     "id": 25,
@@ -201,7 +201,7 @@
   },
   {
     "name": "Whole Grain Bread",
-    "price": "60/loaf",
+    "price": "60/l",
     "image": "/image/market/bread.jpg",
     "description": "Fresh whole grain bread baked daily.",
     "id": 26,
@@ -209,7 +209,7 @@
   },
   {
     "name": "Organic Apples",
-    "price": "80/kg",
+    "price": "80",
     "image": "/image/market/apples.jpg",
     "description": "Crisp organic apples from local orchards.",
     "id": 27,
@@ -217,7 +217,7 @@
   },
   {
     "name": "Fresh Cottage Cheese",
-    "price": "100/kg",
+    "price": "100",
     "image": "/image/market/cottage_cheese.jpg",
     "description": "Fresh homemade cottage cheese.",
     "id": 28,
@@ -225,7 +225,7 @@
   },
   {
     "name": "Organic Broccoli",
-    "price": "70/kg",
+    "price": "70",
     "image": "/image/market/broccoli.jpg",
     "description": "Fresh organic broccoli from local farms.",
     "id": 29,
@@ -233,7 +233,7 @@
   },
   {
     "name": "Organic Peas",
-    "price": "90/kg",
+    "price": "90",
     "image": "/image/market/peas.jpg",
     "description": "Sweet organic peas from local farms.",
     "id": 30,
@@ -241,7 +241,7 @@
   },
   {
     "name": "Organic Corn",
-    "price": "50/kg",
+    "price": "50",
     "image": "/image/market/corn.jpg",
     "description": "Fresh organic corn from local farms.",
     "id": 31,
@@ -249,7 +249,7 @@
   },
   {
     "name": "Organic Mushrooms",
-    "price": "120/kg",
+    "price": "120",
     "image": "/image/market/mushrooms.jpg",
     "description": "Fresh organic mushrooms from local farms.",
     "id": 32,
@@ -257,7 +257,7 @@
   },
   {
     "name": "Organic Pumpkin",
-    "price": "60/kg",
+    "price": "60",
     "image": "/image/market/pumpkin.jpg",
     "description": "Fresh organic pumpkin from local farms.",
     "id": 33,
@@ -265,7 +265,7 @@
   },
   {
     "name": "Organic Ginger",
-    "price": "150/kg",
+    "price": "150",
     "image": "/image/market/ginger.jpg",
     "description": "Fresh organic ginger with strong flavor.",
     "id": 34,
@@ -273,7 +273,7 @@
   },
   {
     "name": "Organic Turmeric",
-    "price": "180/kg",
+    "price": "18",
     "image": "/image/market/turmeric.jpg",
     "description": "Fresh organic turmeric root.",
     "id": 35,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Organic Cinnamon",
-    "price": "200/kg",
+    "price": "200",
     "image": "/image/market/cinnamon.jpg",
     "description": "Premium organic cinnamon sticks.",
     "id": 36,
@@ -289,7 +289,7 @@
   },
   {
     "name": "Organic Almonds",
-    "price": "500/kg",
+    "price": "500",
     "image": "/image/market/almonds.jpg",
     "description": "Premium organic almonds from local farms.",
     "id": 37,
@@ -297,7 +297,7 @@
   },
   {
     "name": "Organic Walnuts",
-    "price": "450/kg",
+    "price": "450",
     "image": "/image/market/walnuts.jpg",
     "description": "Fresh organic walnuts from local orchards.",
     "id": 38,
@@ -305,7 +305,7 @@
   },
   {
     "name": "Organic Cashews",
-    "price": "600/kg",
+    "price": "600",
     "image": "/image/market/cashews.jpg",
     "description": "Premium organic cashews.",
     "id": 39,
@@ -313,7 +313,7 @@
   },
   {
     "name": "Organic Raisins",
-    "price": "300/kg",
+    "price": "300",
     "image": "/image/market/raisins.jpg",
     "description": "Sweet organic raisins from local grapes.",
     "id": 40,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Organic Dates",
-    "price": "350/kg",
+    "price": "350",
     "image": "/image/market/dates.jpg",
     "description": "Fresh organic dates from local farms.",
     "id": 41,
@@ -329,7 +329,7 @@
   },
   {
     "name": "Organic Figs",
-    "price": "400/kg",
+    "price": "400",
     "image": "/image/market/figs.jpg",
     "description": "Sweet organic figs from local orchards.",
     "id": 42,
@@ -337,7 +337,7 @@
   },
   {
     "name": "Organic Quinoa",
-    "price": "250/kg",
+    "price": "250",
     "image": "/image/market/quinoa.jpg",
     "description": "Premium organic quinoa from local farms.",
     "id": 43,
@@ -345,7 +345,7 @@
   },
   {
     "name": "Organic Oats",
-    "price": "120/kg",
+    "price": "120",
     "image": "/image/market/oats.jpg",
     "description": "Whole grain organic oats.",
     "id": 44,
@@ -353,7 +353,7 @@
   },
   {
     "name": "Organic Barley",
-    "price": "100/kg",
+    "price": "100",
     "image": "/image/market/barley.jpg",
     "description": "Premium organic barley grains.",
     "id": 45,
@@ -361,7 +361,7 @@
   },
   {
     "name": "Organic Lentils",
-    "price": "110/kg",
+    "price": "110",
     "image": "/image/market/lentils.jpg",
     "description": "High-protein organic lentils.",
     "id": 46,
@@ -369,7 +369,7 @@
   },
   {
     "name": "Organic Chickpeas",
-    "price": "130/kg",
+    "price": "130",
     "image": "/image/market/chickpeas.jpg",
     "description": "Fresh organic chickpeas from local farms.",
     "id": 47,
@@ -377,7 +377,7 @@
   },
   {
     "name": "Organic Kidney Beans",
-    "price": "140/kg",
+    "price": "140",
     "image": "/image/market/kidney_beans.jpg",
     "description": "Premium organic kidney beans.",
     "id": 48,
@@ -385,7 +385,7 @@
   },
   {
     "name": "Organic Soybeans",
-    "price": "150/kg",
+    "price": "150",
     "image": "/image/market/soybeans.jpg",
     "description": "Fresh organic soybeans from local farms.",
     "id": 49,
@@ -393,7 +393,7 @@
   },
   {
     "name": "Organic Black Beans",
-    "price": "160/kg",
+    "price": "160",
     "image": "/image/market/black_beans.jpg",
     "description": "Premium organic black beans.",
     "id": 50,
