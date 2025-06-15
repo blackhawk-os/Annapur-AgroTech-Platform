@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Organic Tomatoes",
+    "price": "50/kg",
+    "image": "/image/market/tomatoes.jpg",
+    "description": "Fresh organic tomatoes from local farmers.",
+    "id": 1,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Basmati Rice",
+    "price": "90/kg",
+    "image": "/image/market/rice.webp",
+    "description": "Premium aged basmati rice.",
+    "id": 2,
+    "category": "Grains"
+  },
+  {
+    "name": "Free-Range Eggs",
+    "price": "120/dozen",
+    "image": "/image/market/eggs.jpg",
+    "description": "Fresh free-range eggs from local farms.",
+    "id": 3,
+    "category": "Eggs"
+  },
+  {
+    "name": "Organic Potatoes",
+    "price": "60/kg",
+    "image": "/image/market/potatoes.jpg",
+    "description": "Locally sourced organic potatoes.",
+    "id": 4,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Carrots",
+    "price": "70/kg",
+    "image": "/image/market/carrots.jpg",
+    "description": "Fresh organic carrots from local farms.",
+    "id": 5,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Spinach",
+    "price": "80/kg",
+    "image": "/image/market/spinach.jpg",
+    "description": "Organic spinach from local farms.",
+    "id": 6,
+    "category": "Greens"
+  },
+  {
+    "name": "Local Honey",
+    "price": "300/kg",
+    "image": "/image/market/honey.jpg",
+    "description": "Pure local honey harvested from nearby hives.",
+    "id": 7,
+    "category": "Dairy"
+  },
+  {
+    "name": "Fresh Milk",
+    "price": "50/litre",
+    "image": "/image/market/milk.jpg",
+    "description": "Fresh milk from local dairy farms.",
+    "id": 8,
+    "category": "Dairy"
+  },
+  {
+    "name": "Organic Wheat Flour",
+    "price": "40/kg",
+    "image": "/image/market/wheat_flour.jpg",
+    "description": "Whole wheat flour from organic farms.",
+    "id": 9,
+    "category": "Grains"
+  },
+  {
+    "name": "Organic Sugar",
+    "price": "60/kg",
+    "image": "/image/market/sugar.jpg",
+    "description": "Pure organic sugar from local farms.",
+    "id": 10,
+    "category": "Spices"
+  },
+  {
+    "name": "Fresh Green Beans",
+    "price": "70/kg",
+    "image": "/image/market/green_beans.jpg",
+    "description": "Crisp and fresh green beans from local farms.",
+    "id": 11,
+    "category": "Pulses"
+  },
+  {
+    "name": "Organic Cucumber",
+    "price": "30/kg",
+    "image": "/image/market/cucumber.jpg",
+    "description": "Cool and refreshing organic cucumbers.",
+    "id": 12,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Fresh Cauliflower",
+    "price": "50/kg",
+    "image": "/image/market/cauliflower.jpg",
+    "description": "Freshly harvested cauliflower from local farms.",
+    "id": 13,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Bell Peppers",
+    "price": "80/kg",
+    "image": "/image/market/bell_peppers.jpg",
+    "description": "Colorful and crunchy organic bell peppers.",
+    "id": 14,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Local Grapes",
+    "price": "100/kg",
+    "image": "/image/market/grapes.jpg",
+    "description": "Sweet and juicy grapes from local vineyards.",
+    "id": 15,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Bananas",
+    "price": "40/dozen",
+    "image": "/image/market/bananas.jpg",
+    "description": "Fresh organic bananas from local farms.",
+    "id": 16,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Avocados",
+    "price": "60/dozen",
+    "image": "/image/market/avocados.jpg",
+    "description": "Fresh organic avocados from local farms.",
+    "id": 17,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Lettuce",
+    "price": "30/kg",
+    "image": "/image/market/lettuce.jpg",
+    "description": "Healthy and fresh organic lettuce from local farms.",
+    "id": 18,
+    "category": "Greens"
+  },
+  {
+    "name": "Fresh Strawberries",
+    "price": "150/kg",
+    "image": "/image/market/strawberries.jpg",
+    "description": "Sweet and juicy strawberries from local farms.",
+    "id": 19,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Blueberries",
+    "price": "200/kg",
+    "image": "/image/market/blueberries.jpg",
+    "description": "Fresh organic blueberries from local farms.",
+    "id": 20,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Zucchini",
+    "price": "60/kg",
+    "image": "/image/market/zucchini.jpg",
+    "description": "Fresh organic zucchini from local farms.",
+    "id": 21,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Local Oranges",
+    "price": "80/kg",
+    "image": "/image/market/oranges.jpg",
+    "description": "Sweet and juicy oranges from local orchards.",
+    "id": 22,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Lemons",
+    "price": "50/kg",
+    "image": "/image/market/lemons.jpg",
+    "description": "Fresh organic lemons from local farms.",
+    "id": 23,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Garlic",
+    "price": "100/kg",
+    "image": "/image/market/garlic.jpg",
+    "description": "Strong and flavorful organic garlic.",
+    "id": 24,
+    "category": "Fruits"
+  },
+  {
+    "name": "Organic Onions",
+    "price": "40/kg",
+    "image": "/image/market/onions.jpg",
+    "description": "Fresh organic onions from local farms.",
+    "id": 25,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Whole Grain Bread",
+    "price": "60/loaf",
+    "image": "/image/market/bread.jpg",
+    "description": "Fresh whole grain bread baked daily.",
+    "id": 26,
+    "category": "Grains"
+  },
+  {
+    "name": "Organic Apples",
+    "price": "80/kg",
+    "image": "/image/market/apples.jpg",
+    "description": "Crisp organic apples from local orchards.",
+    "id": 27,
+    "category": "Fruits"
+  },
+  {
+    "name": "Fresh Cottage Cheese",
+    "price": "100/kg",
+    "image": "/image/market/cottage_cheese.jpg",
+    "description": "Fresh homemade cottage cheese.",
+    "id": 28,
+    "category": "Dairy"
+  },
+  {
+    "name": "Organic Broccoli",
+    "price": "70/kg",
+    "image": "/image/market/broccoli.jpg",
+    "description": "Fresh organic broccoli from local farms.",
+    "id": 29,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Peas",
+    "price": "90/kg",
+    "image": "/image/market/peas.jpg",
+    "description": "Sweet organic peas from local farms.",
+    "id": 30,
+    "category": "Pulses"
+  },
+  {
+    "name": "Organic Corn",
+    "price": "50/kg",
+    "image": "/image/market/corn.jpg",
+    "description": "Fresh organic corn from local farms.",
+    "id": 31,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Mushrooms",
+    "price": "120/kg",
+    "image": "/image/market/mushrooms.jpg",
+    "description": "Fresh organic mushrooms from local farms.",
+    "id": 32,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Pumpkin",
+    "price": "60/kg",
+    "image": "/image/market/pumpkin.jpg",
+    "description": "Fresh organic pumpkin from local farms.",
+    "id": 33,
+    "category": "Vegetables"
+  },
+  {
+    "name": "Organic Ginger",
+    "price": "150/kg",
+    "image": "/image/market/ginger.jpg",
+    "description": "Fresh organic ginger with strong flavor.",
+    "id": 34,
+    "category": "Spices"
+  },
+  {
+    "name": "Organic Turmeric",
+    "price": "180/kg",
+    "image": "/image/market/turmeric.jpg",
+    "description": "Fresh organic turmeric root.",
+    "id": 35,
+    "category": "Spices"
+  },
+  {
+    "name": "Organic Cinnamon",
+    "price": "200/kg",
+    "image": "/image/market/cinnamon.jpg",
+    "description": "Premium organic cinnamon sticks.",
+    "id": 36,
+    "category": "Spices"
+  },
+  {
+    "name": "Organic Almonds",
+    "price": "500/kg",
+    "image": "/image/market/almonds.jpg",
+    "description": "Premium organic almonds from local farms.",
+    "id": 37,
+    "category": "Dry Fruits"
+  },
+  {
+    "name": "Organic Walnuts",
+    "price": "450/kg",
+    "image": "/image/market/walnuts.jpg",
+    "description": "Fresh organic walnuts from local orchards.",
+    "id": 38,
+    "category": "Dry Fruits"
+  },
+  {
+    "name": "Organic Cashews",
+    "price": "600/kg",
+    "image": "/image/market/cashews.jpg",
+    "description": "Premium organic cashews.",
+    "id": 39,
+    "category": "Dry Fruits"
+  },
+  {
+    "name": "Organic Raisins",
+    "price": "300/kg",
+    "image": "/image/market/raisins.jpg",
+    "description": "Sweet organic raisins from local grapes.",
+    "id": 40,
+    "category": "Dry Fruits"
+  },
+  {
+    "name": "Organic Dates",
+    "price": "350/kg",
+    "image": "/image/market/dates.jpg",
+    "description": "Fresh organic dates from local farms.",
+    "id": 41,
+    "category": "Dry Fruits"
+  },
+  {
+    "name": "Organic Figs",
+    "price": "400/kg",
+    "image": "/image/market/figs.jpg",
+    "description": "Sweet organic figs from local orchards.",
+    "id": 42,
+    "category": "Dry Fruits"
+  },
+  {
+    "name": "Organic Quinoa",
+    "price": "250/kg",
+    "image": "/image/market/quinoa.jpg",
+    "description": "Premium organic quinoa from local farms.",
+    "id": 43,
+    "category": "Grains"
+  },
+  {
+    "name": "Organic Oats",
+    "price": "120/kg",
+    "image": "/image/market/oats.jpg",
+    "description": "Whole grain organic oats.",
+    "id": 44,
+    "category": "Grains"
+  },
+  {
+    "name": "Organic Barley",
+    "price": "100/kg",
+    "image": "/image/market/barley.jpg",
+    "description": "Premium organic barley grains.",
+    "id": 45,
+    "category": "Grains"
+  },
+  {
+    "name": "Organic Lentils",
+    "price": "110/kg",
+    "image": "/image/market/lentils.jpg",
+    "description": "High-protein organic lentils.",
+    "id": 46,
+    "category": "Pulses"
+  },
+  {
+    "name": "Organic Chickpeas",
+    "price": "130/kg",
+    "image": "/image/market/chickpeas.jpg",
+    "description": "Fresh organic chickpeas from local farms.",
+    "id": 47,
+    "category": "Pulses"
+  },
+  {
+    "name": "Organic Kidney Beans",
+    "price": "140/kg",
+    "image": "/image/market/kidney_beans.jpg",
+    "description": "Premium organic kidney beans.",
+    "id": 48,
+    "category": "Pulses"
+  },
+  {
+    "name": "Organic Soybeans",
+    "price": "150/kg",
+    "image": "/image/market/soybeans.jpg",
+    "description": "Fresh organic soybeans from local farms.",
+    "id": 49,
+    "category": "Pulses"
+  },
+  {
+    "name": "Organic Black Beans",
+    "price": "160/kg",
+    "image": "/image/market/black_beans.jpg",
+    "description": "Premium organic black beans.",
+    "id": 50,
+    "category": "Pulses"
+  }
+]

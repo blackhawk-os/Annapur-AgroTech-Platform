@@ -1,4 +1,4 @@
-export default function CreateAccountLayout({
+export default function SendOtpLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

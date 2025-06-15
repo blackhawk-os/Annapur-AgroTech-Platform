@@ -1,4 +1,4 @@
-export default function CreateAccountLayout({
+export default function ResetPasswordLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
