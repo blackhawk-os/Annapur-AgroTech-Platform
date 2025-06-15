@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -10,9 +10,16 @@ import {
 import { LoginButton } from "@/components/ui/Buttons/LoginButton";
 import Link from "next/link";
 import TextInput from "@/components/TextInput";
+import { useRouter } from "next/navigation";
+
 
 export default function ForgotPassword() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showOTP, setShowOTP] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState("");
+  const [otp, setOtp] = useState(Array(6).fill(""));
+
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const router = useRouter();
 
   const {
     register,
@@ -23,62 +30,47 @@ export default function ForgotPassword() {
   });
 
   const onSubmit = (data: ForgotPasswordInput) => {
-    console.log("Reset password for:", data.email);
-    setIsSubmitted(true);
+    if (!showOTP) {
+      setSubmittedEmail(data.email);
+      setShowOTP(true);
+    } else {
+      const enteredOtp = otp.join("");
+      console.log("Verifying OTP:", enteredOtp);
+      
+      router.push("/acccount/forgot-password/reset-password")
+    }
+  };
+
+  
+  const handleOtpChange = (index: number, value: string) => {
+    if (!/^\d?$/.test(value)) return; // Only allow digits
+    const newOtp = [...otp];
+    newOtp[index] = value;
+    setOtp(newOtp);
+
+    if (value && index < 5) {
+      inputRefs.current[index + 1]?.focus();
+    }
   };
 
   return (
     <div className="min-h-screen flex items-start justify-center bg-white p-4">
       <div className="w-full max-w-md bg-gray-50 p-8 rounded-lg border border-gray-300 shadow-sm mt-20">
-        {/* Forgot Password Content */}
-        {isSubmitted ? (
-          <div className="text-center py-4">
-            <svg
-              className="w-16 h-16 text-[#88B04B] mx-auto mb-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              ></path>
-            </svg>
-            <h2 className="text-2xl font-semibold mb-2">
-              Reset Instructions Sent
-            </h2>
-            <p className="text-gray-600 mb-6">
-              If an account exists for this email, you'll receive password reset
-              instructions shortly.
-            </p>
-            <LoginButton
-              variant="primary"
-              onClick={() => setIsSubmitted(false)}
-              label="Resend Instructions"
-              className="w-full py-3 text-lg font-semibold bg-[#88B04B] hover:bg-[#78a03f]"
-            />
-            <p className="mt-4 text-center text-sm text-gray-600">
-              Remember your password?{" "}
-              <Link
-                href="/acccount/login"
-                className="font-medium text-[#88B04B] hover:underline"
-              >
-                Back to Login
-              </Link>
-            </p>
+        <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+          <div className="text-center mb-6">
+            <h1 className="text-2xl font-bold text-gray-900">
+              {showOTP ? "Enter OTP" : "Forgot Password"}
+            </h1>
+            {showOTP && (
+              <p className="text-sm text-gray-600 mt-2">
+                We have sent you an OTP to your mail at:{" "}
+                <span className="font-medium text-black">{submittedEmail}</span>
+              </p>
+            )}
           </div>
-        ) : (
-          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-            <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold text-gray-900">
-                Forgot Password
-              </h1>
-            </div>
 
-            <div className="">
+          {!showOTP && (
+            <>
               <TextInput
                 label="Email"
                 placeholder="Enter your email"
@@ -89,25 +81,44 @@ export default function ForgotPassword() {
                 You will receive an email with a one-time password (OTP) from us
                 to reset your password.
               </p>
-            </div>
-            <LoginButton
-              variant="primary"
-              type="submit"
-              label="Reset Password"
-              className="w-full py-3 text-lg font-semibold bg-[#88B04B] hover:bg-[#78a03f]"
-            />
+            </>
+          )}
 
-            <p className="text-center text-sm text-gray-600">
-              Remember your password?{" "}
-              <Link
-                href="/acccount/login"
-                className="font-medium text-[#88B04B] hover:underline"
-              >
-                Back to Login
-              </Link>
-            </p>
-          </form>
-        )}
+          {showOTP && (
+            <div className="flex justify-between gap-2">
+              {otp.map((digit, index) => (
+                <input
+                  key={index}
+                  type="text"
+                  inputMode="numeric"
+                  maxLength={1}
+                  value={digit}
+                  onChange={(e) => handleOtpChange(index, e.target.value)}
+                  ref={(el) => {
+                    inputRefs.current[index] = el;
+                  }}
+                  className="w-12 h-12 text-center text-lg border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#88B04B]"
+                />
+              ))}
+            </div>
+          )}
+
+          <LoginButton
+            variant="primary"
+            type="submit"
+            label={showOTP ? "Verify OTP" : "Send OTP"}
+            className="w-full py-3 text-lg font-semibold bg-[#88B04B] hover:bg-[#78a03f]"
+          />
+
+          <p className="text-center text-sm text-gray-600">
+            <Link
+              href="/acccount/login"
+              className="font-medium text-[#88B04B] hover:underline"
+            >
+              Go back to Login Page
+            </Link>
+          </p>
+        </form>
       </div>
     </div>
   );
