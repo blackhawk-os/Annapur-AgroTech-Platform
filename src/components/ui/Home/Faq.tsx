@@ -38,8 +38,8 @@ const faqItems = [
 export const Faq = () => {
   return (
     <section className="w-full max-w-4xl mx-auto py-12 px-4 sm:px-6">
-      <div>
-        <HeaderText text="Have Questions?" text2="FAQs" className="mb-8" />
+      <div className="mb-8">
+        <HeaderText text="Have Questions?" text2="FAQs" className="" />
       </div>
       <div className="flex flex-col">
         {faqItems.map((item, index) => (

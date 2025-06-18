@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/manrope": "^5.2.5",
+    "@hookform/resolvers": "^5.1.1",
     "clsx": "^2.1.1",
     "font": "^0.0.4",
     "gsap": "^3.13.0",
@@ -18,8 +19,10 @@
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.57.0",
     "react-icons": "^5.5.0",
-    "react-swipeable": "^7.0.2"
+    "react-swipeable": "^7.0.2",
+    "zod": "^3.25.61"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

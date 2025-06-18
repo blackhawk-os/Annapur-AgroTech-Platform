@@ -46,7 +46,7 @@ export default function Header() {
       </div>
 
       {/* Main Header Bar */}
-      <nav className="flex flex-row justify-between items-center w-full py-4 px-4 sm:px-8 border-b border-white gap-4 sm:gap-0">
+      <nav className="flex flex-row justify-between items-center w-full py-2 px-4 sm:px-8 border-b border-white gap-4 sm:gap-0">
         {/* Logo */}
         <div>
           <Image src="/image/logo.png" width={130} height={50} alt="Logo" />
@@ -57,7 +57,7 @@ export default function Header() {
           <Link href="/">Home</Link>
           <Link href="/market">Market</Link>
           <Link href="/">Services</Link>
-          <Link href="/about">About Us</Link>
+          <Link href="/aboutus">About Us</Link>
           <Link href="/contact">Contact Us</Link>
         </div>
 
