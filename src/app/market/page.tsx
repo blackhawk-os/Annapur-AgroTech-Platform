@@ -74,21 +74,20 @@ export default function Market() {
               <ProductCard key={product.id} product={product} />
             ))}
             {currentItems.length === 0 && (
-  <div className="col-span-full text-center py-12">
-    <img
-      src="/image/market/detective.webp" 
-      alt="No products found"
-      className="mx-auto mb-6 w-40 h-40 object-contain opacity-80"
-    />
-    <h2 className="text-xl font-semibold text-gray-700 mb-2">
-      We couldn’t find any products matching your search.
-    </h2>
-    <p className="text-gray-500">
-      Try adjusting your filters or exploring other categories.
-    </p>
-  </div>
-)}
-
+              <div className="col-span-full text-center py-12">
+                <img
+                  src="/image/market/detective.webp"
+                  alt="No products found"
+                  className="mx-auto mb-6 w-40 h-40 object-contain opacity-80"
+                />
+                <h2 className="text-xl font-semibold text-gray-700 mb-2">
+                  We couldn’t find any products matching your search.
+                </h2>
+                <p className="text-gray-500">
+                  Try adjusting your filters or exploring other categories.
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="mt-8">
