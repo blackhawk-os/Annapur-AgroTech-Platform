@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/BreadCrumbs/BreadCrumb";
-import ProductDetail from "@/components/ui/Market/ProductDetail";
+import ProductDetail from "@/components/ui/Product-detail/ProductDetail";
 import products from "@/data/market-products.json";
 import { notFound } from "next/navigation";
 
@@ -10,21 +10,20 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
+export async function generateMetadata(props: {
   params: { id: string; slug: string };
 }) {
+  const params = await props.params;
   const product = products.find((p) => p.id.toString() === params.id);
 
   if (!product) return {};
 
   return {
     title: `${product.name} | Marketplace`,
-    description: product.description,
+    description: product.short_description,
     openGraph: {
       title: product.name,
-      description: product.description,
+      description: product.short_description,
       images: [
         {
           url: product.image,
@@ -36,11 +35,10 @@ export async function generateMetadata({
   };
 }
 
-export default function ProductPage({
-  params,
-}: {
+export default async function ProductPage(props: {
   params: { id: string; slug: string };
 }) {
+  const params = await props.params;
   const product = products.find((p) => p.id.toString() === params.id);
 
   if (!product) return notFound();
