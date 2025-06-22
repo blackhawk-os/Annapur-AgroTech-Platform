@@ -4,6 +4,9 @@
 import Image from "next/image";
 import { Product } from "@/lib/types/Product";
 import QuantitySelector from "./QuantitySelector";
+import AddToCartButton from "../Buttons/AddToCartButton";
+import BuyNowButton from "../Buttons/BuyNowButtons";
+import { useCart } from "@/lib/context/useCart";
 
 interface Props {
   product: Product;
@@ -49,12 +52,8 @@ const ProductDetail: React.FC<Props> = ({ product }) => {
         />
 
         <div className="mt-6">
-          <button className="bg-[#88B04B] hover:opacity-60 text-white px-6 py-2 rounded-lg text-sm font-semibold">
-            Add to Cart
-          </button>
-          <button className="bg-gray-200 hover:bg-gray-300 text-[#151515] px-6 py-2 ml-4 rounded-lg text-sm font-semibold">
-            Buy Now
-          </button>
+          <AddToCartButton onClick={() => {}} />
+          <BuyNowButton onClick={() => {}} />
         </div>
       </div>
     </div>

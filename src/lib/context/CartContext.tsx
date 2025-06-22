@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useReducer, useEffect } from "react";
 
 // Cart item type
@@ -53,7 +55,8 @@ export const CartProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState, (initial) => {
-    const localData = window.localStorage.getItem("cart");
+    const localData =
+      typeof window !== "undefined" && window.localStorage.getItem("cart");
     return localData ? JSON.parse(localData) : initial;
   });
 
