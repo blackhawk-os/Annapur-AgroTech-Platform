@@ -63,7 +63,9 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           {/* Cart Icon */}
-          <FaCartShopping className="text-xl text-[#88B04B] sm:block hidden" />
+          <Link href="/cart">
+            <FaCartShopping className="text-xl text-[#88B04B] sm:block hidden" />
+          </Link>
 
           {/* Create Account */}
           <Link href="/acccount/create-account">

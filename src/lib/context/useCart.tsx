@@ -5,7 +5,13 @@ import { CartContext } from "./CartContext";
 export const useCart = () => {
   const { state, dispatch } = useContext(CartContext);
 
-  const addItem = (item: { id: string; name: string; price: number }) => {
+  const addItem = (item: {
+    id: string;
+    image?: string;
+    name: string;
+    price: number;
+    quantity: number;
+  }) => {
     dispatch({ type: "ADD_ITEM", payload: item });
   };
 

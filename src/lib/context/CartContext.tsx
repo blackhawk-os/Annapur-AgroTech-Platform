@@ -5,6 +5,7 @@ import React, { createContext, useReducer, useEffect } from "react";
 // Cart item type
 export type CartItem = {
   id: string;
+  image?: string;
   name: string;
   price: number;
   quantity: number;

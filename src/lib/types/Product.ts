@@ -6,4 +6,5 @@ export interface Product {
   image: string;
   short_description: string;
   description?: string;
+  quantity?: number;
 }

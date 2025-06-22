@@ -1,0 +1,107 @@
+"use client";
+
+import React from "react";
+import { useCart } from "@/lib/context/useCart";
+import { FaCartShopping } from "react-icons/fa6";
+
+const CartPage: React.FC = () => {
+  const { cart, removeItem, updateQuantity, clearCart } = useCart();
+
+  const handleRemove = (id: string) => {
+    removeItem(id);
+  };
+
+  const handleUpdateQuantity = (id: string, quantity: number) => {
+    updateQuantity(id, quantity);
+  };
+
+  const handleClearCart = () => {
+    clearCart();
+  };
+
+  const calculateTotalPrice = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
+  return (
+    <div className="max-w-5xl mx-auto py-8">
+      <h1 className="text-2xl font-bold text-[#88B04B] mb-8">Your Cart</h1>
+      {cart.length === 0 ? (
+        <div>
+          <div className="flex flex-col items-center justify-center h-50 w-50 mx-auto p- rounded-full bg-gray-100 shadow-md">
+            <FaCartShopping className="text-6xl text-gray-400 mx-auto mb-4" />
+          </div>
+          <p className="text-gray-700 text-center text-2xl mt-5">
+            Your cart is empty.
+          </p>
+        </div>
+      ) : (
+        <>
+          <ul className="space-y-4">
+            {cart.map((item) => (
+              <li
+                key={item.id}
+                className="flex items-center justify-between bg-gray-100 p-4 rounded-lg shadow-md"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gray-300 rounded-lg">
+                    <img
+                      src={item.image || "/placeholder-image.png"}
+                      alt={item.name}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold">{item.name}</p>
+                    <p className="text-[#88B04B] font-bold">
+                      Price: NPR {item.price}
+                    </p>
+                    <p>Quantity: {item.quantity}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <button
+                    className="bg-gray-300 px-4 py-2 rounded-full"
+                    onClick={() =>
+                      handleUpdateQuantity(item.id, item.quantity + 1)
+                    }
+                  >
+                    +
+                  </button>
+                  <button
+                    className="bg-gray-300 px-4 py-2 rounded-full"
+                    onClick={() =>
+                      handleUpdateQuantity(item.id, item.quantity - 1)
+                    }
+                    disabled={item.quantity === 1}
+                  >
+                    -
+                  </button>
+                  <button
+                    className="bg-red-500 text-white px-4 py-2 rounded-lg"
+                    onClick={() => handleRemove(item.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 flex justify-between items-center">
+            <p className="text-xl font-bold">
+              Total Price: NPR {calculateTotalPrice()}
+            </p>
+            <button
+              className="bg-gray-300 text-[#88B04B] hover:opacity-60 px-6 py-2 rounded-lg font-semibold"
+              onClick={handleClearCart}
+            >
+              Clear Cart
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default CartPage;
