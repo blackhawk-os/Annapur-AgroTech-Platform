@@ -3,6 +3,7 @@
 import React from "react";
 import { useCart } from "@/lib/context/useCart";
 import { FaCartShopping } from "react-icons/fa6";
+import { Minus, Plus } from "lucide-react";
 
 const CartPage: React.FC = () => {
   const { cart, removeItem, updateQuantity, clearCart } = useCart();
@@ -61,21 +62,31 @@ const CartPage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <button
-                    className="bg-gray-300 px-4 py-2 rounded-full"
-                    onClick={() =>
-                      handleUpdateQuantity(item.id, item.quantity + 1)
-                    }
-                  >
-                    +
-                  </button>
-                  <button
-                    className="bg-gray-300 px-4 py-2 rounded-full"
+                    className="disabled:opacity-50 h-8 w-8 bg-gray-200 rounded-full shadow-md flex items-center justify-center disabled:cursor-not-allowed hover:bg-gray-300 transition-colors"
                     onClick={() =>
                       handleUpdateQuantity(item.id, item.quantity - 1)
                     }
                     disabled={item.quantity === 1}
                   >
-                    -
+                    <Minus size={18} color="#88B04B" />
+                  </button>
+                  <span
+                    style={{
+                      minWidth: 24,
+                      textAlign: "center",
+                      color: "#151515",
+                    }}
+                    className="border border-gray-300 px-8 py-1 rounded-md"
+                  >
+                    {item.quantity}
+                  </span>
+                  <button
+                    className="disabled:opacity-50 h-8 w-8 bg-gray-200 rounded-full shadow-md flex items-center justify-center disabled:cursor-not-allowed hover:bg-gray-300 transition-colors"
+                    onClick={() =>
+                      handleUpdateQuantity(item.id, item.quantity + 1)
+                    }
+                  >
+                    <Plus size={18} color="#88B04B" />
                   </button>
                   <button
                     className="bg-red-500 text-white px-4 py-2 rounded-lg"

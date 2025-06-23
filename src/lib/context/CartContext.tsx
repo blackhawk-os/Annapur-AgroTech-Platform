@@ -22,11 +22,11 @@ const cartReducer = (state: CartItem[], action: any) => {
       if (existingItem) {
         return state.map((item) =>
           item.id === action.payload.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + action.payload.quantity }
             : item
         );
       }
-      return [...state, { ...action.payload, quantity: 1 }];
+      return [...state, { ...action.payload }];
     case "REMOVE_ITEM":
       return state.filter((item) => item.id !== action.payload.id);
     case "UPDATE_ITEM_QUANTITY":

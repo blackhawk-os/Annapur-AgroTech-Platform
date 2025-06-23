@@ -1,6 +1,5 @@
-import { IndentDecreaseIcon, Minus, Plus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import React, { useState } from "react";
-import { MdTextDecrease } from "react-icons/md";
 
 type QuantitySelectorProps = {
   min?: number;
@@ -45,6 +44,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
         <p className="text-[#88B04B] font-semibold mb-4">
           Quantity:{" "}
           <span className="font-semibold text-[#151515]">{quantity}</span>{" "}
+          <span className="font-semibold text-[#343434]">(kg)</span>
         </p>
       </div>
       <div className="flex flex-row items-center gap-2">

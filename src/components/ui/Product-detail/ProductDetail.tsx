@@ -28,12 +28,13 @@ const ProductDetail: React.FC<Props> = ({ product }) => {
   const handleAddToCart = async () => {
     setIsAdding(true);
     try {
+      console.log("Adding item to cart:", product.name, "Quantity:", quantity);
       await addItem({
         id: String(product.id),
         image: product.image,
         name: product.name,
         price: Number(product.price),
-        quantity: quantity,
+        quantity,
       });
       console.log("Item added to cart:", product.name, "Quantity:", quantity);
       showAuthToast("cart-added");
@@ -72,7 +73,7 @@ const ProductDetail: React.FC<Props> = ({ product }) => {
         </p>
         <QuantitySelector
           min={1}
-          max={10}
+          max={50}
           initial={1}
           onChange={handleQuantityChange}
         />
