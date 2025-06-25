@@ -3,7 +3,8 @@
 import React from "react";
 import { useCart } from "@/lib/context/useCart";
 import { FaCartShopping } from "react-icons/fa6";
-import { Minus, Plus } from "lucide-react";
+import { ChevronRight, Minus, Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const CartPage: React.FC = () => {
   const { cart, removeItem, updateQuantity, clearCart } = useCart();
@@ -24,17 +25,29 @@ const CartPage: React.FC = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
+  const router = useRouter();
+
+  const handleContinueShopping = () => {
+    router.push("/market");
+  };
+
   return (
     <div className="max-w-5xl mx-auto py-8">
       <h1 className="text-2xl font-bold text-[#88B04B] mb-8">Your Cart</h1>
       {cart.length === 0 ? (
-        <div>
-          <div className="flex flex-col items-center justify-center h-50 w-50 mx-auto p- rounded-full bg-gray-100 shadow-md">
+        <div className="flex flex-col items-center justify-center h-full">
+          <div className="flex flex-col items-center justify-center h-70 w-70 mx-auto rounded-full bg-gray-100 shadow-md">
             <FaCartShopping className="text-6xl text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-700 text-center text-2xl mt-5">
+              Your cart is empty.
+            </p>
           </div>
-          <p className="text-gray-700 text-center text-2xl mt-5">
-            Your cart is empty.
-          </p>
+          <button
+            onClick={handleContinueShopping}
+            className="mt-4 flex items-center gap-2 bg-[#88B04B] text-white px-6 py-2 rounded-lg font-semibold hover:opacity-80 transition-colors"
+          >
+            <span>Continue Shopping</span> <ChevronRight />
+          </button>
         </div>
       ) : (
         <>

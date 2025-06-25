@@ -68,9 +68,9 @@ export default function Header() {
         <div className="relative flex items-center gap-4">
           {/* Cart Icon */}
           <Link href="/cart">
-            <FaCartShopping className="text-xl text-[#88B04B] sm:block hidden" />
+            <FaCartShopping className="text-2xl text-[#88B04B] sm:block hidden" />
             {getTotalQuantity() > 0 && (
-              <span className="absolute -top-2 right-6  text-[#88B04B] text-[14px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+              <span className="absolute -top-2 right-6 bg-[#151515]  text-[#88B04B] text-[14px] font-bold w-5 h-5 p-0 flex items-center justify-center rounded-full">
                 {badgeCount}
               </span>
             )}
@@ -78,7 +78,7 @@ export default function Header() {
 
           {/* Create Account */}
           <Link href="/acccount/create-account">
-            <FaUser className="text-xl text-[#88B04B] sm:block hidden" />
+            <FaUser className="text-2xl text-[#88B04B] sm:block hidden" />
           </Link>
         </div>
 
