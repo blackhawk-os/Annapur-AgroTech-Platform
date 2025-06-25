@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useCart } from "@/lib/context/useCart";
 import {
   FaWhatsapp,
   FaPhoneAlt,
@@ -21,6 +22,9 @@ export default function Header() {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  const { getTotalQuantity, getUniqueItemCount } = useCart();
+  const badgeCount = getUniqueItemCount();
 
   return (
     <header className="w-full">
@@ -61,10 +65,15 @@ export default function Header() {
           <Link href="/contact">Contact Us</Link>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="relative flex items-center gap-4">
           {/* Cart Icon */}
           <Link href="/cart">
             <FaCartShopping className="text-xl text-[#88B04B] sm:block hidden" />
+            {getTotalQuantity() > 0 && (
+              <span className="absolute -top-2 right-6  text-[#88B04B] text-[14px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                {badgeCount}
+              </span>
+            )}
           </Link>
 
           {/* Create Account */}

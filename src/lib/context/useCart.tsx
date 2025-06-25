@@ -23,9 +23,25 @@ export const useCart = () => {
     dispatch({ type: "UPDATE_ITEM_QUANTITY", payload: { id, quantity } });
   };
 
+  const getTotalQuantity = () => {
+    return state.reduce((total, item) => total + item.quantity, 0);
+  };
+
+  const getUniqueItemCount = () => {
+    return state.length;
+  };
+
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
   };
 
-  return { cart: state, addItem, removeItem, updateQuantity, clearCart };
+  return {
+    cart: state,
+    addItem,
+    removeItem,
+    updateQuantity,
+    getTotalQuantity,
+    getUniqueItemCount,
+    clearCart,
+  };
 };
