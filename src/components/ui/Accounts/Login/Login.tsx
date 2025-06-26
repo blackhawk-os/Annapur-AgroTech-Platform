@@ -59,13 +59,13 @@ export default function Login() {
           {/* Auth Navigation */}
           <div className="flex gap-4 mv-8 justify-between">
             <Link
-              href="/acccount/login"
+              href="/login"
               className="flex-1 text-2xl font-semibold text-center text-[#88B04B] border-b-2 border-[#88B04B] pb-1"
             >
               Login
             </Link>
             <Link
-              href="/acccount/create-account"
+              href="/create-account"
               className={`flex-1 text-2xl font-medium text-center transition-all border-b-2 pb-1 ${
                 false
                   ? "text-[#88B04B] border-[#88B04B]"
@@ -101,7 +101,7 @@ export default function Login() {
               />
 
               <Link
-                href="/acccount/forgot-password"
+                href="/forgot-password"
                 className="text-sm font-medium text-accent hover:underline text-[#88B04B]"
               >
                 Forgot password?
@@ -118,7 +118,7 @@ export default function Login() {
             <p className=" text-center text-sm text-gray-600">
               Don&apos;t have an account?{" "}
               <Link
-                href="/acccount/create-account"
+                href="/create-account"
                 className="text-sm font-medium text-accent hover:underline text-[#88B04B]"
               >
                 Create Account

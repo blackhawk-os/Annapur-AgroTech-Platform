@@ -77,7 +77,7 @@ export default function Header() {
           </Link>
 
           {/* Create Account */}
-          <Link href="/acccount/create-account">
+          <Link href="/create-account">
             <FaUser className="text-2xl text-[#88B04B] sm:block hidden" />
           </Link>
         </div>
@@ -153,7 +153,7 @@ export default function Header() {
               <Link href="/">Get Support</Link>
             </div>
 
-            <Link href="/acccount/create-account">
+            <Link href="/create-account">
               <Button
                 text="Create Account"
                 className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2"

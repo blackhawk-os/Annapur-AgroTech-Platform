@@ -85,7 +85,7 @@ export default function CreateAccount() {
           {/* Auth Navigation */}
           <div className="flex gap-4 mb-8 justify-between">
             <Link
-              href="/acccount/login"
+              href="/login"
               className={`flex-1 text-2xl font-medium text-center transition-all border-b-2 pb-1 ${
                 false
                   ? "text-[#88B04B] border-[#88B04B]"
@@ -95,7 +95,7 @@ export default function CreateAccount() {
               Login
             </Link>
             <Link
-              href="/acccount/create-account"
+              href="/create-account"
               className="flex-1 text-2xl font-semibold text-center text-[#88B04B] border-b-2 border-[#88B04B] pb-1"
             >
               Create Account
@@ -287,7 +287,7 @@ export default function CreateAccount() {
             <p className="text-center text-sm text-gray-600">
               Already have an account?{" "}
               <Link
-                href="/acccount/login"
+                href="/login"
                 className="font-medium text-[#88B04B] hover:underline"
               >
                 Login
