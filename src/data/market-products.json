@@ -3,7 +3,8 @@
     "name": "Organic Tomatoes",
     "price": "50",
     "image": "/image/market/tomatoes.jpg",
-    "description": "Fresh organic tomatoes from local farmers.",
+    "short_description": "Fresh organic tomatoes from local farmers.",
+    "description": "",
     "id": 1,
     "category": "Vegetables"
   },
@@ -11,7 +12,8 @@
     "name": "Basmati Rice",
     "price": "90",
     "image": "/image/market/rice.webp",
-    "description": "Premium aged basmati rice.",
+    "short_description": "Premium aged basmati rice.",
+    "description": "",
     "id": 2,
     "category": "Grains"
   },
@@ -19,7 +21,8 @@
     "name": "Free-Range Eggs",
     "price": "120",
     "image": "/image/market/eggs.jpg",
-    "description": "Fresh free-range eggs from local farms.",
+    "short_description": "Fresh free-range eggs from local farms.",
+    "description": "",
     "id": 3,
     "category": "Eggs"
   },
@@ -27,7 +30,8 @@
     "name": "Organic Potatoes",
     "price": "60",
     "image": "/image/market/potatoes.jpg",
-    "description": "Locally sourced organic potatoes.",
+    "short_description": "Locally sourced organic potatoes.",
+    "description": "",
     "id": 4,
     "category": "Vegetables"
   },
@@ -35,7 +39,8 @@
     "name": "Organic Carrots",
     "price": "70",
     "image": "/image/market/carrots.jpg",
-    "description": "Fresh organic carrots from local farms.",
+    "short_description": "Fresh organic carrots from local farms.",
+    "description": "",
     "id": 5,
     "category": "Vegetables"
   },
@@ -43,7 +48,8 @@
     "name": "Organic Spinach",
     "price": "80",
     "image": "/image/market/spinach.jpg",
-    "description": "Organic spinach from local farms.",
+    "short_description": "Organic spinach from local farms.",
+    "description": "",
     "id": 6,
     "category": "Greens"
   },
@@ -51,7 +57,8 @@
     "name": "Local Honey",
     "price": "300",
     "image": "/image/market/honey.jpg",
-    "description": "Pure local honey harvested from nearby hives.",
+    "short_description": "Pure local honey harvested from nearby hives.",
+    "description": "",
     "id": 7,
     "category": "Dairy"
   },
@@ -59,7 +66,8 @@
     "name": "Fresh Milk",
     "price": "50",
     "image": "/image/market/milk.jpg",
-    "description": "Fresh milk from local dairy farms.",
+    "short_description": "Fresh milk from local dairy farms.",
+    "description": "",
     "id": 8,
     "category": "Dairy"
   },
@@ -67,7 +75,8 @@
     "name": "Organic Wheat Flour",
     "price": "40",
     "image": "/image/market/wheat_flour.jpg",
-    "description": "Whole wheat flour from organic farms.",
+    "short_description": "Whole wheat flour from organic farms.",
+    "description": "",
     "id": 9,
     "category": "Grains"
   },
@@ -75,7 +84,8 @@
     "name": "Organic Sugar",
     "price": "60",
     "image": "/image/market/sugar.jpg",
-    "description": "Pure organic sugar from local farms.",
+    "short_description": "Pure organic sugar from local farms.",
+    "description": "",
     "id": 10,
     "category": "Spices"
   },
@@ -83,7 +93,8 @@
     "name": "Fresh Green Beans",
     "price": "70",
     "image": "/image/market/green_beans.jpg",
-    "description": "Crisp and fresh green beans from local farms.",
+    "short_description": "Crisp and fresh green beans from local farms.",
+    "description": "",
     "id": 11,
     "category": "Pulses"
   },
@@ -91,7 +102,8 @@
     "name": "Organic Cucumber",
     "price": "30",
     "image": "/image/market/cucumber.jpg",
-    "description": "Cool and refreshing organic cucumbers.",
+    "short_description": "Cool and refreshing organic cucumbers.",
+    "description": "",
     "id": 12,
     "category": "Vegetables"
   },
@@ -99,7 +111,8 @@
     "name": "Fresh Cauliflower",
     "price": "50",
     "image": "/image/market/cauliflower.jpg",
-    "description": "Freshly harvested cauliflower from local farms.",
+    "short_description": "Freshly harvested cauliflower from local farms.",
+    "description": "",
     "id": 13,
     "category": "Vegetables"
   },
@@ -107,7 +120,8 @@
     "name": "Organic Bell Peppers",
     "price": "80",
     "image": "/image/market/bell_peppers.jpg",
-    "description": "Colorful and crunchy organic bell peppers.",
+    "short_description": "Colorful and crunchy organic bell peppers.",
+    "description": "",
     "id": 14,
     "category": "Vegetables"
   },
@@ -115,7 +129,8 @@
     "name": "Local Grapes",
     "price": "100",
     "image": "/image/market/grapes.jpg",
-    "description": "Sweet and juicy grapes from local vineyards.",
+    "short_description": "Sweet and juicy grapes from local vineyards.",
+    "description": "",
     "id": 15,
     "category": "Fruits"
   },
@@ -123,7 +138,8 @@
     "name": "Organic Bananas",
     "price": "40",
     "image": "/image/market/bananas.jpg",
-    "description": "Fresh organic bananas from local farms.",
+    "short_description": "Fresh organic bananas from local farms.",
+    "description": "",
     "id": 16,
     "category": "Fruits"
   },
@@ -131,7 +147,8 @@
     "name": "Organic Avocados",
     "price": "60",
     "image": "/image/market/avocados.jpg",
-    "description": "Fresh organic avocados from local farms.",
+    "short_description": "Fresh organic avocados from local farms.",
+    "description": "",
     "id": 17,
     "category": "Fruits"
   },
@@ -139,7 +156,8 @@
     "name": "Organic Lettuce",
     "price": "30",
     "image": "/image/market/lettuce.jpg",
-    "description": "Healthy and fresh organic lettuce from local farms.",
+    "short_description": "Healthy and fresh organic lettuce from local farms.",
+    "description": "",
     "id": 18,
     "category": "Greens"
   },
@@ -147,7 +165,8 @@
     "name": "Fresh Strawberries",
     "price": "150",
     "image": "/image/market/strawberries.jpg",
-    "description": "Sweet and juicy strawberries from local farms.",
+    "short_description": "Sweet and juicy strawberries from local farms.",
+    "description": "",
     "id": 19,
     "category": "Fruits"
   },
@@ -155,7 +174,8 @@
     "name": "Organic Blueberries",
     "price": "200",
     "image": "/image/market/blueberries.jpg",
-    "description": "Fresh organic blueberries from local farms.",
+    "short_description": "Fresh organic blueberries from local farms.",
+    "description": "",
     "id": 20,
     "category": "Fruits"
   },
@@ -163,7 +183,8 @@
     "name": "Organic Zucchini",
     "price": "60",
     "image": "/image/market/zucchini.jpg",
-    "description": "Fresh organic zucchini from local farms.",
+    "short_description": "Fresh organic zucchini from local farms.",
+    "description": "",
     "id": 21,
     "category": "Vegetables"
   },
@@ -171,7 +192,8 @@
     "name": "Local Oranges",
     "price": "80",
     "image": "/image/market/oranges.jpg",
-    "description": "Sweet and juicy oranges from local orchards.",
+    "short_description": "Sweet and juicy oranges from local orchards.",
+    "description": "",
     "id": 22,
     "category": "Fruits"
   },
@@ -179,7 +201,8 @@
     "name": "Organic Lemons",
     "price": "50",
     "image": "/image/market/lemons.jpg",
-    "description": "Fresh organic lemons from local farms.",
+    "short_description": "Fresh organic lemons from local farms.",
+    "description": "",
     "id": 23,
     "category": "Fruits"
   },
@@ -187,7 +210,8 @@
     "name": "Organic Garlic",
     "price": "100",
     "image": "/image/market/garlic.jpg",
-    "description": "Strong and flavorful organic garlic.",
+    "short_description": "Strong and flavorful organic garlic.",
+    "description": "",
     "id": 24,
     "category": "Fruits"
   },
@@ -195,7 +219,8 @@
     "name": "Organic Onions",
     "price": "40",
     "image": "/image/market/onions.jpg",
-    "description": "Fresh organic onions from local farms.",
+    "short_description": "Fresh organic onions from local farms.",
+    "description": "",
     "id": 25,
     "category": "Vegetables"
   },
@@ -203,7 +228,8 @@
     "name": "Whole Grain Bread",
     "price": "60/l",
     "image": "/image/market/bread.jpg",
-    "description": "Fresh whole grain bread baked daily.",
+    "short_description": "Fresh whole grain bread baked daily.",
+    "description": "",
     "id": 26,
     "category": "Grains"
   },
@@ -211,7 +237,8 @@
     "name": "Organic Apples",
     "price": "80",
     "image": "/image/market/Apple.jpg",
-    "description": "Crisp organic apples from local orchards.",
+    "short_description": "Crisp organic apples from local orchards.",
+    "description": "",
     "id": 27,
     "category": "Fruits"
   },
@@ -219,7 +246,8 @@
     "name": "Fresh Cottage Cheese",
     "price": "100",
     "image": "/image/market/cottage_cheese.jpg",
-    "description": "Fresh homemade cottage cheese.",
+    "short_description": "Fresh homemade cottage cheese.",
+    "description": "",
     "id": 28,
     "category": "Dairy"
   },
@@ -227,7 +255,8 @@
     "name": "Organic Broccoli",
     "price": "70",
     "image": "/image/market/Broccoli.jpg",
-    "description": "Fresh organic broccoli from local farms.",
+    "short_description": "Fresh organic broccoli from local farms.",
+    "description": "",
     "id": 29,
     "category": "Vegetables"
   },
@@ -235,7 +264,8 @@
     "name": "Organic Peas",
     "price": "90",
     "image": "/image/market/Peas.jpg",
-    "description": "Sweet organic peas from local farms.",
+    "short_description": "Sweet organic peas from local farms.",
+    "description": "",
     "id": 30,
     "category": "Pulses"
   },
@@ -243,7 +273,8 @@
     "name": "Organic Corn",
     "price": "50",
     "image": "/image/market/corn.jpg",
-    "description": "Fresh organic corn from local farms.",
+    "short_description": "Fresh organic corn from local farms.",
+    "description": "",
     "id": 31,
     "category": "Vegetables"
   },
@@ -251,7 +282,8 @@
     "name": "Organic Mushrooms",
     "price": "120",
     "image": "/image/market/mushrooms.jpg",
-    "description": "Fresh organic mushrooms from local farms.",
+    "short_description": "Fresh organic mushrooms from local farms.",
+    "description": "",
     "id": 32,
     "category": "Vegetables"
   },
@@ -259,7 +291,8 @@
     "name": "Organic Pumpkin",
     "price": "60",
     "image": "/image/market/pumpkin.jpg",
-    "description": "Fresh organic pumpkin from local farms.",
+    "short_description": "Fresh organic pumpkin from local farms.",
+    "description": "",
     "id": 33,
     "category": "Vegetables"
   },
@@ -267,7 +300,8 @@
     "name": "Organic Ginger",
     "price": "150",
     "image": "/image/market/ginger.jpg",
-    "description": "Fresh organic ginger with strong flavor.",
+    "short_description": "Fresh organic ginger with strong flavor.",
+    "description": "",
     "id": 34,
     "category": "Spices"
   },
@@ -275,7 +309,8 @@
     "name": "Organic Turmeric",
     "price": "18",
     "image": "/image/market/turmeric.jpg",
-    "description": "Fresh organic turmeric root.",
+    "short_description": "Fresh organic turmeric root.",
+    "description": "",
     "id": 35,
     "category": "Spices"
   },
@@ -283,7 +318,8 @@
     "name": "Organic Cinnamon",
     "price": "200",
     "image": "/image/market/cinnamon.jpg",
-    "description": "Premium organic cinnamon sticks.",
+    "short_description": "Premium organic cinnamon sticks.",
+    "description": "",
     "id": 36,
     "category": "Spices"
   },
@@ -291,7 +327,8 @@
     "name": "Organic Almonds",
     "price": "500",
     "image": "/image/market/almonds.jpg",
-    "description": "Premium organic almonds from local farms.",
+    "short_description": "Premium organic almonds from local farms.",
+    "description": "",
     "id": 37,
     "category": "Dry Fruits"
   },
@@ -299,7 +336,8 @@
     "name": "Organic Walnuts",
     "price": "450",
     "image": "/image/market/walnuts.jpg",
-    "description": "Fresh organic walnuts from local orchards.",
+    "short_description": "Fresh organic walnuts from local orchards.",
+    "description": "",
     "id": 38,
     "category": "Dry Fruits"
   },
@@ -307,7 +345,8 @@
     "name": "Organic Cashews",
     "price": "600",
     "image": "/image/market/cashews.jpg",
-    "description": "Premium organic cashews.",
+    "short_description": "Premium organic cashews.",
+    "description": "",
     "id": 39,
     "category": "Dry Fruits"
   },
@@ -315,7 +354,8 @@
     "name": "Organic Raisins",
     "price": "300",
     "image": "/image/market/raisins.jpg",
-    "description": "Sweet organic raisins from local grapes.",
+    "short_description": "Sweet organic raisins from local grapes.",
+    "description": "",
     "id": 40,
     "category": "Dry Fruits"
   },
@@ -323,7 +363,8 @@
     "name": "Organic Dates",
     "price": "350",
     "image": "/image/market/dates.jpg",
-    "description": "Fresh organic dates from local farms.",
+    "short_description": "Fresh organic dates from local farms.",
+    "description": "",
     "id": 41,
     "category": "Dry Fruits"
   },
@@ -331,7 +372,8 @@
     "name": "Organic Figs",
     "price": "400",
     "image": "/image/market/figs.jpg",
-    "description": "Sweet organic figs from local orchards.",
+    "short_description": "Sweet organic figs from local orchards.",
+    "description": "",
     "id": 42,
     "category": "Dry Fruits"
   },
@@ -339,7 +381,8 @@
     "name": "Organic Quinoa",
     "price": "250",
     "image": "/image/market/Quinoa.jpg",
-    "description": "Premium organic quinoa from local farms.",
+    "short_description": "Premium organic quinoa from local farms.",
+    "description": "",
     "id": 43,
     "category": "Grains"
   },
@@ -347,7 +390,8 @@
     "name": "Organic Oats",
     "price": "120",
     "image": "/image/market/Oats.jpg",
-    "description": "Whole grain organic oats.",
+    "short_description": "Whole grain organic oats.",
+    "description": "",
     "id": 44,
     "category": "Grains"
   },
@@ -355,7 +399,8 @@
     "name": "Organic Barley",
     "price": "100",
     "image": "/image/market/Barley.jpg",
-    "description": "Premium organic barley grains.",
+    "short_description": "Premium organic barley grains.",
+    "description": "",
     "id": 45,
     "category": "Grains"
   },
@@ -363,7 +408,8 @@
     "name": "Organic Lentils",
     "price": "110",
     "image": "/image/market/lentils.jpg",
-    "description": "High-protein organic lentils.",
+    "short_description": "High-protein organic lentils.",
+    "description": "",
     "id": 46,
     "category": "Pulses"
   },
@@ -371,7 +417,8 @@
     "name": "Organic Chickpeas",
     "price": "130",
     "image": "/image/market/chickpeas.jpg",
-    "description": "Fresh organic chickpeas from local farms.",
+    "short_description": "Fresh organic chickpeas from local farms.",
+    "description": "",
     "id": 47,
     "category": "Pulses"
   },
@@ -379,7 +426,8 @@
     "name": "Organic Kidney Beans",
     "price": "140",
     "image": "/image/market/kidney_beans.jpg",
-    "description": "Premium organic kidney beans.",
+    "short_description": "Premium organic kidney beans.",
+    "description": "",
     "id": 48,
     "category": "Pulses"
   },
@@ -387,7 +435,8 @@
     "name": "Organic Soybeans",
     "price": "150",
     "image": "/image/market/soybeans.jpg",
-    "description": "Fresh organic soybeans from local farms.",
+    "short_description": "Fresh organic soybeans from local farms.",
+    "description": "",
     "id": 49,
     "category": "Pulses"
   },
@@ -395,7 +444,8 @@
     "name": "Organic Black Beans",
     "price": "160",
     "image": "/image/market/black beans.jpg",
-    "description": "Premium organic black beans.",
+    "short_description": "Premium organic black beans.",
+    "description": "",
     "id": 50,
     "category": "Pulses"
   },
@@ -403,7 +453,8 @@
     "name": "Fresh Turnip",
     "price": "160",
     "image": "/image/market/turnip.jpg",
-    "description": "Fresh Turnip sourced from local farms.",
+    "short_description": "Fresh Turnip sourced from local farms.",
+    "description": "",
     "id": 51,
     "category": "Vegetables"
   },
@@ -411,7 +462,8 @@
     "name": "Organic Sweet Potatoes",
     "price": "200",
     "image": "/image/market/sweet_potatoes.jpg",
-    "description": "sweet potatoe sourced from local farms.",
+    "short_description": "sweet potatoe sourced from local farms.",
+    "description": "",
     "id": 52,
     "category": "Vegetables"
   },
@@ -420,7 +472,8 @@
     "name": "Okra",
     "price": "87",
     "image": "/image/market/okra.jpg",
-    "description": "Okra sourced from local farms.",
+    "short_description": "Okra sourced from local farms.",
+    "description": "",
     "id": 53,
     "category": "Vegetables"
   },
@@ -428,7 +481,8 @@
     "name": "Bitter Gourd",
     "price": "150",
     "image": "/image/market/Bitter Gourd.jpg",
-    "description": "Bitter Gourd sourced from local farms.",
+    "short_description": "Bitter Gourd sourced from local farms.",
+    "description": "",
     "id": 54,
     "category": "Vegetables"
   },
@@ -436,7 +490,8 @@
     "name": "Ridge Gourd",
     "price": "113",
     "image": "/image/market/Ridge Gourd.jpg",
-    "description": "Ridge Gourd sourced from local farms.",
+    "short_description": "Ridge Gourd sourced from local farms.",
+    "description": "",
     "id": 55,
     "category": "Vegetables"
   },
@@ -444,7 +499,8 @@
     "name": "Pointed Gourd (Parwal)",
     "price": "170",
     "image": "/image/market/Pointed Gourd (Parwal).jpg",
-    "description": "Pointed Gourd (Parwal)sourced from local farms.",
+    "short_description": "Pointed Gourd (Parwal)sourced from local farms.",
+    "description": "",
     "id": 56,
     "category": "Vegetables"
   },
@@ -452,7 +508,8 @@
     "name": "Bottle Gourd (Lauki)",
     "price": "110",
     "image": "/image/market/Bottle Gourd (Lauki).jpg",
-    "description": "Bottle Gourd (Lauki) sourced from local farms.",
+    "short_description": "Bottle Gourd (Lauki) sourced from local farms.",
+    "description": "",
     "id": 57,
     "category": "Vegetables"
   },
@@ -460,7 +517,8 @@
     "name": "Pear",
     "price": "100",
     "image": "/image/market/Pear.jpg",
-    "description": "Pear sourced from local farms.",
+    "short_description": "Pear sourced from local farms.",
+    "description": "",
     "id": 58,
     "category": "Fruits"
   },
@@ -468,7 +526,8 @@
     "name": "Moringa (Sitalchini)",
     "price": "150",
     "image": "/image/market/Moringa.jpg",
-    "description": "Moringa sourced from local farms.",
+    "short_description": "Moringa sourced from local farms.",
+    "description": "",
     "id": 59,
     "category": "Vegetables"
   },
@@ -476,7 +535,8 @@
     "name": "Bajra (Pearl Millet)",
     "price": "113",
     "image": "/image/market/Bajra (Pearl Millet).jpg",
-    "description": "Bajra (Pearl Millet) sourced from local farms.",
+    "short_description": "Bajra (Pearl Millet) sourced from local farms.",
+    "description": "",
     "id": 60,
     "category": "Grains"
   },
@@ -484,7 +544,8 @@
     "name": "Foxtail Millet",
     "price": "260",
     "image": "/image/market/Foxtail Millet.jpg",
-    "description": "Foxtail Milletsourced from local farms.",
+    "short_description": "Foxtail Milletsourced from local farms.",
+    "description": "",
     "id": 61,
     "category": "Grains"
   },
@@ -492,7 +553,8 @@
     "name": "Maize (Cornmeal)",
     "price": "113",
     "image": "/image/market/Maize (Cornmeal).jpg",
-    "description": "Maize (Cornmeal)sourced from local farms.",
+    "short_description": "Maize (Cornmeal)sourced from local farms.",
+    "description": "",
     "id": 62,
     "category": "Grains"
   },
@@ -500,7 +562,8 @@
     "name": "Brinjal",
     "price": "100",
     "image": "/image/market/Brinjal.jpg",
-    "description": "Brinjalsourced from local farms.",
+    "short_description": "Brinjalsourced from local farms.",
+    "description": "",
     "id": 63,
     "category": "Vegetables"
   },
@@ -509,7 +572,8 @@
     "name": "Mung Beans",
     "price": "156",
     "image": "/image/market/mung beans.jpg",
-    "description": "Pure Mung Beans sourced from local farms.",
+    "short_description": "Pure Mung Beans sourced from local farms.",
+    "description": "",
     "id": 64,
     "category": "Pulses"
   },
@@ -517,7 +581,8 @@
     "name": "Natural Coriander",
     "price": "143",
     "image": "/image/market/natural coriander.jpg",
-    "description": "Natural Coriander sourced from local farms.",
+    "short_description": "Natural Coriander sourced from local farms.",
+    "description": "",
     "id": 65,
     "category": "Grains"
   },
@@ -525,7 +590,8 @@
     "name": "Pumpkin Seeds",
     "price": "484",
     "image": "/image/market/pumpkin seeds.jpg",
-    "description": "Pumpkin Seeds sourced from local farms.",
+    "short_description": "Pumpkin Seeds sourced from local farms.",
+    "description": "",
     "id": 66,
     "category": "Sprouts"
   },
@@ -533,7 +599,8 @@
     "name": "Organic Artichokes",
     "price": "441",
     "image": "/image/market/organic artichokes.jpg",
-    "description": "Organic Artichokes sourced from local farms.",
+    "short_description": "Organic Artichokes sourced from local farms.",
+    "description": "",
     "id": 67,
     "category": "Fruits"
   },
@@ -541,7 +608,8 @@
     "name": "Raw Black Pepper",
     "price": "549",
     "image": "/image/market/Raw Black Pepper.jpg",
-    "description": "Raw Black Pepper sourced from local farms.",
+    "short_description": "Raw Black Pepper sourced from local farms.",
+    "description": "",
     "id": 68,
     "category": "Spices"
   },
@@ -549,7 +617,8 @@
     "name": "Natural Pecans",
     "price": "250",
     "image": "/image/market/natural_pecans.jpg",
-    "description": "Natural Pecans sourced from local farms.",
+    "short_description": "Natural Pecans sourced from local farms.",
+    "description": "",
     "id": 69,
     "category": "Dairy"
   },
@@ -557,7 +626,8 @@
     "name": "Organic Soy Milk",
     "price": "576",
     "image": "/image/market/Organic Soy Milk.jpg",
-    "description": "Organic Soy Milk sourced from local farms.",
+    "short_description": "Organic Soy Milk sourced from local farms.",
+    "description": "",
     "id": 70,
     "category": "Dairy"
   },
@@ -565,7 +635,8 @@
     "name": "Paneer",
     "price": "403",
     "image": "/image/market/Paneer.jpg",
-    "description": "Paneer sourced from local farms.",
+    "short_description": "Paneer sourced from local farms.",
+    "description": "",
     "id": 90,
     "category": "Dairy"
   },
@@ -573,7 +644,8 @@
     "name": "Healthy Dragon Fruit",
     "price": "572",
     "image": "/image/market/Healthy Dragon Fruit.jpg",
-    "description": "Healthy Dragon Fruit sourced from local farms.",
+    "short_description": "Healthy Dragon Fruit sourced from local farms.",
+    "description": "",
     "id": 130,
     "category": "Fruits"
   },
@@ -581,7 +653,8 @@
     "name": "Sweet Rosemary",
     "price": "103",
     "image": "/image/market/Sweet Rosemary.jpg",
-    "description": "Sweet Rosemary sourced from local farms.",
+    "short_description": "Sweet Rosemary sourced from local farms.",
+    "description": "",
     "id": 73,
     "category": "Herbs"
   },
@@ -589,7 +662,8 @@
     "name": "Moong Sprouts",
     "price": "80",
     "image": "/image/market/Moong Sprouts.jpg",
-    "description": "Moong Sprouts sourced from local farms.",
+    "short_description": "Moong Sprouts sourced from local farms.",
+    "description": "",
     "id": 74,
     "category": "Sprouts"
   },
@@ -597,7 +671,8 @@
     "name": "Jackfruit",
     "price": "267",
     "image": "/image/market/Jackfruit.jpg",
-    "description": "Jackfruit sourced from local farms.",
+    "short_description": "Jackfruit sourced from local farms.",
+    "description": "",
     "id": 75,
     "category": "Fruits"
   },
@@ -605,7 +680,8 @@
     "name": "Dates",
     "price": "154",
     "image": "/image/market/Dates.jpg",
-    "description": "Dates sourced from local farms.",
+    "short_description": "Dates sourced from local farms.",
+    "description": "",
     "id": 76,
     "category": "Fruits"
   },
@@ -613,7 +689,8 @@
     "name": "Gooseberries",
     "price": "266",
     "image": "/image/market/Gooseberries.jpg",
-    "description": "Gooseberries sourced from local farms.",
+    "short_description": "Gooseberries sourced from local farms.",
+    "description": "",
     "id": 77,
     "category": "Fruits"
   },
@@ -621,7 +698,8 @@
     "name": "Coriander",
     "price": "20",
     "image": "/image/market/Coriander.jpg",
-    "description": "Coriander sourced from local farms.",
+    "short_description": "Coriander sourced from local farms.",
+    "description": "",
     "id": 78,
     "category": "Vegetables"
   },
@@ -629,7 +707,8 @@
     "name": "Healthy Asparagus",
     "price": "163",
     "image": "/image/market/Healthy Asparagus.jpg",
-    "description": "Healthy Asparagus sourced from local farms.",
+    "short_description": "Healthy Asparagus sourced from local farms.",
+    "description": "",
     "id": 79,
     "category": "Vegetables"
   },
@@ -637,7 +716,8 @@
     "name": "Nutmeg",
     "price": "148",
     "image": "/image/market/Nutmeg.jpg",
-    "description": "Nutmeg sourced from local farms.",
+    "short_description": "Nutmeg sourced from local farms.",
+    "description": "",
     "id": 80,
     "category": "Spices"
   },
@@ -645,7 +725,8 @@
     "name": "Organic Collard Greens",
     "price": "373",
     "image": "/image/market/Organic Collard Greens.jpg",
-    "description": "Organic Collard Greens sourced from local farms.",
+    "short_description": "Organic Collard Greens sourced from local farms.",
+    "description": "",
     "id": 81,
     "category": "Greens"
   },
@@ -653,7 +734,8 @@
     "name": "Chia Seeds",
     "price": "197",
     "image": "/image/market/Chia Seeds.jpg",
-    "description": "Chia Seeds sourced from local farms.",
+    "short_description": "Chia Seeds sourced from local farms.",
+    "description": "",
     "id": 82,
     "category": "Sprouts"
   },
@@ -661,7 +743,8 @@
     "name": "Cardamom ",
     "price": "70",
     "image": "/image/market/Cardamom.jpg",
-    "description": "Cardamom sourced from local farms.",
+    "short_description": "Cardamom sourced from local farms.",
+    "description": "",
     "id": 83,
     "category": "Spices"
   },
@@ -669,7 +752,8 @@
     "name": "Beetroot",
     "price": "150",
     "image": "/image/market/Beetroot.jpg",
-    "description": "Beetroot sourced from local farms.",
+    "short_description": "Beetroot sourced from local farms.",
+    "description": "",
     "id": 84,
     "category": "Vegetables"
   },
@@ -677,7 +761,8 @@
     "name": "Radish",
     "price": "124",
     "image": "/image/market/Radish.jpg",
-    "description": "Radish sourced from local farms.",
+    "short_description": "Radish sourced from local farms.",
+    "description": "",
     "id": 85,
     "category": "Vegetables"
   },
@@ -685,7 +770,8 @@
     "name": "Mango",
     "price": "100",
     "image": "/image/market/Mango.jpg",
-    "description": "Mango sourced from local farms.",
+    "short_description": "Mango sourced from local farms.",
+    "description": "",
     "id": 86,
     "category": "Fruits"
   },
@@ -693,7 +779,8 @@
     "name": "Pineapple",
     "price": "126",
     "image": "/image/market/Pineapple.jpg",
-    "description": "Pineapple sourced from local farms.",
+    "short_description": "Pineapple sourced from local farms.",
+    "description": "",
     "id": 87,
     "category": "Fruits"
   },
@@ -701,7 +788,8 @@
     "name": "Papaya",
     "price": "130",
     "image": "/image/market/Papaya.jpg",
-    "description": "Papaya sourced from local farms.",
+    "short_description": "Papaya sourced from local farms.",
+    "description": "",
     "id": 88,
     "category": "Fruits"
   },
@@ -709,7 +797,8 @@
     "name": "Watermelons",
     "price": "131",
     "image": "/image/market/Watermelon.jpg",
-    "description": "Watermelon sourced from local farms.",
+    "short_description": "Watermelon sourced from local farms.",
+    "description": "",
     "id": 89,
     "category": "Fruits"
   },
@@ -717,7 +806,8 @@
     "name": "Spring Onion",
     "price": "98",
     "image": "/image/market/Spring Onion.jpg",
-    "description": "Spring Onion sourced from local farms.",
+    "short_description": "Spring Onion sourced from local farms.",
+    "description": "",
     "id": 90,
     "category": "Vegetables"
   },
@@ -725,7 +815,8 @@
     "name": "Leek",
     "price": "234",
     "image": "/image/market/Leek.jpg",
-    "description": "Leek sourced from local farms.",
+    "short_description": "Leek sourced from local farms.",
+    "description": "",
     "id": 91,
     "category": "Vegetables"
   },
@@ -733,7 +824,8 @@
     "name": "Pomegranate",
     "price": "80",
     "image": "/image/market/Pomegranate.jpg",
-    "description": "Pomegranate sourced from local farms.",
+    "short_description": "Pomegranate sourced from local farms.",
+    "description": "",
     "id": 92,
     "category": "Fruits"
   },
@@ -741,7 +833,8 @@
     "name": "Strawberry",
     "price": "90",
     "image": "/image/market/Strawberry.jpg",
-    "description": "Strawberry sourced from local farms.",
+    "short_description": "Strawberry sourced from local farms.",
+    "description": "",
     "id": 93,
     "category": "Fruits"
   },
@@ -749,7 +842,8 @@
     "name": "Raspberry",
     "price": "82",
     "image": "/image/market/Raspberry.jpg",
-    "description": "Raspberry sourced from local farms.",
+    "short_description": "Raspberry sourced from local farms.",
+    "description": "",
     "id": 94,
     "category": "Fruits"
   },
@@ -757,7 +851,8 @@
     "name": "Blackberry",
     "price": "75",
     "image": "/image/market/Blackberry.jpg",
-    "description": "Blackberry sourced from local farms.",
+    "short_description": "Blackberry sourced from local farms.",
+    "description": "",
     "id": 95,
     "category": "Fruits"
   },
@@ -765,7 +860,8 @@
     "name": "Guava",
     "price": "93",
     "image": "/image/market/Guava.jpg",
-    "description": "Guava sourced from local farms.",
+    "short_description": "Guava sourced from local farms.",
+    "description": "",
     "id": 96,
     "category": "Fruits"
   },
@@ -773,7 +869,8 @@
     "name": "Peach",
     "price": "109",
     "image": "/image/market/Peach.jpg",
-    "description": "Peach sourced from local farms.",
+    "short_description": "Peach sourced from local farms.",
+    "description": "",
     "id": 97,
     "category": "Fruits"
   },
@@ -781,7 +878,8 @@
     "name": "Plum",
     "price": "85",
     "image": "/image/market/Plum.jpg",
-    "description": "Plum sourced from local farms.",
+    "short_description": "Plum sourced from local farms.",
+    "description": "",
     "id": 98,
     "category": "Fruits"
   },
@@ -789,7 +887,8 @@
     "name": "Cherry",
     "price": "88",
     "image": "/image/market/Cherry.jpg",
-    "description": "Cherry sourced from local farms.",
+    "short_description": "Cherry sourced from local farms.",
+    "description": "",
     "id": 99,
     "category": "Fruits"
   },
@@ -797,7 +896,8 @@
     "name": "Kiwi",
     "price": "151",
     "image": "/image/market/Kiwi.jpg",
-    "description": "Kiwi sourced from local farms.",
+    "short_description": "Kiwi sourced from local farms.",
+    "description": "",
     "id": 100,
     "category": "Fruits"
   },
@@ -805,7 +905,8 @@
     "name": "Coconut",
     "price": "109",
     "image": "/image/market/Coconut.jpg",
-    "description": "Coconut sourced from local farms.",
+    "short_description": "Coconut sourced from local farms.",
+    "description": "",
     "id": 101,
     "category": "Fruits"
   },
@@ -813,7 +914,8 @@
     "name": "Apricot",
     "price": "119",
     "image": "/image/market/Apricot.jpg",
-    "description": "Apricot sourced from local farms.",
+    "short_description": "Apricot sourced from local farms.",
+    "description": "",
     "id": 102,
     "category": "Fruits"
   },
@@ -821,7 +923,8 @@
     "name": "Cranberry",
     "price": "120",
     "image": "/image/market/Cranberry.jpg",
-    "description": "Cranberry sourced from local farms.",
+    "short_description": "Cranberry sourced from local farms.",
+    "description": "",
     "id": 103,
     "category": "Fruits"
   },
@@ -829,7 +932,8 @@
     "name": "Olive",
     "price": "139",
     "image": "/image/market/Olive.jpg",
-    "description": "Olive sourced from local farms.",
+    "short_description": "Olive sourced from local farms.",
+    "description": "",
     "id": 104,
     "category": "Fruits"
   },
@@ -837,7 +941,8 @@
     "name": "Rice",
     "price": "300",
     "image": "/image/market/Rice.jpg",
-    "description": "Rice sourced from local farms.",
+    "short_description": "Rice sourced from local farms.",
+    "description": "",
     "id": 105,
     "category": "Grains"
   },
@@ -845,7 +950,8 @@
     "name": "Wheat",
     "price": "159",
     "image": "/image/market/Wheat.jpg",
-    "description": "Wheatsourced from local farms.",
+    "short_description": "Wheatsourced from local farms.",
+    "description": "",
     "id": 106,
     "category": "Grains"
   },
@@ -853,7 +959,8 @@
     "name": "Finger Millet",
     "price": "179",
     "image": "/image/market/Finger Millet.jpg",
-    "description": "Finger Millet sourced from local farms.",
+    "short_description": "Finger Millet sourced from local farms.",
+    "description": "",
     "id": 107,
     "category": "Grains"
   },
@@ -861,7 +968,8 @@
     "name": "Proso Millet",
     "price": "190",
     "image": "/image/market/Proso Millet.jpg",
-    "description": "Proso Millet sourced from local farms.",
+    "short_description": "Proso Millet sourced from local farms.",
+    "description": "",
     "id": 108,
     "category": "Grains"
   },
@@ -869,7 +977,8 @@
     "name": "Little Millet",
     "price": "160",
     "image": "/image/market/Little Millet.jpg",
-    "description": "Little Millet sourced from local farms.",
+    "short_description": "Little Millet sourced from local farms.",
+    "description": "",
     "id": 109,
     "category": "Grains"
   },
@@ -877,7 +986,8 @@
     "name": "Buckwheat",
     "price": "126",
     "image": "/image/market/Buckwheat.jpg",
-    "description": "Buckwheat sourced from local farms.",
+    "short_description": "Buckwheat sourced from local farms.",
+    "description": "",
     "id": 110,
     "category": "Grains"
   },
@@ -885,7 +995,8 @@
     "name": "Wild Rice",
     "price": "220",
     "image": "/image/market/Wild Rice.jpg",
-    "description": "Wild Rice sourced from local farms.",
+    "short_description": "Wild Rice sourced from local farms.",
+    "description": "",
     "id": 111,
     "category": "Grains"
   },
@@ -893,7 +1004,8 @@
     "name": "Bulgur",
     "price": "149",
     "image": "/image/market/Bulgur.jpg",
-    "description": "Bulgur sourced from local farms.",
+    "short_description": "Bulgur sourced from local farms.",
+    "description": "",
     "id": 112,
     "category": "Grains"
   },
@@ -901,7 +1013,8 @@
     "name": "Couscous",
     "price": "189",
     "image": "/image/market/Couscous.jpg",
-    "description": "Couscous sourced from local farms.",
+    "short_description": "Couscous sourced from local farms.",
+    "description": "",
     "id": 113,
     "category": "Grains"
   },
@@ -909,7 +1022,8 @@
     "name": "Freekeh",
     "price": "155",
     "image": "/image/market/Freekeh.jpg",
-    "description": "Freekehsourced from local farms.",
+    "short_description": "Freekehsourced from local farms.",
+    "description": "",
     "id": 114,
     "category": "Grains"
   },
@@ -917,7 +1031,8 @@
     "name": "Farro",
     "price": "169",
     "image": "/image/market/Farro.jpg",
-    "description": "Farro sourced from local farms.",
+    "short_description": "Farro sourced from local farms.",
+    "description": "",
     "id": 115,
     "category": "Grains"
   },
@@ -925,7 +1040,8 @@
     "name": "Einkorn",
     "price": "119",
     "image": "/image/market/Einkorn.jpg",
-    "description": "Einkorn sourced from local farms.",
+    "short_description": "Einkorn sourced from local farms.",
+    "description": "",
     "id": 116,
     "category": "Grains"
   },
@@ -933,7 +1049,8 @@
     "name": "Emmer",
     "price": "199",
     "image": "/image/market/Emmer.jpg",
-    "description": "Emmer sourced from local farms.",
+    "short_description": "Emmer sourced from local farms.",
+    "description": "",
     "id": 117,
     "category": "Grains"
   },
@@ -941,7 +1058,8 @@
     "name": "Masoor Whole",
     "price": "186",
     "image": "/image/market/Masoor Whole.jpg",
-    "description": "Masoor Whole sourced from local farms.",
+    "short_description": "Masoor Whole sourced from local farms.",
+    "description": "",
     "id": 118,
     "category": "Pulses"
   },
@@ -949,7 +1067,8 @@
     "name": "Horse Gram",
     "price": "116",
     "image": "/image/market/Horse Gram.jpg",
-    "description": "Horse Gram sourced from local farms.",
+    "short_description": "Horse Gram sourced from local farms.",
+    "description": "",
     "id": 119,
     "category": "Pulses"
   },
@@ -957,7 +1076,8 @@
     "name": "Split Black Gram",
     "price": "171",
     "image": "/image/market/Split Black Gram.jpg",
-    "description": "Split Black Gram sourced from local farms.",
+    "short_description": "Split Black Gram sourced from local farms.",
+    "description": "",
     "id": 120,
     "category": "Pulses"
   },
@@ -965,7 +1085,8 @@
     "name": "Toor Dal",
     "price": "177",
     "image": "/image/market/Toor Dal.jpg",
-    "description": "Toor Dal sourced from local farms.",
+    "short_description": "Toor Dal sourced from local farms.",
+    "description": "",
     "id": 121,
     "category": "Pulses"
   },
@@ -973,7 +1094,8 @@
     "name": "Yellow Split Lentils",
     "price": "197",
     "image": "/image/market/Yellow Split Lentils.jpg",
-    "description": "Yellow Split Lentils sourced from local farms.",
+    "short_description": "Yellow Split Lentils sourced from local farms.",
+    "description": "",
     "id": 122,
     "category": "Pulses"
   },
@@ -981,7 +1103,8 @@
     "name": "Black Lentils",
     "price": "168",
     "image": "/image/market/Black Lentils.jpg",
-    "description": "Black Lentils sourced from local farms.",
+    "short_description": "Black Lentils sourced from local farms.",
+    "description": "",
     "id": 123,
     "category": "Pulses"
   },
@@ -989,7 +1112,8 @@
     "name": "Brown Lentils",
     "price": "114",
     "image": "/image/market/Brown Lentils.jpg",
-    "description": "Brown Lentils sourced from local farms.",
+    "short_description": "Brown Lentils sourced from local farms.",
+    "description": "",
     "id": 124,
     "category": "Pulses"
   },
@@ -997,7 +1121,8 @@
     "name": "Red Lentils",
     "price": "110",
     "image": "/image/market/Red Lentil.jpg",
-    "description": "Red Lentils sourced from local farms.",
+    "short_description": "Red Lentils sourced from local farms.",
+    "description": "",
     "id": 125,
     "category": "Pulses"
   },
@@ -1005,7 +1130,8 @@
     "name": "Split Green Peas",
     "price": "142",
     "image": "/image/market/Split Green Peas.jpg",
-    "description": "Split Green Peas sourced from local farms.",
+    "short_description": "Split Green Peas sourced from local farms.",
+    "description": "",
     "id": 126,
     "category": "Pulses"
   },
@@ -1013,7 +1139,8 @@
     "name": "Pigeon Peas",
     "price": "178",
     "image": "/image/market/Pigeon Peas.jpg",
-    "description": "Pigeon Peas sourced from local farms.",
+    "short_description": "Pigeon Peas sourced from local farms.",
+    "description": "",
     "id": 127,
     "category": "Pulses"
   },
@@ -1021,7 +1148,8 @@
     "name": "Pinto Beans",
     "price": "153",
     "image": "/image/market/Pinto Beans.jpg",
-    "description": "Pinto Beans sourced from local farms.",
+    "short_description": "Pinto Beans sourced from local farms.",
+    "description": "",
     "id": 128,
     "category": "Pulses"
   },
@@ -1029,7 +1157,8 @@
     "name": "Navy Beans",
     "price": "165",
     "image": "/image/market/Navy Beans.jpg",
-    "description": "Navy Beans sourced from local farms.",
+    "short_description": "Navy Beans sourced from local farms.",
+    "description": "",
     "id": 129,
     "category": "Pulses"
   },
@@ -1037,7 +1166,8 @@
     "name": "Cannellini Beans",
     "price": "147",
     "image": "/image/market/Cannellini Beans.jpg",
-    "description": "Cannellini Beans sourced from local farms.",
+    "short_description": "Cannellini Beans sourced from local farms.",
+    "description": "",
     "id": 130,
     "category": "Pulses"
   },
@@ -1045,7 +1175,8 @@
     "name": "Green Gram",
     "price": "159",
     "image": "/image/market/Green Gram.jpg",
-    "description": "Green Gram sourced from local farms.",
+    "short_description": "Green Gram sourced from local farms.",
+    "description": "",
     "id": 131,
     "category": "Pulses"
   },
@@ -1053,7 +1184,8 @@
     "name": "Grass Peas",
     "price": "169",
     "image": "/image/market/Grass Peas.jpg",
-    "description": "Grass Peas  sourced from local farms.",
+    "short_description": "Grass Peas  sourced from local farms.",
+    "description": "",
     "id": 132,
     "category": "Pulses"
   },
@@ -1061,7 +1193,8 @@
     "name": "Desi Chickpeas",
     "price": "166",
     "image": "/image/market/Desi Chickpeas.jpg",
-    "description": "Desi Chickpeas sourced from local farms.",
+    "short_description": "Desi Chickpeas sourced from local farms.",
+    "description": "",
     "id": 133,
     "category": "Pulses"
   },
@@ -1069,7 +1202,8 @@
     "name": "Lima Beans",
     "price": "149",
     "image": "/image/market/Lima Beans.jpg",
-    "description": "Lima Beans sourced from local farms.",
+    "short_description": "Lima Beans sourced from local farms.",
+    "description": "",
     "id": 134,
     "category": "Pulses"
   },
@@ -1077,7 +1211,8 @@
     "name": "Runner Beans",
     "price": "174",
     "image": "/image/market/Runner Beans.jpg",
-    "description": "Runner Beans sourced from local farms.",
+    "short_description": "Runner Beans sourced from local farms.",
+    "description": "",
     "id": 135,
     "category": "Pulses"
   },
@@ -1085,7 +1220,8 @@
     "name": "Velvet Bean",
     "price": "121",
     "image": "/image/market/Velvet Bean.jpg",
-    "description": "Velvet Bean sourced from local farms.",
+    "short_description": "Velvet Bean sourced from local farms.",
+    "description": "",
     "id": 136,
     "category": "Pulses"
   },
@@ -1093,7 +1229,8 @@
     "name": "Jack Beans",
     "price": "135",
     "image": "/image/market/Jack Beans.jpg",
-    "description": "Jack Beans sourced from local farms.",
+    "short_description": "Jack Beans sourced from local farms.",
+    "description": "",
     "id": 137,
     "category": "Pulses"
   },
@@ -1101,7 +1238,8 @@
     "name": "Cowpeas",
     "price": "162",
     "image": "/image/market/Cowpeas.jpg",
-    "description": "Cowpeas sourced from local farms.",
+    "short_description": "Cowpeas sourced from local farms.",
+    "description": "",
     "id": 138,
     "category": "Pulses"
   },
@@ -1109,7 +1247,8 @@
     "name": "Cream",
     "price": "159",
     "image": "/image/market/dairy Cream.jpg",
-    "description": "Cream sourced from local farms.",
+    "short_description": "Cream sourced from local farms.",
+    "description": "",
     "id": 164,
     "category": "Dairy"
   },
@@ -1117,7 +1256,8 @@
     "name": "Butter",
     "price": "172",
     "image": "/image/market/Butter.jpg",
-    "description": "Butter sourced from local farms.",
+    "short_description": "Butter sourced from local farms.",
+    "description": "",
     "id": 165,
     "category": "Dairy"
   },
@@ -1125,7 +1265,8 @@
     "name": "Ghee",
     "price": "198",
     "image": "/image/market/Ghee.jpg",
-    "description": "Ghee sourced from local farms.",
+    "short_description": "Ghee sourced from local farms.",
+    "description": "",
     "id": 166,
     "category": "Dairy"
   },
@@ -1133,7 +1274,8 @@
     "name": "Buttermilk",
     "price": "126",
     "image": "/image/market/Buttermilk.jpg",
-    "description": "Buttermilk sourced from local farms.",
+    "short_description": "Buttermilk sourced from local farms.",
+    "description": "",
     "id": 167,
     "category": "Dairy"
   },
@@ -1141,7 +1283,8 @@
     "name": "Curd",
     "price": "117",
     "image": "/image/market/Curd.jpg",
-    "description": "Curd sourced from local farms.",
+    "short_description": "Curd sourced from local farms.",
+    "description": "",
     "id": 168,
     "category": "Dairy"
   },
@@ -1149,7 +1292,8 @@
     "name": "Yogurt",
     "price": "137",
     "image": "/image/market/Yogurt.jpg",
-    "description": "Yogurt sourced from local farms.",
+    "short_description": "Yogurt sourced from local farms.",
+    "description": "",
     "id": 169,
     "category": "Dairy"
   },
@@ -1157,7 +1301,8 @@
     "name": "Whipped Cream",
     "price": "153",
     "image": "/image/market/Whipped Cream.jpg",
-    "description": "Whipped Cream sourced from local farms.",
+    "short_description": "Whipped Cream sourced from local farms.",
+    "description": "",
     "id": 171,
     "category": "Dairy"
   },
@@ -1165,7 +1310,8 @@
     "name": "Cheddar Cheese",
     "price": "177",
     "image": "/image/market/Cheddar Cheese.jpg",
-    "description": "Cheddar Cheese sourced from local farms.",
+    "short_description": "Cheddar Cheese sourced from local farms.",
+    "description": "",
     "id": 174,
     "category": "Dairy"
   },
@@ -1173,7 +1319,8 @@
     "name": "Mozzarella Cheese",
     "price": "186",
     "image": "/image/market/Mozzarella Cheese.jpg",
-    "description": "Mozzarella Cheese sourced from local farms.",
+    "short_description": "Mozzarella Cheese sourced from local farms.",
+    "description": "",
     "id": 175,
     "category": "Dairy"
   },
@@ -1181,7 +1328,8 @@
     "name": "Parmesan Cheese",
     "price": "192",
     "image": "/image/market/Parmesan Cheese.jpg",
-    "description": "Parmesan Cheese sourced from local farms.",
+    "short_description": "Parmesan Cheese sourced from local farms.",
+    "description": "",
     "id": 176,
     "category": "Dairy"
   },
@@ -1189,7 +1337,8 @@
     "name": "Feta Cheese",
     "price": "173",
     "image": "/image/market/Feta Cheese.jpg",
-    "description": "Feta Cheese sourced from local farms.",
+    "short_description": "Feta Cheese sourced from local farms.",
+    "description": "",
     "id": 178,
     "category": "Dairy"
   },
@@ -1197,7 +1346,8 @@
     "name": "Cream Cheese",
     "price": "154",
     "image": "/image/market/Cream Cheese.jpg",
-    "description": "Cream Cheese sourced from local farms.",
+    "short_description": "Cream Cheese sourced from local farms.",
+    "description": "",
     "id": 179,
     "category": "Dairy"
   },
@@ -1205,7 +1355,8 @@
     "name": "Blue Cheese",
     "price": "169",
     "image": "/image/market/Blue Cheese.jpg",
-    "description": "Blue Cheese sourced from local farms.",
+    "short_description": "Blue Cheese sourced from local farms.",
+    "description": "",
     "id": 180,
     "category": "Dairy"
   },
@@ -1213,7 +1364,8 @@
     "name": "Swiss Cheese",
     "price": "183",
     "image": "/image/market/Swiss Cheese.jpg",
-    "description": "Swiss Cheese sourced from local farms.",
+    "short_description": "Swiss Cheese sourced from local farms.",
+    "description": "",
     "id": 181,
     "category": "Dairy"
   },
@@ -1221,7 +1373,8 @@
     "name": "Kefir",
     "price": "135",
     "image": "/image/market/Kefir.jpg",
-    "description": "Kefir sourced from local farms.",
+    "short_description": "Kefir sourced from local farms.",
+    "description": "",
     "id": 183,
     "category": "Dairy"
   },
@@ -1229,7 +1382,8 @@
     "name": "Lassi",
     "price": "119",
     "image": "/image/market/Lassi.jpg",
-    "description": "Lassi sourced from local farms.",
+    "short_description": "Lassi sourced from local farms.",
+    "description": "",
     "id": 184,
     "category": "Dairy"
   },
@@ -1237,7 +1391,8 @@
     "name": "Flavored Milk",
     "price": "167",
     "image": "/image/market/Flavored Milk.jpg",
-    "description": "Flavored Milk sourced from local farms.",
+    "short_description": "Flavored Milk sourced from local farms.",
+    "description": "",
     "id": 185,
     "category": "Dairy"
   },
@@ -1245,7 +1400,8 @@
     "name": "Milkshake",
     "price": "156",
     "image": "/image/market/Milkshake.jpg",
-    "description": "Milkshake sourced from local farms.",
+    "short_description": "Milkshake sourced from local farms.",
+    "description": "",
     "id": 186,
     "category": "Dairy"
   },
@@ -1253,7 +1409,8 @@
     "name": "Condensed Milk",
     "price": "179",
     "image": "/image/market/Condensed Milk.jpg",
-    "description": "Condensed Milk sourced from local farms.",
+    "short_description": "Condensed Milk sourced from local farms.",
+    "description": "",
     "id": 187,
     "category": "Dairy"
   },
@@ -1261,7 +1418,8 @@
     "name": "Milk",
     "price": "164",
     "image": "/image/market/milk.jpg",
-    "description": "Milk sourced from local farms.",
+    "short_description": "Milk sourced from local farms.",
+    "description": "",
     "id": 188,
     "category": "Dairy"
   },
@@ -1269,7 +1427,8 @@
     "name": "Ice Cream",
     "price": "199",
     "image": "/image/market/Ice Cream.jpg",
-    "description": "Ice Cream sourced from local farms.",
+    "short_description": "Ice Cream sourced from local farms.",
+    "description": "",
     "id": 189,
     "category": "Dairy"
   },
@@ -1277,7 +1436,8 @@
     "name": "Custard",
     "price": "143",
     "image": "/image/market/Custard.jpg",
-    "description": "Custard sourced from local farms.",
+    "short_description": "Custard sourced from local farms.",
+    "description": "",
     "id": 190,
     "category": "Dairy"
   },
@@ -1285,7 +1445,8 @@
     "name": "Pudding",
     "price": "140",
     "image": "/image/market/Pudding.jpg",
-    "description": "Pudding sourced from local farms.",
+    "short_description": "Pudding sourced from local farms.",
+    "description": "",
     "id": 191,
     "category": "Dairy"
   },
@@ -1293,7 +1454,8 @@
     "name": "Milk Powder",
     "price": "175",
     "image": "/image/market/Milk Powder.jpg",
-    "description": "Milk Powder sourced from local farms.",
+    "short_description": "Milk Powder sourced from local farms.",
+    "description": "",
     "id": 192,
     "category": "Dairy"
   },
@@ -1301,7 +1463,8 @@
     "name": "Kale",
     "price": "155",
     "image": "/image/market/Kale.jpg",
-    "description": "Kale sourced from local farms.",
+    "short_description": "Kale sourced from local farms.",
+    "description": "",
     "id": 193,
     "category": "Greens"
   },
@@ -1309,7 +1472,8 @@
     "name": "Mustard Greens",
     "price": "161",
     "image": "/image/market/Mustard Greens.jpg",
-    "description": "Mustard Greens (Sarson) sourced from local farms.",
+    "short_description": "Mustard Greens (Sarson) sourced from local farms.",
+    "description": "",
     "id": 194,
     "category": "Greens"
   },
@@ -1317,7 +1481,8 @@
     "name": "Fenugreek Leaves",
     "price": "139",
     "image": "/image/market/Fenugreek Leaves.jpg",
-    "description": "Fenugreek Leaves (Methi) sourced from local farms.",
+    "short_description": "Fenugreek Leaves (Methi) sourced from local farms.",
+    "description": "",
     "id": 195,
     "category": "Greens"
   },
@@ -1325,7 +1490,8 @@
     "name": "Amaranth Leaves",
     "price": "145",
     "image": "/image/market/Amaranth Leaves.jpg",
-    "description": "Amaranth Leaves (Chaulai) sourced from local farms.",
+    "short_description": "Amaranth Leaves (Chaulai) sourced from local farms.",
+    "description": "",
     "id": 196,
     "category": "Greens"
   },
@@ -1333,7 +1499,8 @@
     "name": "Nettle Leaves",
     "price": "142",
     "image": "/image/market/Nettle Leaves.jpg",
-    "description": "Nettle Leaves sourced from local farms.",
+    "short_description": "Nettle Leaves sourced from local farms.",
+    "description": "",
     "id": 197,
     "category": "Greens"
   },
@@ -1341,7 +1508,8 @@
     "name": "Swiss Chard",
     "price": "159",
     "image": "/image/market/Swiss Chard.jpg",
-    "description": "Swiss Chard sourced from local farms.",
+    "short_description": "Swiss Chard sourced from local farms.",
+    "description": "",
     "id": 198,
     "category": "Greens"
   },
@@ -1349,7 +1517,8 @@
     "name": "Arugula",
     "price": "144",
     "image": "/image/market/Arugula.jpg",
-    "description": "Arugula (Rocket) sourced from local farms.",
+    "short_description": "Arugula (Rocket) sourced from local farms.",
+    "description": "",
     "id": 199,
     "category": "Greens"
   },
@@ -1357,7 +1526,8 @@
     "name": "Watercress",
     "price": "132",
     "image": "/image/market/Watercress.jpg",
-    "description": "Watercress sourced from local farms.",
+    "short_description": "Watercress sourced from local farms.",
+    "description": "",
     "id": 200,
     "category": "Greens"
   },
@@ -1365,7 +1535,8 @@
     "name": "Mint Leaves",
     "price": "147",
     "image": "/image/market/Mint Leaves.jpg",
-    "description": "Mint Leaves (Pudina) sourced from local farms.",
+    "short_description": "Mint Leaves (Pudina) sourced from local farms.",
+    "description": "",
     "id": 201,
     "category": "Greens"
   },
@@ -1373,7 +1544,8 @@
     "name": "Curry Leaves",
     "price": "138",
     "image": "/image/market/Curry Leaves.jpg",
-    "description": "Curry Leaves sourced from local farms.",
+    "short_description": "Curry Leaves sourced from local farms.",
+    "description": "",
     "id": 202,
     "category": "Greens"
   },
@@ -1381,7 +1553,8 @@
     "name": "Malabar Spinach",
     "price": "151",
     "image": "/image/market/Malabar Spinach.jpg",
-    "description": "Malabar Spinach (Poi Saag) sourced from local farms.",
+    "short_description": "Malabar Spinach (Poi Saag) sourced from local farms.",
+    "description": "",
     "id": 203,
     "category": "Greens"
   },
@@ -1389,7 +1562,8 @@
     "name": "Basella Leaves",
     "price": "135",
     "image": "/image/market/Basella Leaves.jpg",
-    "description": "Basella Leaves sourced from local farms.",
+    "short_description": "Basella Leaves sourced from local farms.",
+    "description": "",
     "id": 204,
     "category": "Greens"
   },
@@ -1397,7 +1571,8 @@
     "name": "Radish Leaves",
     "price": "134",
     "image": "/image/market/Radish Leaves.jpg",
-    "description": "Radish Leaves (Mooli ke Patte) sourced from local farms.",
+    "short_description": "Radish Leaves (Mooli ke Patte) sourced from local farms.",
+    "description": "",
     "id": 205,
     "category": "Greens"
   },
@@ -1405,7 +1580,8 @@
     "name": "Beet Greens",
     "price": "136",
     "image": "/image/market/Beet Greens.jpg",
-    "description": "Beet Greens sourced from local farms.",
+    "short_description": "Beet Greens sourced from local farms.",
+    "description": "",
     "id": 206,
     "category": "Greens"
   },
@@ -1413,7 +1589,8 @@
     "name": "Turnip Greens",
     "price": "137",
     "image": "/image/market/Turnip Greens.jpg",
-    "description": "Turnip Greens sourced from local farms.",
+    "short_description": "Turnip Greens sourced from local farms.",
+    "description": "",
     "id": 207,
     "category": "Greens"
   },
@@ -1421,7 +1598,8 @@
     "name": "Taro Leaves",
     "price": "146",
     "image": "/image/market/Taro Leaves.jpg",
-    "description": "Taro Leaves (Kochu Pata/Gaava Saag) sourced from local farms.",
+    "short_description": "Taro Leaves (Kochu Pata/Gaava Saag) sourced from local farms.",
+    "description": "",
     "id": 208,
     "category": "Greens"
   },
@@ -1429,7 +1607,8 @@
     "name": "Purslane",
     "price": "141",
     "image": "/image/market/Purslane.jpg",
-    "description": "Purslane sourced from local farms.",
+    "short_description": "Purslane sourced from local farms.",
+    "description": "",
     "id": 209,
     "category": "Greens"
   },
@@ -1437,7 +1616,8 @@
     "name": "Celery Leaves",
     "price": "157",
     "image": "/image/market/Celery Leaves.jpg",
-    "description": "Celery Leaves sourced from local farms.",
+    "short_description": "Celery Leaves sourced from local farms.",
+    "description": "",
     "id": 210,
     "category": "Greens"
   },
@@ -1445,7 +1625,8 @@
     "name": "Parsley",
     "price": "148",
     "image": "/image/market/Parsley.jpg",
-    "description": "Parsley sourced from local farms.",
+    "short_description": "Parsley sourced from local farms.",
+    "description": "",
     "id": 211,
     "category": "Greens"
   },
@@ -1453,7 +1634,8 @@
     "name": "Dill Leaves",
     "price": "153",
     "image": "/image/market/Dill Leaves.jpg",
-    "description": "Dill Leaves (Sowa Bhaji) sourced from local farms.",
+    "short_description": "Dill Leaves (Sowa Bhaji) sourced from local farms.",
+    "description": "",
     "id": 212,
     "category": "Greens"
   },
@@ -1461,7 +1643,8 @@
     "name": "Spring Onion Greens",
     "price": "150",
     "image": "/image/market/Spring Onion Greens.jpg",
-    "description": "Spring Onion Greens sourced from local farms.",
+    "short_description": "Spring Onion Greens sourced from local farms.",
+    "description": "",
     "id": 213,
     "category": "Greens"
   },
@@ -1469,7 +1652,8 @@
     "name": "Cassava Leaves",
     "price": "160",
     "image": "/image/market/Cassava Leaves.jpg",
-    "description": "Cassava Leaves sourced from local farms.",
+    "short_description": "Cassava Leaves sourced from local farms.",
+    "description": "",
     "id": 214,
     "category": "Greens"
   },
@@ -1477,7 +1661,8 @@
     "name": "Mung Bean Sprouts",
     "price": "125",
     "image": "/image/market/Mung Bean Sprouts.jpg",
-    "description": "Mung Bean Sprouts (Green Gram) sourced from local farms.",
+    "short_description": "Mung Bean Sprouts (Green Gram) sourced from local farms.",
+    "description": "",
     "id": 215,
     "category": "Sprouts"
   },
@@ -1485,7 +1670,8 @@
     "name": "Black Gram Sprouts",
     "price": "129",
     "image": "/image/market/Black Gram Sprouts.jpg",
-    "description": "Black Gram Sprouts (Urad) sourced from local farms.",
+    "short_description": "Black Gram Sprouts (Urad) sourced from local farms.",
+    "description": "",
     "id": 216,
     "category": "Sprouts"
   },
@@ -1493,7 +1679,8 @@
     "name": "Chickpea Sprouts",
     "price": "133",
     "image": "/image/market/Chickpea Sprouts.jpg",
-    "description": "Chickpea Sprouts (Chana) sourced from local farms.",
+    "short_description": "Chickpea Sprouts (Chana) sourced from local farms.",
+    "description": "",
     "id": 217,
     "category": "Sprouts"
   },
@@ -1501,7 +1688,8 @@
     "name": "Green Pea Sprouts",
     "price": "122",
     "image": "/image/market/Green Pea Sprouts.jpg",
-    "description": "Green Pea Sprouts sourced from local farms.",
+    "short_description": "Green Pea Sprouts sourced from local farms.",
+    "description": "",
     "id": 218,
     "category": "Sprouts"
   },
@@ -1509,7 +1697,8 @@
     "name": "Pigeon Pea Sprouts",
     "price": "132",
     "image": "/image/market/Pigeon Sprout.jpg",
-    "description": "Pigeon Pea Sprouts (Toor/Arhar) sourced from local farms.",
+    "short_description": "Pigeon Pea Sprouts (Toor/Arhar) sourced from local farms.",
+    "description": "",
     "id": 219,
     "category": "Sprouts"
   },
@@ -1517,7 +1706,8 @@
     "name": "Lentil Sprouts",
     "price": "120",
     "image": "/image/market/Lentil Sprouts.jpg",
-    "description": "Lentil Sprouts (Masoor) sourced from local farms.",
+    "short_description": "Lentil Sprouts (Masoor) sourced from local farms.",
+    "description": "",
     "id": 220,
     "category": "Sprouts"
   },
@@ -1525,7 +1715,8 @@
     "name": "Horse Gram Sprouts",
     "price": "124",
     "image": "/image/market/Horse Gram Sprouts.jpg",
-    "description": "Horse Gram Sprouts (Kulthi) sourced from local farms.",
+    "short_description": "Horse Gram Sprouts (Kulthi) sourced from local farms.",
+    "description": "",
     "id": 221,
     "category": "Sprouts"
   },
@@ -1533,7 +1724,8 @@
     "name": "Soybean Sprouts",
     "price": "127",
     "image": "/image/market/Soybean Sprouts.jpg",
-    "description": "Soybean Sprouts (Kongnamul – Korean) sourced from local farms.",
+    "short_description": "Soybean Sprouts (Kongnamul – Korean) sourced from local farms.",
+    "description": "",
     "id": 222,
     "category": "Sprouts"
   },
@@ -1541,7 +1733,8 @@
     "name": "Adzuki Bean Sprouts",
     "price": "134",
     "image": "/image/market/Adzuki Bean Sprouts.jpg",
-    "description": "Adzuki Bean Sprouts sourced from local farms.",
+    "short_description": "Adzuki Bean Sprouts sourced from local farms.",
+    "description": "",
     "id": 223,
     "category": "Sprouts"
   },
@@ -1549,7 +1742,8 @@
     "name": "Cowpea Sprouts",
     "price": "126",
     "image": "/image/market/Cowpea Sprouts.jpg",
-    "description": "Cowpea Sprouts (Lobia) sourced from local farms.",
+    "short_description": "Cowpea Sprouts (Lobia) sourced from local farms.",
+    "description": "",
     "id": 224,
     "category": "Sprouts"
   },
@@ -1557,7 +1751,8 @@
     "name": "Wheat Sprouts",
     "price": "123",
     "image": "/image/market/Whrat Sprouts.jpg",
-    "description": "Wheat Sprouts sourced from local farms.",
+    "short_description": "Wheat Sprouts sourced from local farms.",
+    "description": "",
     "id": 225,
     "category": "Sprouts"
   },
@@ -1565,7 +1760,8 @@
     "name": "Barley Sprouts",
     "price": "118",
     "image": "/image/market/Barley Sprouts.jpg",
-    "description": "Barley Sprouts sourced from local farms.",
+    "short_description": "Barley Sprouts sourced from local farms.",
+    "description": "",
     "id": 226,
     "category": "Sprouts"
   },
@@ -1573,7 +1769,8 @@
     "name": "Rice Sprouts",
     "price": "121",
     "image": "/image/market/Rice Sprouts.jpg",
-    "description": "Rice Sprouts sourced from local farms.",
+    "short_description": "Rice Sprouts sourced from local farms.",
+    "description": "",
     "id": 227,
     "category": "Sprouts"
   },
@@ -1581,7 +1778,8 @@
     "name": "Oat Sprouts",
     "price": "117",
     "image": "/image/market/Oat Sprouts.jpg",
-    "description": "Oat Sprouts sourced from local farms.",
+    "short_description": "Oat Sprouts sourced from local farms.",
+    "description": "",
     "id": 228,
     "category": "Sprouts"
   },
@@ -1589,7 +1787,8 @@
     "name": "Corn Sprouts",
     "price": "119",
     "image": "/image/market/Corn Sprouts.jpg",
-    "description": "Corn Sprouts (Maize) sourced from local farms.",
+    "short_description": "Corn Sprouts (Maize) sourced from local farms.",
+    "description": "",
     "id": 229,
     "category": "Sprouts"
   },
@@ -1597,7 +1796,8 @@
     "name": "Millet Sprouts",
     "price": "116",
     "image": "/image/market/Millet Sprouts.jpg",
-    "description": "Millet Sprouts (Bajra) sourced from local farms.",
+    "short_description": "Millet Sprouts (Bajra) sourced from local farms.",
+    "description": "",
     "id": 230,
     "category": "Sprouts"
   },
@@ -1605,7 +1805,8 @@
     "name": "Foxtail Millet Sprouts",
     "price": "128",
     "image": "/image/market/Foxtail Millet Sprouts.jpg",
-    "description": "Foxtail Millet Sprouts sourced from local farms.",
+    "short_description": "Foxtail Millet Sprouts sourced from local farms.",
+    "description": "",
     "id": 231,
     "category": "Sprouts"
   },
@@ -1613,7 +1814,8 @@
     "name": "Finger Millet Sprouts",
     "price": "131",
     "image": "/image/market/Finger Millet Sprouts.jpg",
-    "description": "Finger Millet Sprouts (Ragi) sourced from local farms.",
+    "short_description": "Finger Millet Sprouts (Ragi) sourced from local farms.",
+    "description": "",
     "id": 232,
     "category": "Sprouts"
   },
@@ -1621,7 +1823,8 @@
     "name": "Little Millet Sprouts",
     "price": "130",
     "image": "/image/market/Little Millet.jpg",
-    "description": "Little Millet Sprouts sourced from local farms.",
+    "short_description": "Little Millet Sprouts sourced from local farms.",
+    "description": "",
     "id": 233,
     "category": "Sprouts"
   },
@@ -1629,7 +1832,8 @@
     "name": "Fenugreek Sprouts",
     "price": "114",
     "image": "/image/market/Fenugreek Sprouts.jpg",
-    "description": "Fenugreek Sprouts (Methi) sourced from local farms.",
+    "short_description": "Fenugreek Sprouts (Methi) sourced from local farms.",
+    "description": "",
     "id": 235,
     "category": "Sprouts"
   },
@@ -1637,7 +1841,8 @@
     "name": "Mustard Sprouts",
     "price": "113",
     "image": "/image/market/Mustard Sprouts.jpg",
-    "description": "Mustard Sprouts (Rai/Sarson) sourced from local farms.",
+    "short_description": "Mustard Sprouts (Rai/Sarson) sourced from local farms.",
+    "description": "",
     "id": 236,
     "category": "Sprouts"
   },
@@ -1645,7 +1850,8 @@
     "name": "Sunflower Seed Sprouts",
     "price": "140",
     "image": "/image/market/Sunflower Seed Sprouts.jpg",
-    "description": "Sunflower Seed Sprouts sourced from local farms.",
+    "short_description": "Sunflower Seed Sprouts sourced from local farms.",
+    "description": "",
     "id": 237,
     "category": "Sprouts"
   },
@@ -1653,7 +1859,8 @@
     "name": "Chicken Egg",
     "price": "135",
     "image": "/image/market/Chicken Egg.jpg",
-    "description": "Fresh Chicken Egg sourced from local farms.",
+    "short_description": "Fresh Chicken Egg sourced from local farms.",
+    "description": "",
     "id": 240,
     "category": "Eggs"
   },
@@ -1661,7 +1868,8 @@
     "name": "Duck Egg",
     "price": "145",
     "image": "/image/market/Duck Egg.jpg",
-    "description": "Fresh Duck Egg sourced from local farms.",
+    "short_description": "Fresh Duck Egg sourced from local farms.",
+    "description": "",
     "id": 241,
     "category": "Eggs"
   },
@@ -1669,7 +1877,8 @@
     "name": "Quail Egg",
     "price": "158",
     "image": "/image/market/Quail Egg.jpg",
-    "description": "Fresh Quail Egg sourced from local farms.",
+    "short_description": "Fresh Quail Egg sourced from local farms.",
+    "description": "",
     "id": 242,
     "category": "Eggs"
   },
@@ -1677,7 +1886,8 @@
     "name": "Goose Egg",
     "price": "175",
     "image": "/image/market/Goose Egg.jpg",
-    "description": "Fresh Goose Egg sourced from local farms.",
+    "short_description": "Fresh Goose Egg sourced from local farms.",
+    "description": "",
     "id": 243,
     "category": "Eggs"
   },
@@ -1685,7 +1895,8 @@
     "name": "Turkey Egg",
     "price": "168",
     "image": "/image/market/Turkey Egg.jpg",
-    "description": "Fresh Turkey Egg sourced from local farms.",
+    "short_description": "Fresh Turkey Egg sourced from local farms.",
+    "description": "",
     "id": 244,
     "category": "Eggs"
   },
@@ -1693,7 +1904,8 @@
     "name": "Pigeon Egg",
     "price": "139",
     "image": "/image/market/Pigeon Egg.jpg",
-    "description": "Fresh Pigeon Egg sourced from local farms.",
+    "short_description": "Fresh Pigeon Egg sourced from local farms.",
+    "description": "",
     "id": 245,
     "category": "Eggs"
   },
@@ -1701,7 +1913,8 @@
     "name": "Coriander Seeds",
     "price": "112",
     "image": "/image/market/Coriander Seeds.jpg",
-    "description": "Coriander Seeds sourced from local farms.",
+    "short_description": "Coriander Seeds sourced from local farms.",
+    "description": "",
     "id": 246,
     "category": "Spices"
   },
@@ -1709,7 +1922,8 @@
     "name": "Cumin Seeds",
     "price": "119",
     "image": "/image/market/Cumin Seeds.jpg",
-    "description": "Cumin Seeds sourced from local farms.",
+    "short_description": "Cumin Seeds sourced from local farms.",
+    "description": "",
     "id": 247,
     "category": "Spices"
   },
@@ -1717,7 +1931,8 @@
     "name": "Fennel Seeds",
     "price": "123",
     "image": "/image/market/Fennel Seeds.jpg",
-    "description": "Fennel Seeds sourced from local farms.",
+    "short_description": "Fennel Seeds sourced from local farms.",
+    "description": "",
     "id": 248,
     "category": "Spices"
   },
@@ -1725,7 +1940,8 @@
     "name": "Fenugreek Seeds",
     "price": "109",
     "image": "/image/market/Fenugreek Seeds.jpg",
-    "description": "Fenugreek Seeds sourced from local farms.",
+    "short_description": "Fenugreek Seeds sourced from local farms.",
+    "description": "",
     "id": 249,
     "category": "Spices"
   },
@@ -1733,7 +1949,8 @@
     "name": "Mustard Seeds (Yellow/Black)",
     "price": "114",
     "image": "/image/market/Mustard Seeds.jpg",
-    "description": "Mustard Seeds (Yellow/Black) sourced from local farms.",
+    "short_description": "Mustard Seeds (Yellow/Black) sourced from local farms.",
+    "description": "",
     "id": 250,
     "category": "Spices"
   },
@@ -1741,7 +1958,8 @@
     "name": "Caraway Seeds",
     "price": "124",
     "image": "/image/market/Caraway Seeds.jpg",
-    "description": "Caraway Seeds sourced from local farms.",
+    "short_description": "Caraway Seeds sourced from local farms.",
+    "description": "",
     "id": 251,
     "category": "Spices"
   },
@@ -1749,7 +1967,8 @@
     "name": "Nigella Seeds (Kalonji)",
     "price": "116",
     "image": "/image/market/Nigella Seeds.jpg",
-    "description": "Nigella Seeds (Kalonji) sourced from local farms.",
+    "short_description": "Nigella Seeds (Kalonji) sourced from local farms.",
+    "description": "",
     "id": 252,
     "category": "Spices"
   },
@@ -1757,7 +1976,8 @@
     "name": "Poppy Seeds",
     "price": "127",
     "image": "/image/market/Poppy Seeds.jpg",
-    "description": "Poppy Seeds sourced from local farms.",
+    "short_description": "Poppy Seeds sourced from local farms.",
+    "description": "",
     "id": 253,
     "category": "Spices"
   },
@@ -1765,7 +1985,8 @@
     "name": "Ajwain (Carom Seeds)",
     "price": "115",
     "image": "/image/market/Ajwain.jpg",
-    "description": "Ajwain (Carom Seeds) sourced from local farms.",
+    "short_description": "Ajwain (Carom Seeds) sourced from local farms.",
+    "description": "",
     "id": 254,
     "category": "Spices"
   },
@@ -1773,7 +1994,8 @@
     "name": "Anise Seeds",
     "price": "118",
     "image": "/image/market/Anise Seeds.jpg",
-    "description": "Anise Seeds sourced from local farms.",
+    "short_description": "Anise Seeds sourced from local farms.",
+    "description": "",
     "id": 255,
     "category": "Spices"
   },
@@ -1781,7 +2003,8 @@
     "name": "Bay Leaf (Tej Patta)",
     "price": "109",
     "image": "/image/market/Bay Leaf.jpg",
-    "description": "Bay Leaf (Tej Patta) sourced from local farms.",
+    "short_description": "Bay Leaf (Tej Patta) sourced from local farms.",
+    "description": "",
     "id": 256,
     "category": "Spices"
   },
@@ -1789,7 +2012,8 @@
     "name": "Curry Leaf",
     "price": "113",
     "image": "/image/market/Curry Leaf.jpg",
-    "description": "Curry Leaf sourced from local farms.",
+    "short_description": "Curry Leaf sourced from local farms.",
+    "description": "",
     "id": 257,
     "category": "Spices"
   },
@@ -1797,7 +2021,8 @@
     "name": "Dried Fenugreek Leaves (Kasuri Methi)",
     "price": "121",
     "image": "/image/market/Dried Fenugreek Leaves.jpg",
-    "description": "Dried Fenugreek Leaves (Kasuri Methi) sourced from local farms.",
+    "short_description": "Dried Fenugreek Leaves (Kasuri Methi) sourced from local farms.",
+    "description": "",
     "id": 258,
     "category": "Spices"
   },
@@ -1805,7 +2030,8 @@
     "name": "Dried Mint",
     "price": "117",
     "image": "/image/market/Dried Mint.jpg",
-    "description": "Dried Mint sourced from local farms.",
+    "short_description": "Dried Mint sourced from local farms.",
+    "description": "",
     "id": 259,
     "category": "Spices"
   },
@@ -1813,7 +2039,8 @@
     "name": "Dried Basil",
     "price": "116",
     "image": "/image/market/Dried Basil.jpg",
-    "description": "Dried Basil sourced from local farms.",
+    "short_description": "Dried Basil sourced from local farms.",
+    "description": "",
     "id": 260,
     "category": "Spices"
   },
@@ -1821,7 +2048,8 @@
     "name": "Mace (Javitri)",
     "price": "139",
     "image": "/image/market/Mace.jpg",
-    "description": "Mace (Javitri) sourced from local farms.",
+    "short_description": "Mace (Javitri) sourced from local farms.",
+    "description": "",
     "id": 261,
     "category": "Spices"
   },
@@ -1829,7 +2057,8 @@
     "name": "Rose Petals",
     "price": "133",
     "image": "/image/market/Rose Petals.jpg",
-    "description": "Dried Rose Petals for garam masala or biryani.",
+    "short_description": "Dried Rose Petals for garam masala or biryani.",
+    "description": "",
     "id": 262,
     "category": "Spices"
   },
@@ -1837,7 +2066,8 @@
     "name": "Marjoram",
     "price": "126",
     "image": "/image/market/Marjoram.jpg",
-    "description": "Dried Marjoram sourced from local farms.",
+    "short_description": "Dried Marjoram sourced from local farms.",
+    "description": "",
     "id": 263,
     "category": "Spices"
   },
@@ -1845,7 +2075,8 @@
     "name": "Oregano (Dried)",
     "price": "120",
     "image": "/image/market/Oregano.jpg",
-    "description": "Dried Oregano sourced from local farms.",
+    "short_description": "Dried Oregano sourced from local farms.",
+    "description": "",
     "id": 264,
     "category": "Spices"
   },
@@ -1853,7 +2084,8 @@
     "name": "Thyme (Dried)",
     "price": "125",
     "image": "/image/market/Thyme.jpg",
-    "description": "Dried Thyme sourced from local farms.",
+    "short_description": "Dried Thyme sourced from local farms.",
+    "description": "",
     "id": 265,
     "category": "Spices"
   },
@@ -1861,7 +2093,8 @@
     "name": "Galangal",
     "price": "137",
     "image": "/image/market/Galangal.jpg",
-    "description": "Galangal (Thai spice) sourced from local farms.",
+    "short_description": "Galangal (Thai spice) sourced from local farms.",
+    "description": "",
     "id": 266,
     "category": "Spices"
   },
@@ -1869,7 +2102,8 @@
     "name": "Garlic Powder",
     "price": "128",
     "image": "/image/market/Garlic Powder.jpg",
-    "description": "Garlic Powder sourced from local farms.",
+    "short_description": "Garlic Powder sourced from local farms.",
+    "description": "",
     "id": 267,
     "category": "Spices"
   },
@@ -1877,7 +2111,8 @@
     "name": "Onion Powder",
     "price": "130",
     "image": "/image/market/Onion Powder.jpg",
-    "description": "Onion Powder sourced from local farms.",
+    "short_description": "Onion Powder sourced from local farms.",
+    "description": "",
     "id": 268,
     "category": "Spices"
   },
@@ -1885,7 +2120,8 @@
     "name": "Horseradish",
     "price": "132",
     "image": "/image/market/Horseradish.jpg",
-    "description": "Horseradish root or powder sourced locally.",
+    "short_description": "Horseradish root or powder sourced locally.",
+    "description": "",
     "id": 269,
     "category": "Spices"
   },
@@ -1893,7 +2129,8 @@
     "name": "Wasabi",
     "price": "140",
     "image": "/image/market/Wasabi.jpg",
-    "description": "Authentic Wasabi Powder.",
+    "short_description": "Authentic Wasabi Powder.",
+    "description": "",
     "id": 270,
     "category": "Spices"
   },
@@ -1901,7 +2138,8 @@
     "name": "Liquorice Root (Mulethi)",
     "price": "135",
     "image": "/image/market/Liquorice Root.jpg",
-    "description": "Liquorice Root (Mulethi) used in Ayurvedic cooking.",
+    "short_description": "Liquorice Root (Mulethi) used in Ayurvedic cooking.",
+    "description": "",
     "id": 272,
     "category": "Spices"
   },
@@ -1909,7 +2147,8 @@
     "name": "Sichuan Pepper (Timur)",
     "price": "138",
     "image": "/image/market/Sichuan Pepper.jpg",
-    "description": "Sichuan Pepper (Timur) from Nepal and China.",
+    "short_description": "Sichuan Pepper (Timur) from Nepal and China.",
+    "description": "",
     "id": 273,
     "category": "Spices"
   },
@@ -1917,7 +2156,8 @@
     "name": "Long Pepper (Pippali)",
     "price": "136",
     "image": "/image/market/Long Pepper.jpg",
-    "description": "Long Pepper (Pippali) sourced from traditional farms.",
+    "short_description": "Long Pepper (Pippali) sourced from traditional farms.",
+    "description": "",
     "id": 274,
     "category": "Spices"
   },
@@ -1925,7 +2165,8 @@
     "name": "Lime (Dried Lime)",
     "price": "134",
     "image": "/image/market/Lime.jpg",
-    "description": "Lime (Dried) for Middle Eastern cooking.",
+    "short_description": "Lime (Dried) for Middle Eastern cooking.",
+    "description": "",
     "id": 275,
     "category": "Spices"
   },
@@ -1933,7 +2174,8 @@
     "name": "Sumac",
     "price": "131",
     "image": "/image/market/Sumac.jpg",
-    "description": "Sumac spice for tangy flavoring.",
+    "short_description": "Sumac spice for tangy flavoring.",
+    "description": "",
     "id": 276,
     "category": "Spices"
   },
@@ -1941,7 +2183,8 @@
     "name": "Tamarind (Dry or Powdered)",
     "price": "122",
     "image": "/image/market/Tamarind.jpg",
-    "description": "Tamarind (Dry or Powdered) for flavoring.",
+    "short_description": "Tamarind (Dry or Powdered) for flavoring.",
+    "description": "",
     "id": 277,
     "category": "Spices"
   },
@@ -1949,7 +2192,8 @@
     "name": "Cloves",
     "price": "129",
     "image": "/image/market/Cloves.jpg",
-    "description": "Cloves berries sourced locally.",
+    "short_description": "Cloves berries sourced locally.",
+    "description": "",
     "id": 278,
     "category": "Spices"
   },
@@ -1957,7 +2201,8 @@
     "name": "Juniper Berries",
     "price": "143",
     "image": "/image/market/Juniper Berries.jpg",
-    "description": "Juniper Berries used in spice blends and marinades.",
+    "short_description": "Juniper Berries used in spice blends and marinades.",
+    "description": "",
     "id": 279,
     "category": "Spices"
   },
@@ -1965,7 +2210,8 @@
     "name": "Star Anise",
     "price": "144",
     "image": "/image/market/Star Anise.jpg",
-    "description": "Star Anise used in garam masala and biryani.",
+    "short_description": "Star Anise used in garam masala and biryani.",
+    "description": "",
     "id": 280,
     "category": "Spices"
   }

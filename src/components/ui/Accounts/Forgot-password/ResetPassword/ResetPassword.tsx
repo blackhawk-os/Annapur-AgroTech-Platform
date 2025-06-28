@@ -53,7 +53,7 @@ export default function ResetPassword() {
 
           <p className="text-center text-sm text-gray-600">
             <Link
-              href="/acccount/login"
+              href="/login"
               className="font-medium text-[#88B04B] hover:underline"
             >
               Back to Login

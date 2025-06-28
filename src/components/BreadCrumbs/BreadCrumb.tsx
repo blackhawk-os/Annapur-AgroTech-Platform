@@ -78,7 +78,7 @@ const Breadcrumb = ({ productName }: Props) => {
                   <span className="mx-1">/</span>
                 </>
               ) : (
-                <span className="text-black text-[14px] font-dm-sans tracking-[0.03em] capitalize">
+                <span className="text-[#88B04B] text-[14px] font-dm-sans tracking-[0.03em] capitalize">
                   {label}
                 </span>
               )}

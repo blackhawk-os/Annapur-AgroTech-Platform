@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useCart } from "@/lib/context/useCart";
 import {
   FaWhatsapp,
   FaPhoneAlt,
@@ -21,6 +22,9 @@ export default function Header() {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  const { getTotalQuantity, getUniqueItemCount } = useCart();
+  const badgeCount = getUniqueItemCount();
 
   return (
     <header className="w-full">
@@ -61,13 +65,20 @@ export default function Header() {
           <Link href="/contact">Contact Us</Link>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="relative flex items-center gap-4">
           {/* Cart Icon */}
-          <FaCartShopping className="text-xl text-[#88B04B] sm:block hidden" />
+          <Link href="/cart">
+            <FaCartShopping className="text-2xl text-[#88B04B] sm:block hidden" />
+            {getTotalQuantity() > 0 && (
+              <span className="absolute -top-2 right-6 bg-[#151515]  text-[#88B04B] text-[14px] font-bold w-5 h-5 p-0 flex items-center justify-center rounded-full">
+                {badgeCount}
+              </span>
+            )}
+          </Link>
 
           {/* Create Account */}
-          <Link href="/acccount/create-account">
-            <FaUser className="text-xl text-[#88B04B] sm:block hidden" />
+          <Link href="/create-account">
+            <FaUser className="text-2xl text-[#88B04B] sm:block hidden" />
           </Link>
         </div>
 
@@ -142,7 +153,7 @@ export default function Header() {
               <Link href="/">Get Support</Link>
             </div>
 
-            <Link href="/acccount/create-account">
+            <Link href="/create-account">
               <Button
                 text="Create Account"
                 className="text-white bg-gradient-to-r from-[#88B04B] to-[#4BAF47] opacity-80 hover:opacity-100 rounded-md px-4 py-2"

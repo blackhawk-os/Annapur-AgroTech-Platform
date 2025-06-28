@@ -12,7 +12,6 @@ import Link from "next/link";
 import TextInput from "@/components/TextInput";
 import { useRouter } from "next/navigation";
 
-
 export default function ForgotPassword() {
   const [showOTP, setShowOTP] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState("");
@@ -36,12 +35,11 @@ export default function ForgotPassword() {
     } else {
       const enteredOtp = otp.join("");
       console.log("Verifying OTP:", enteredOtp);
-      
-      router.push("/acccount/forgot-password/reset-password")
+
+      router.push("/forgot-password/reset-password");
     }
   };
 
-  
   const handleOtpChange = (index: number, value: string) => {
     if (!/^\d?$/.test(value)) return; // Only allow digits
     const newOtp = [...otp];
@@ -112,7 +110,7 @@ export default function ForgotPassword() {
 
           <p className="text-center text-sm text-gray-600">
             <Link
-              href="/acccount/login"
+              href="/login"
               className="font-medium text-[#88B04B] hover:underline"
             >
               Go back to Login Page

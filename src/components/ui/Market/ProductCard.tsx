@@ -8,7 +8,7 @@ interface Product {
   category: string;
   price: string;
   image: string;
-  description: string;
+  short_description: string;
 }
 
 export const ProductCard = ({ product }: { product: Product }) => {
@@ -27,7 +27,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
             {product.name}
           </h3>
           <p className="h-10 text-gray-500  text-sm line-clamp-2">
-            {product.description}
+            {product.short_description}
           </p>
           <p className="h-5 text-[#88B04B] text-sm font-medium">
             Category:{" "}
@@ -40,7 +40,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
               NRs. {product.price}
             </span>
             <button className="bg-[#88B04B] hover:opacity-60 text-white px-3 py-1 rounded text-sm">
-              Add to Cart
+              Buy Now
             </button>
           </div>
         </div>

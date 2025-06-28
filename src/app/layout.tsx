@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Manrope } from "next/font/google";
 import { Covered_By_Your_Grace } from "next/font/google";
+import { CartProvider } from "@/lib/context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -35,16 +37,31 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.className} ${coveredByYourGrace.className} ${manrope.variable} ${coveredByYourGrace.variable}`}
     >
-      <body style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
-        {/* Header */}
-        <Header />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        closeButton={true}
+        theme="light"
+      />
+      <CartProvider>
+        <body style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
+          {/* Header */}
+          <Header />
 
-        {/* Main Content */}
-        {children}
+          {/* Main Content */}
+          {children}
 
-        {/* Footer */}
-        <Footer />
-      </body>
+          {/* Footer */}
+          <Footer />
+        </body>
+      </CartProvider>
     </html>
   );
 }
