@@ -78,7 +78,7 @@ const ProductDetail: React.FC<Props> = ({ product }) => {
           onChange={handleQuantityChange}
         />
 
-        <div className="mt-6">
+        <div className="flex flex-row mt-6">
           <AddToCartButton onClick={handleAddToCart} />
           <BuyNowButton onClick={() => {}} />
         </div>
