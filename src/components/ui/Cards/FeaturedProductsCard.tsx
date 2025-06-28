@@ -29,13 +29,15 @@ export default function FeaturedProductsCard({
           <h3 className="text-lg font-semibold text-gray-800">
             {product.name}
           </h3>
-          <p className="text-sm text-gray-600 mb-2">
+          <p className="text-sm text-gray-600 mb-2 h-10 line-clamp-2">
             {product.short_description}
           </p>
-          <p className="text-sm text-[#88B04B]">Category: {product.category}</p>
+          <p className="text-sm text-[#88B04B] h-5">
+            Category: {product.category}
+          </p>
           <div className="mt-3 flex justify-between items-center">
             <span className="text-[#88B04B] font-bold text-lg">
-              Rs. {product.price}/kg
+              Rs. {product.price}
             </span>
             <button className="flex items-center gap-2 bg-[#88B04B] text-white px-4 py-1 rounded-md hover:bg-green-600">
               Buy Now
