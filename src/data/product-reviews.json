@@ -1,0 +1,76 @@
+[
+  {
+    "productId": "1",
+    "reviews": [
+      {
+        "name": "Sita",
+        "rating": 5,
+        "verified": true,
+        "comment": "Very fresh and tasty!"
+      },
+      {
+        "name": "Ram",
+        "rating": 4,
+        "verified": false,
+        "comment": "Loved the packaging and quality."
+      },
+      {
+        "name": "Asha",
+        "rating": 5,
+        "verified": true,
+        "comment": "Will definitely buy again."
+      }
+    ]
+  },
+
+  
+  {
+    "productId": "2",
+    "reviews": [
+      {
+        "name": "Laxman",
+        "rating": 0,
+        "verified": true,
+        "comment": "Ghin lagdo taste. bag baata condom niskyo!!!!"
+      },
+      {
+        "name": "Ram",
+        "rating": 4,
+        "verified": false,
+        "comment": "Loved the packaging and quality."
+      },
+      {
+        "name": "Asha",
+        "rating": 5,
+        "verified": true,
+        "comment": "Will definitely buy again."
+      }
+    ]
+  },
+
+  {
+    "productId": "3",
+    "reviews": [
+      {
+        "name": "Sita",
+        "rating": 5,
+        "verified": true,
+        "comment": "Very fresh and tasty!"
+      },
+      {
+        "name": "Ram",
+        "rating": 4,
+        "verified": false,
+        "comment": "Loved the packaging and quality."
+      },
+      {
+        "name": "Asha",
+        "rating": 5,
+        "verified": true,
+        "comment": "Will definitely buy again."
+      }
+    ]
+  },
+
+
+]

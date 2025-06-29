@@ -2,6 +2,8 @@ import Breadcrumb from "@/components/BreadCrumbs/BreadCrumb";
 import ProductDetail from "@/components/ui/Product-detail/ProductDetail";
 import products from "@/data/market-products.json";
 import { notFound } from "next/navigation";
+import ToggleDescription from "@/components/ui/Product-detail/ToggleDescription";
+
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -47,6 +49,7 @@ export default async function ProductPage(props: {
     <>
       <Breadcrumb productName={product.name} />
       <ProductDetail product={product} />
+      <ToggleDescription product={product} />
     </>
   );
 }

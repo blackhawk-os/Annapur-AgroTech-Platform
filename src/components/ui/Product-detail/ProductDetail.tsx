@@ -52,7 +52,7 @@ const ProductDetail: React.FC<Props> = ({ product }) => {
           alt={product.name}
           width={600}
           height={600}
-          className="rounded-lg shadow-lg object-cover w-[600px] h-[400px]"
+          className="rounded-lg shadow-lg object-cover w-[500px] h-[300px]"
         />
       </div>
       <div>

@@ -128,15 +128,14 @@ const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({ isOpen, onC
               <li>
                 <strong>Contact Us</strong>
                 <ul className="list-disc pl-5 mt-1">
-                  <li>If you have any questions or concerns, please reach out to our support team at:</li>
-                  <li>
+                  <li>If you have any questions or concerns, please reach out to our support team at:<br/>
                     <Link 
                       href="/contact"
                       className= "hover:underline"
                       >
                         📧 support@annapur.com
                       </Link>
-                  </li>
+                    </li>
                 </ul>
               </li>
             </ol>
@@ -224,8 +223,7 @@ const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({ isOpen, onC
               <li>
                 <strong>Contact Us</strong>
                 <ul className="list-disc pl-5 mt-1">
-                  <li>For any questions or concerns regarding your privacy, contact us at:</li>
-                  <li>
+                  <li>For any questions or concerns regarding your privacy, contact us at: <br />
                     <Link 
                       href="/contact"
                       className= "hover:underline"
