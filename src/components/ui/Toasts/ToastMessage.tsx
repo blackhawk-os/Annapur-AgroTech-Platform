@@ -32,7 +32,8 @@ type ToastType =
   | "error"
   | "user-notfound"
   | "logout-success"
-  | "cart-added";
+  | "cart-added"
+  | "order-success";
 
 export const showAuthToast = (
   type: ToastType,
@@ -98,6 +99,13 @@ export const showAuthToast = (
           <ToastContent
             primary="Item added to cart successfully!"
             secondary="You can view your cart for more details."
+          />
+        );
+      case "order-success":
+        return (
+          <ToastContent
+            primary="Order placed successfully!"
+            secondary="You can view your order details in your account."
           />
         );
       default:

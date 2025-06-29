@@ -5,6 +5,7 @@ import { useCart } from "@/lib/context/useCart";
 import { FaCartShopping } from "react-icons/fa6";
 import { ChevronRight, Minus, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
+import CartSummary from "@/components/ui/Cart/CartSummary";
 
 const CartPage: React.FC = () => {
   const { cart, removeItem, updateQuantity, clearCart } = useCart();
@@ -33,7 +34,15 @@ const CartPage: React.FC = () => {
 
   return (
     <div className="max-w-5xl mx-auto py-8">
-      <h1 className="text-2xl font-bold text-[#88B04B] mb-8">Your Cart</h1>
+      <div className="flex flex-row items-start justify-between">
+        <h1 className="text-2xl font-bold text-[#88B04B] mb-8">Your Cart</h1>
+        <button
+          className="bg-gray-300 text-[#88B04B] hover:opacity-60 px-6 py-2 rounded-lg font-semibold"
+          onClick={handleClearCart}
+        >
+          Clear Cart
+        </button>
+      </div>
       {cart.length === 0 ? (
         <div className="flex flex-col items-center justify-center h-full">
           <div className="flex flex-col items-center justify-center h-70 w-70 mx-auto rounded-full bg-gray-100 shadow-md">
@@ -111,17 +120,7 @@ const CartPage: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex justify-between items-center">
-            <p className="text-xl font-bold">
-              Total Price: NPR {calculateTotalPrice()}
-            </p>
-            <button
-              className="bg-gray-300 text-[#88B04B] hover:opacity-60 px-6 py-2 rounded-lg font-semibold"
-              onClick={handleClearCart}
-            >
-              Clear Cart
-            </button>
-          </div>
+          <CartSummary />
         </>
       )}
     </div>
