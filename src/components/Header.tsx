@@ -18,7 +18,14 @@ import Link from "next/link";
 import { FaCartShopping, FaUser } from "react-icons/fa6";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
+  // Check if the component is mounted on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Disable body scroll when the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
@@ -69,7 +76,7 @@ export default function Header() {
           {/* Cart Icon */}
           <Link href="/cart">
             <FaCartShopping className="text-2xl text-[#88B04B] sm:block hidden" />
-            {getTotalQuantity() > 0 && (
+            {isClient && getTotalQuantity() > 0 && (
               <span className="absolute -top-2 right-6 bg-[#151515]  text-[#88B04B] text-[14px] font-bold w-5 h-5 p-0 flex items-center justify-center rounded-full">
                 {badgeCount}
               </span>
