@@ -37,21 +37,21 @@ export default function RootLayout({
       lang="en"
       className={`${manrope.className} ${coveredByYourGrace.className} ${manrope.variable} ${coveredByYourGrace.variable}`}
     >
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        closeButton={true}
-        theme="light"
-      />
       <CartProvider>
         <body style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            closeButton={true}
+            theme="light"
+          />
           {/* Header */}
           <Header />
 
