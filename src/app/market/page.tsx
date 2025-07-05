@@ -1,5 +1,7 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+
 import HeaderText from "@/components/HeaderText";
 import { Filter } from "@/components/ui/Market/Filter";
 import { SearchBar } from "@/components/ui/Market/SearchBar";
@@ -12,11 +14,21 @@ const ITEMS_PER_PAGE = 12;
 const MAX_PRICE = 5000;
 
 export default function Market() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [query, setQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string[]>([
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const pageParam = Number(searchParams.get("page")) || 1;
+  const [currentPage, setCurrentPage] = useState(pageParam);
+
+  const queryParam = searchParams.get("query") || "";
+  const [query, setQuery] = useState(queryParam);
+
+  const categoryParam = searchParams.get("category")?.split(",") || [
     "All Products",
-  ]);
+  ];
+  const [selectedCategory, setSelectedCategory] =
+    useState<string[]>(categoryParam);
+
   const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
 
   const filteredProducts = useMemo(() => {
@@ -40,6 +52,15 @@ export default function Market() {
     startIndex,
     startIndex + ITEMS_PER_PAGE
   );
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (query) params.set("query", query);
+    if (selectedCategory.length > 0)
+      params.set("category", selectedCategory.join(","));
+    if (currentPage > 1) params.set("page", currentPage.toString());
+    router.push(`?${params.toString()}`);
+  }, [query, selectedCategory, currentPage]);
 
   return (
     <section className="min-h-screen">
