@@ -23,20 +23,20 @@ export const ProductCard = ({ product }: { product: Product }) => {
           className="w-full h-48 object-cover"
         />
         <div className="p-4 space-y-2">
-          <h3 className="text-lg font-semibold text-green-700">
+          <h3 className="text-lg font-semibold text-[#88B04B]">
             {product.name}
           </h3>
           <p className="h-10 text-gray-500  text-sm line-clamp-2">
             {product.short_description}
           </p>
-          <p className="h-5 text-[#88B04B] text-sm font-medium">
+          <p className="h-5 text-[#5a7e24] text-sm font-medium">
             Category:{" "}
             <span className=" text-gray-500 text-xs font-normal">
               {product.category}
             </span>
           </p>
           <div className="flex justify-between items-center">
-            <span className="text-md font-bold text-green-600">
+            <span className="text-md font-bold text-[#88B04B]">
               NRs. {product.price}
             </span>
             <button className="bg-[#88B04B] hover:opacity-60 text-white px-3 py-1 rounded text-sm">

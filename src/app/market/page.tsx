@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import HeaderText from "@/components/HeaderText";
 import { Filter } from "@/components/ui/Market/Filter";
 import { SearchBar } from "@/components/ui/Market/SearchBar";
@@ -7,17 +7,26 @@ import { ProductCard } from "@/components/ui/Market/ProductCard";
 import { Pagination } from "@/components/ui/Market/Pagination";
 import products from "@/data/market-products.json";
 import Breadcrumb from "@/components/BreadCrumbs/BreadCrumb";
+import { useSearchParams } from "next/navigation";
 
 const ITEMS_PER_PAGE = 12;
 const MAX_PRICE = 5000;
 
 export default function Market() {
+  const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string[]>([
     "All Products",
   ]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
+
+  useEffect(() => {
+    const categoryParam = searchParams?.get('category');
+    if (categoryParam) {
+      setSelectedCategory([categoryParam]);
+    }
+  }, [searchParams]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -81,7 +90,7 @@ export default function Market() {
                   className="mx-auto mb-6 w-40 h-40 object-contain opacity-80"
                 />
                 <h2 className="text-xl font-semibold text-gray-700 mb-2">
-                  We couldn’t find any products matching your search.
+                  We couldn't find any products matching your search.
                 </h2>
                 <p className="text-gray-500">
                   Try adjusting your filters or exploring other categories.
