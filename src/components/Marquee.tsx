@@ -3,8 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MarqueeCard } from "./ui/Cards/MarqueeCard";
 import HeaderText from "./HeaderText";
+import { useRouter } from "next/navigation";
 
 export const Marquee = () => {
+  const router = useRouter();
   const [isPaused, setIsPaused] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,32 +17,32 @@ export const Marquee = () => {
   const products = [
     {
       icon: "/image/Marquee-icons/vegetable.png",
-      title: "Fresh Vegetables",
+      title: "Vegetables",
       tagline: "Farm-to-table goodness",
     },
     {
       icon: "/image/Marquee-icons/fruit.png",
-      title: "Seasonal Fruits",
+      title: "Fruits",
       tagline: "Nature's sweet bounty",
     },
     {
       icon: "/image/Marquee-icons/grain.png",
-      title: "Essential Grains",
+      title: "Grains",
       tagline: "The foundation of every meal",
     },
     {
       icon: "/image/Marquee-icons/red-beans.png",
-      title: "Nutritious Pulses",
+      title: "Pulses",
       tagline: "Protein rich and hearty",
     },
     {
       icon: "/image/Marquee-icons/milk.png",
-      title: "Dairy Products",
+      title: "Dairy",
       tagline: "Pure & nutritious",
     },
     {
       icon: "/image/Marquee-icons/lettuce.png",
-      title: "Organic Greens",
+      title: "Greens",
       tagline: "Straight from the farm",
     },
     {
@@ -50,7 +52,7 @@ export const Marquee = () => {
     },
     {
       icon: "/image/Marquee-icons/eggs.png",
-      title: "Farm Eggs",
+      title: "Eggs",
       tagline: "Daily freshness",
     },
     {
@@ -59,6 +61,10 @@ export const Marquee = () => {
       tagline: "Flavorful harvest",
     },
   ];
+
+  const handleCardClick = (title: string) => {
+    router.push(`/market?category=${encodeURIComponent(title)}`);
+  };
 
   useEffect(() => {
     const animate = () => {
@@ -110,12 +116,17 @@ export const Marquee = () => {
             }}
           >
             {[...products, ...products].map((product, index) => (
-              <MarqueeCard
-                key={index}
-                icon={product.icon}
-                title={product.title}
-                tagline={product.tagline}
-              />
+              <div 
+                key={index} 
+                onClick={() => handleCardClick(product.title)}
+                className="cursor-pointer"
+              >
+                <MarqueeCard
+                  icon={product.icon}
+                  title={product.title}
+                  tagline={product.tagline}
+                />
+              </div>
             ))}
           </div>
         </div>
