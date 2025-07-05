@@ -12,15 +12,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createAccountSchema } from "@/lib/validation/CreateAccount/CreateAccountSchema";
 
-const checkPasswordStrength = (password: string) => {
-  let score = 0;
-  if (password.length >= 8) score++;
-  if (/[A-Z]/.test(password)) score++;
-  if (/\d/.test(password)) score++;
-  if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) score++;
-  return score;
-};
-
 type CreateAccountForm = {
   userType: "farmer" | "buyer";
   fullName: string;
@@ -29,6 +20,15 @@ type CreateAccountForm = {
   password: string;
   confirmPassword: string;
   termsChecked: true;
+};
+
+const checkPasswordStrength = (password: string) => {
+  let score = 0;
+  if (password.length >= 8) score++;
+  if (/[A-Z]/.test(password)) score++;
+  if (/\d/.test(password)) score++;
+  if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) score++;
+  return score;
 };
 
 export default function CreateAccount() {

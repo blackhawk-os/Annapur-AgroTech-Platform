@@ -7,22 +7,28 @@ import { ProductCard } from "@/components/ui/Market/ProductCard";
 import { Pagination } from "@/components/ui/Market/Pagination";
 import products from "@/data/market-products.json";
 import Breadcrumb from "@/components/BreadCrumbs/BreadCrumb";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const ITEMS_PER_PAGE = 12;
 const MAX_PRICE = 5000;
 
 export default function Market() {
   const searchParams = useSearchParams();
-  const [currentPage, setCurrentPage] = useState(1);
-  const [query, setQuery] = useState("");
+  const router = useRouter();
+
+  const pageParam = Number(searchParams.get("page")) || 1;
+  const [currentPage, setCurrentPage] = useState(pageParam);
+
+  const queryParam = searchParams.get("query") || "";
+  const [query, setQuery] = useState(queryParam);
+
   const [selectedCategory, setSelectedCategory] = useState<string[]>([
     "All Products",
   ]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
 
   useEffect(() => {
-    const categoryParam = searchParams?.get('category');
+    const categoryParam = searchParams?.get("category");
     if (categoryParam) {
       setSelectedCategory([categoryParam]);
     }
@@ -49,6 +55,15 @@ export default function Market() {
     startIndex,
     startIndex + ITEMS_PER_PAGE
   );
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (query) params.set("query", query);
+    if (selectedCategory.length > 0)
+      params.set("category", selectedCategory.join(","));
+    if (currentPage > 1) params.set("page", currentPage.toString());
+    router.push(`?${params.toString()}`);
+  }, [query, selectedCategory, currentPage]);
 
   return (
     <section className="min-h-screen">
