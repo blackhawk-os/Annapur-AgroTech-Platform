@@ -27,12 +27,12 @@ export default function Market() {
   ]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
 
-  useEffect(() => {
-    const categoryParam = searchParams?.get("category");
-    if (categoryParam) {
-      setSelectedCategory([categoryParam]);
-    }
-  }, [searchParams]);
+  // useEffect(() => {
+  //   const categoryParam = searchParams?.get("category");
+  //   if (categoryParam) {
+  //     setSelectedCategory([categoryParam]);
+  //   }
+  // }, [searchParams]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
