@@ -16,23 +16,27 @@ export default function Market() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const pageParam = Number(searchParams.get("page")) || 1;
-  const [currentPage, setCurrentPage] = useState(pageParam);
-
-  const queryParam = searchParams.get("query") || "";
-  const [query, setQuery] = useState(queryParam);
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string[]>([
     "All Products",
   ]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: MAX_PRICE });
+  const [hasHydrated, setHasHydrated] = useState(false);
 
-  // useEffect(() => {
-  //   const categoryParam = searchParams?.get("category");
-  //   if (categoryParam) {
-  //     setSelectedCategory([categoryParam]);
-  //   }
-  // }, [searchParams]);
+  // Pull values from URL on initial mount
+  useEffect(() => {
+    const page = Number(searchParams.get("page")) || 1;
+    const queryVal = searchParams.get("query") || "";
+    const categoryVal = searchParams.get("category")
+      ? searchParams.get("category")!.split(",")
+      : ["All Products"];
+
+    setCurrentPage(page);
+    setQuery(queryVal);
+    setSelectedCategory(categoryVal);
+    setHasHydrated(true);
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -56,14 +60,19 @@ export default function Market() {
     startIndex + ITEMS_PER_PAGE
   );
 
+  //  Update the URL when filters/query/page change
   useEffect(() => {
     const params = new URLSearchParams();
     if (query) params.set("query", query);
     if (selectedCategory.length > 0)
       params.set("category", selectedCategory.join(","));
     if (currentPage > 1) params.set("page", currentPage.toString());
+
     router.push(`?${params.toString()}`);
   }, [query, selectedCategory, currentPage]);
+
+  // Ensure we only render after initial hydration
+  if (!hasHydrated) return null;
 
   return (
     <section className="min-h-screen">
@@ -86,7 +95,10 @@ export default function Market() {
               setCurrentPage(1);
             }}
             priceRange={priceRange}
-            setPriceRange={setPriceRange}
+            setPriceRange={(val) => {
+              setPriceRange(val);
+              setCurrentPage(1);
+            }}
             maxPrice={MAX_PRICE}
           />
         </aside>
