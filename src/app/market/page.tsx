@@ -81,7 +81,10 @@ export default function Market() {
         <aside className="md:col-span-1">
           <Filter
             selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
+            setSelectedCategory={(val) => {
+              setSelectedCategory(val);
+              setCurrentPage(1);
+            }}
             priceRange={priceRange}
             setPriceRange={setPriceRange}
             maxPrice={MAX_PRICE}
