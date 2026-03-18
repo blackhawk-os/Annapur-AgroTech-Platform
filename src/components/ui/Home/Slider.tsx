@@ -71,20 +71,20 @@ const Slider: React.FC = () => {
 
   return (
     <div
-      className="relative w-full  overflow-hidden py-16 px-4"
+      className="relative w-full overflow-hidden py-10 sm:py-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center"
       style={{
         backgroundImage: `url('/image/banner/banner-bg.png')`, // Replace with your image
       }}
       {...swipeHandlers}
-    >
+      >
       <button
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-30 p-3 bg-white rounded-full shadow-md hover:scale-110 transition"
+        className="hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 bg-white rounded-full shadow-md hover:scale-110 transition"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
 
-      <div className="relative w-full h-[500px] flex items-center justify-center">
+      <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[500px] flex items-center justify-center">
         {slides.map((slide, index) => {
           const isCurrent = index === current;
           const isPrev =
@@ -116,7 +116,7 @@ const Slider: React.FC = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-30 p-3 bg-white rounded-full shadow-md hover:scale-110 transition"
+        className="hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 bg-white rounded-full shadow-md hover:scale-110 transition"
       >
         <ChevronRight className="w-6 h-6" />
       </button>

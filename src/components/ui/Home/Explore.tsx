@@ -11,21 +11,21 @@ const Explore = () => {
   return (
     <div className="">
       {/*Why Choose Annapur Section */}
-      <section className="w-full h-[900px] mx-auto px-10 py-12">
+      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-12 lg:py-16">
         <HeaderText
           text="Our Benefits"
           text2="Why Choose Annapur Marketplace"
           className="text-center items-center"
         />
-        <div className="w-full flex flex-row justify-center gap-4">
-          <div className="w-1\2 h-[450px]">
+        <div className="w-full mt-8 flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-10">
+          <div className="w-full lg:w-1/2 flex justify-center">
             <img
               src="/image/explore-image-1.jpg"
               alt="Why Choose Agrios Market"
-              className="w-[400px] h-[628px] object-contain"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain"
             />
           </div>
-          <div className="w-[480px]">
+          <div className="w-full lg:w-1/2 max-w-xl mt-8 lg:mt-0">
             <div className="flex flex-col justify-center items-start gap-5">
               {/* Feature 1*/}
 

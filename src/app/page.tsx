@@ -6,10 +6,9 @@ import { Faq } from "@/components/ui/Home/Faq";
 import Testimonials from "@/components/ui/Home/Testimonials";
 import FeaturedProducts from "@/components/ui/Home/FeaturedProducts";
 import FillerBanner from "@/components/ui/Home/FillerBanner";
-import { DivideCircle } from "lucide";
 export default function Home() {
   return (
-    <div className="mt-[116px]">
+    <div className="mt-[80px] sm:mt-[96px] md:mt-[116px]">
       {/* Components yesko muni*/}
       <Banner />
       <FeaturedProducts />

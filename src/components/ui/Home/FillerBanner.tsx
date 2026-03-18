@@ -5,7 +5,7 @@ import { url } from "inspector";
 export default function FillerBanner() {
   return (
     <div
-      className="flex flex-row justify-center items-center gap-7 py-10"
+      className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-7 py-10 px-4 bg-cover bg-center"
       style={{ backgroundImage: `url('/image/banner/banner-bg.png')` }}
     >
       <FillerBannerCard
